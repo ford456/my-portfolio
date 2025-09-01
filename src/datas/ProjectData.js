@@ -859,5 +859,87 @@ const ProjectDatas = [
         //     </div>
         // )
     },
+    {
+        id: "26",
+        title: "Motion Graphic work at Maider co.,ltd",
+        description: "ออกแบบและจัดทำสื่อภาพเคลื่อนไหว (motion graphic) โดยพัฒนาจากผลงาน Artwork ที่จัดทำโดยฝ่าย Graphic designer พร้อมทั้งดำเนินการปรับขนาดสื่อ (Resize) ให้เหมาะสมกับสัดส่วนและความละเอียดของจอ LED หลากหลายรูปแบบที่ใช้ในการนำเสนอผลงาน \n รับผิดชอบดูแลการอัปโหลดและจัดเรียงสื่อภาพเข้าสู่ระบบควบคุมการแสดงผล เพื่อให้การนำเสนอผ่านจอ LED เป็นไปอย่างมีประสิทธิภาพ",
+        img1: "https://img5.pic.in.th/file/secure-sv1/Artboard-17d05cca56af391fc.png",
+        
+        tag: {
+            tag1: "Motion Graphic",
+
+        },
+        skill: {
+            skill1: "Adobe After Effects",
+
+        },
+        date: "31/08/2025",
+        content: (
+            <div className=''>
+                <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
+
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
+                    
+                <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/4bxnyiEwoSE?si=4wM-RMheGvcSRwQQ" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+                </div>
+            </div>)
+        // content: (
+        //     <div className='grid grid-cols-3 gap-5 px-5'>
+        //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
+        //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
+                
+
+        //     </div>
+        // )
+    },
+    {
+        id: "27",
+        title: "Rose Advernture | 3D Animation sort film",
+        description: "การออกแบบตัวละคร 3D Animation โดยใช้โปรแกรม Maya ในการสร้างโมเดลตัวละครและฉากต่างๆ รวมถึงการทำ Rigging เพื่อให้ตัวละครสามารถเคลื่อนไหวได้อย่างสมจริง จากนั้นจึงนำโมเดลที่ได้ไปทำการจัดแสง (Lighting) และการเรนเดอร์ (Rendering) เพื่อให้ได้ภาพที่มีคุณภาพสูงและเหมาะสมกับการนำเสนอในรูปแบบของสื่อดิจิทัล \n\n การสร้างสรรค์เรื่องราว (Storytelling) ที่น่าสนใจและมีความหมาย โดยเน้นการสื่อสารผ่านภาพและเสียง เพื่อให้ผู้ชมสามารถเข้าใจและรับรู้ถึงความรู้สึกที่ต้องการถ่ายทอดผ่านตัวละครและเหตุการณ์ต่างๆ ในเรื่องราวนั้นๆ",
+        img1: "https://img2.pic.in.th/pic/Screenshot-2025-09-01-185509.png",
+        
+        tag: {
+            tag1: "3D Modeling",
+            tag2: "Animation",
+
+        },
+        skill: {
+            skill1: "Maya",
+
+        },
+        date: "17/10/2023",
+        content: (
+            <div className=''>
+                <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
+
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
+                    
+                <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/J5SjNjH8Wwk?si=KjIR_Bi9M9RafGiG" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+                </div>
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip mt-8'>
+                    
+                <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/jbW3sSjAAqw?si=xBuDXa5eslV8o1hA" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+                </div>
+                <div className='flex flex-col sm:flex-row gap-4 px-5 mt-8'>
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip mt-8'>
+                    
+                <iframe className="w-fit h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[320px]" title="Rose" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/c89b893d51264ebdb45fd4a4b9a95332/embed?autospin=1&autostart=1&preload=1&dnt=1"> </iframe>
+                </div>
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip mt-8'>
+                    
+                <iframe className="w-fit h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[320px]" title="wonder" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/b2e8a33aed21403ebec9e406055d3bc6/embed?autospin=1&autostart=1&preload=1&dnt=1"> </iframe>
+                </div>
+                </div>
+                
+            </div>)
+        // content: (
+        //     <div className='grid grid-cols-3 gap-5 px-5'>
+        //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
+        //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
+                
+
+        //     </div>
+        // )
+    },
 ]
 export default ProjectDatas

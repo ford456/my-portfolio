@@ -16,6 +16,8 @@ export const TagColorMap = [{
         "Camera Man": "outline-teal-500",
         "Photography": "outline-rose-500",
         "AI": "outline-orange-500",
+        "Animation": "outline-fuchsia-500",
+        "Web Design": "outline-lime-500",
     },
 },
 {
