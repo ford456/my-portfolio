@@ -27,7 +27,7 @@ export const ExperiencesData = [
         </li>
         
         
-        <div className="grid grid-cols-1 lg:grid  lg:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid  lg:grid-cols-2 gap-4 mt-5">
           <img
             src="https://img2.pic.in.th/pic/BK-F4-CAR.png"
             alt="BK F4 Car"
