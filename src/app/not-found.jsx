@@ -12,7 +12,7 @@ export default function NotFound() {
         <h2 className='text-6xl p-4 font-bold'>404 Not Found</h2>
         <p>Could not find requested resource</p>
         <p className='pt-5'>
-          <Link href="/" className="font-bold text-blue-200 hover:text-blue-500" target='_parent' >View all posts</Link>
+          <Link href="/" className="font-bold text-blue-200 hover:text-blue-500" target='_parent' >Back to Home</Link>
         </p>
       </div>
 
