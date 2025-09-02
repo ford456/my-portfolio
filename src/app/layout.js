@@ -5,6 +5,7 @@ import "./globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Particles from "../components/Particles";
+import { Analytics } from '@vercel/analytics/react';
 
 
 const ibmPlexSansThai = IBM_Plex_Sans_Thai({
@@ -54,7 +55,7 @@ export default function RootLayout({ children }) {
         {children}
         <SpeedInsights />
         <Footer />
-
+        <Analytics />
       </body>
     </html>
   );
