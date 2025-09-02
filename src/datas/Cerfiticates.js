@@ -32,7 +32,7 @@ export const Cerfiticates = [
                     รายวิชานี้มุ่งให้ผู้เรียนเข้าใจพื้นฐาน Generative AI และการใช้ ChatGPT อย่างเหมาะสมในงานวิชาการ พร้อมฝึกทักษะ prompt และวิเคราะห์ผลอย่างมีวิจารณญาณ
                 </p>
                 <img
-                    src="/Cer/Cer02.JPG"
+                    src="/Cer/Cer02.jpg"
                     alt="Certificate of Generative AI"
                     width={500}
                     height={500}
@@ -52,7 +52,7 @@ export const Cerfiticates = [
                     The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding, Logo Design
                 </p>
                 <img
-                    src="/Cer/Cer03.JPG"
+                    src="/Cer/Cer03.jpg"
                     alt="Graphic Design Masterclass"
                     width={500}
                     height={500}
