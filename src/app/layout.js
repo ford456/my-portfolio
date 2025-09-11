@@ -27,8 +27,8 @@ export const metadata = {
   icons: { 
     icon: "/PortLogoWhite.svg",
     shortcut: "/PortLogoWhite.svg",
-    // apple: "/PortLogoWhite.svg",
-    // other: { rel: "apple-touch-icon", url: "/PortLogoWhite.svg" }
+    apple: "/PortLogoWhite.svg",
+    other: { rel: "apple-touch-icon", url: "/PortLogoWhite.svg" }
   },
   keywords: [
     "Patcharadol",
@@ -84,7 +84,7 @@ export const unstable_runtimeJS = false; // this page will not include runtime J
 
 export const unstable_isr = false; // this page does not support Incremental Static Regeneration
 
-export const unstable_preload = false; // this page will be preloaded for better performance
+export const unstable_preload = true; // this page will be preloaded for better performance
 
 export const unstable_prefetch = true; // this page will be prefetched for better performance
 
