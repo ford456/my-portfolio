@@ -176,7 +176,7 @@ export default function Details({ params }) {
                 <hr className='pb-2' />
                 <ul className="py-5 justify-start mx-auto px-5 flex flex-wrap md:flex text-sm md:flex-row gap-5">
                     {product.skill &&
-                        Object.values(product.skill).map((skillName, index) => (
+                        Object.values(product.skill).sort((a, b) => a.localeCompare(b)).map((skillName, index) => (
                             <li key={index}>
                                 <h6 className={`max-w-auto p-2 px-2 rounded-xl outline-2 ${skillColorMap[skillName] || " outline-gray-300"}`}>
                                     {skillName}

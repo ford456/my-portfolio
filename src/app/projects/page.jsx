@@ -10,6 +10,62 @@ import { IoSearch } from "react-icons/io5";
 import Link from 'next/link';
 import AnimatedContent from '../../components/AnimatedContent';
 
+// 👇 helper ฟังก์ชันเรียงลำดับ
+const sortKeepAllFirst = (arr) =>
+  [...arr].sort((a, b) => {
+    const A = String(a);
+    const B = String(b);
+
+    // 1. 'all' ต้องอยู่ก่อนเสมอ
+    if (A.toLowerCase() === "all") return -1;
+    if (B.toLowerCase() === "all") return 1;
+
+    const isNumA = /^\d+/.test(A);
+    const isNumB = /^\d+/.test(B);
+
+    // 2. ถ้า A เป็นตัวเลข แต่ B ไม่ใช่ → A ไปท้าย
+    if (isNumA && !isNumB) return 1;
+    if (!isNumA && isNumB) return -1;
+
+    // 3. ถ้า A และ B เป็นเลขทั้งคู่ → เรียงตามค่าตัวเลขจริง
+    if (isNumA && isNumB) {
+      return parseInt(A, 10) - parseInt(B, 10);
+    }
+
+    // 4. ตัวอักษร → เรียง A-Z
+    return A.localeCompare(B, undefined, { sensitivity: "base" });
+  });
+
+//เลื่อนขึ้นบนแบบนุ่มนวล
+
+// เลื่อนไปที่การ์ดตัวแรกแบบ ease-in-out จริง ๆ
+const scrollToFirstCard = () => {
+  if (typeof window === "undefined") return;
+
+  const target = document.getElementById("first-card");
+  if (!target) return;
+
+  const headerOffset = 80; // ปรับตามความสูง navbar
+  const start = window.scrollY;
+  const end = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+  const distance = end - start;
+  const duration = 600; // ms
+  let startTime = null;
+  if (Math.abs(distance) < 4) return; // แทบไม่ต้องเลื่อน
+  const easeInOutCubic = (t) =>
+    t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+  const step = (ts) => {
+    if (!startTime) startTime = ts;
+    const progress = Math.min((ts - startTime) / duration, 1);
+    const eased = easeInOutCubic(progress);
+    window.scrollTo(0, start + distance * eased);
+    if (progress < 1) requestAnimationFrame(step);
+  };
+
+  requestAnimationFrame(step);
+};
+
 
 
 export default function ArtPro() {
@@ -17,7 +73,7 @@ export default function ArtPro() {
   const Datas = ProjectDatas; // นำเข้าข้อมูลจาก ProjectData
   const [showAll, setShowAll] = useState(false); // ควบคุมการแสดงสินค้า
   const [searchTerm, setSearchTerm] = useState(""); // เก็บค่าค้นหา
-  const [filterType, setFilterType] = useState("all");
+
   // 🔸 ประกาศ state
   const [selectedTag, setSelectedTag] = useState("all");
   const [selectedSkill, setSelectedSkill] = useState("all");
@@ -68,6 +124,10 @@ export default function ArtPro() {
   // 🔹 แสดง 6 ชิ้นแรก ถ้า showAll เป็น false
   const displayedProducts = showAll ? sortedDatas : sortedDatas.slice(0, 6);
 
+  const tagBtnBase =
+    "text-xs lg:text-sm px-4 py-2 rounded-full border border-2 lg:border-3 transition-all duration-200 ease-out transform will-change-[transform,opacity]";
+
+
   return (
 
 
@@ -98,6 +158,7 @@ export default function ArtPro() {
               setSearchTerm(e.target.value);
               setSelectedTag("all");     // 🔹 reset tag
               setSelectedSkill("all");   // 🔹 reset skill
+
             }}
           />
         </div></AnimatedContent>
@@ -119,16 +180,23 @@ export default function ArtPro() {
 
             {/* 🔸 ปุ่มกรองประเภท */}
             <div className='flex justify-center flex-wrap gap-2 mt-5  md:px-0'>
-              {["all", ...allTags].map((type) => (
-                <button
-                  key={type}
-                  onClick={() => { setSelectedTag(type); setSelectedSkill("all"); }}
-                  className={`text-xs lg:text-sm px-4 py-2 rounded-full  ${filterType === type ? " outline-2 outline-white focus:outline-blue-400 text-white focus:text-blue-400" : " outline-2 outline-white focus:outline-blue-400 text-white focus:text-blue-400"
-                    }`}
-                >
-                  {type === "all" ? "ทั้งหมด" : type}
-                </button>
-              ))}
+              {sortKeepAllFirst(["all", ...allTags]).map((type) => {
+                const isActive = selectedTag === type;
+                return (
+                  <button
+                    key={type}
+                    onClick={() => { setSelectedTag(type); setSelectedSkill("all"); requestAnimationFrame(scrollToFirstCard); }}
+                    className={`${tagBtnBase} ` +
+                      (isActive
+                        ? " text-blue-700 border-blue-700 opacity-100 scale-100 "
+                        : "bg-transparent border-white hover:text-blue-400 hover:border-blue-400 scale-95")
+                    }
+                    aria-pressed={isActive}
+                  >
+                    {type === "all" ? "ทั้งหมด" : type}
+                  </button>
+                )
+              })}
             </div>
             {/* 🔸 ปุ่มกรองประเภท skill */}
             <div className="">
@@ -139,16 +207,23 @@ export default function ArtPro() {
             </div>
 
             <div className='flex justify-center flex-wrap gap-2 mt-3  md:px-0'>
-              {[...allskills].map((type) => (
-                <button
-                  key={type}
-                  onClick={() => { setSelectedSkill(type); setSelectedTag("all"); }}
-                  className={`text-xs lg:text-sm px-4 py-2 rounded-full border ${filterType === type ? "outline-2 outline-white focus:outline-pink-400 text-white focus:text-pink-400" : "outline-2 outline-white focus:outline-pink-400 text-white focus:text-pink-400"
-                    }`}
-                >
-                  {type === "all" ? "ทั้งหมด" : type}
-                </button>
-              ))}
+              {[...allskills].sort((a, b) => a.localeCompare(b)).map((type) => {
+                const isActive = selectedSkill === type;
+                return (
+                  <button
+                    key={type}
+                    onClick={() => { setSelectedSkill(type); setSelectedTag("all"); requestAnimationFrame(scrollToFirstCard); }}
+                    className={`${tagBtnBase} ` +
+                      (isActive
+                        ? " text-pink-700 border-pink-700 opacity-100 scale-100 "
+                        : "bg-transparent border-white hover:text-pink-400 hover:border-pink-400 scale-95")
+                    }
+                    aria-pressed={isActive}
+                  >
+                    {type === "all" ? "ทั้งหมด" : type}
+                  </button>
+                )
+              })}
             </div>
           </div>
         </AnimatedContent>
@@ -157,23 +232,25 @@ export default function ArtPro() {
           {/* 🔸 แสดงสินค้า  */}
           <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3  gap-x-6 px-5 mt-10'>
             {displayedProducts.length > 0 ? (
-              displayedProducts.map((product) => (
-                <AnimatedContent
-                  key={product.id}
-                  className=''
-                  distance={80}
-                  direction="vertical"
-                  reverse={false}
-                  config={{ tension: 80, friction: 20 }}
-                  initialOpacity={0}
-                  animateOpacity
-                  scale={1.1}
-                  threshold={0.2}
-                  delay={500}>
-                  <Link href={`/projects/${product.id}`} target='_parent'>
-                    <Card data={product} 
-                    textClassName='text-xs'/>
-                  </Link></AnimatedContent>
+              displayedProducts.map((product, index) => (
+                <div id={index === 0 ? "first-card" : undefined} key={product.id}>
+                  <AnimatedContent
+                    key={product.id}
+                    className=''
+                    distance={80}
+                    direction="vertical"
+                    reverse={false}
+                    config={{ tension: 80, friction: 20 }}
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={1.1}
+                    threshold={0.2}
+                    delay={500}>
+                    <Link href={`/projects/${product.id}`} target='_parent'>
+                      <Card data={product}
+                        textClassName='text-xs' />
+                    </Link></AnimatedContent>
+                </div>
               ))
             ) : (
               <p className="md:col-2 text-center text-red-500 py-10">ไม่พบข้อมูลที่ตรงกับ "{searchTerm}"</p>
@@ -185,7 +262,16 @@ export default function ArtPro() {
             sortedDatas.length > 6 && (
               <div className="text-center my-5  hover:text-blue-500">
                 <button
-                  onClick={() => setShowAll(!showAll)}
+                  onClick={() => {
+                    const wasShowingAll = showAll;     // เก็บค่าเดิมไว้ก่อน
+                    setShowAll(prev => !prev);
+
+                    // เลื่อนขึ้นเฉพาะตอนที่ปุ่มกำลังแสดง "แสดงน้อยลง" (showAll === true)
+                    if (wasShowingAll) {
+                      // รอ React อัปเดต DOM ก่อนแล้วค่อยเลื่อน
+                      requestAnimationFrame(() => requestAnimationFrame(scrollToFirstCard));
+                    }
+                  }}
                   className="bg-[#0000] outline-[#FFFFF] cursor-pointer outline-2 text-[#FFFFF] px-4 py-4 rounded-full">
                   {showAll ? "แสดงน้อยลง" : "ดูเพิ่มเติม"}
                 </button>

@@ -15,7 +15,7 @@ export const TagColorMap = [{
         "Visual Effect": "outline-sky-500",
         "Camera Man": "outline-teal-500",
         "Photography": "outline-rose-500",
-        "AI": "outline-orange-500",
+        "Ganerative AI": "outline-orange-500",
         "Animation": "outline-fuchsia-500",
         "Web Design": "outline-lime-500",
     },
@@ -69,7 +69,9 @@ export default function Card({
                         <h6 className='text-[10px] '>{data.date}</h6>
                     </div>
                     {data.tag &&
-                        Object.values(data.tag).map((tagName, index) => (
+                        Object.values(data.tag)
+                        .sort((a, b) => a.localeCompare(b))
+                        .map((tagName, index) => (
                             <li key={index}>
                                 <h6 className={`${textClassName} max-w-auto p-2 px-2 rounded-xl outline-2 ${tagColorMap[tagName] || " outline-gray-300"}`}>
                                     {tagName}

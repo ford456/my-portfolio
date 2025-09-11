@@ -485,7 +485,7 @@ const ProjectDatas = [
         tag: {
 
             tag1: "Graphic Design",
-            tag2: "AI",
+            tag2: "Ganerative AI",
 
 
         },
