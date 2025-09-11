@@ -8,6 +8,7 @@ import Particles from "../components/Particles";
 import { Analytics } from '@vercel/analytics/react';
 
 
+
 const ibmPlexSansThai = IBM_Plex_Sans_Thai({
   weight: ["400"],
   variable: "--font-geist-sans",
@@ -55,6 +56,67 @@ export const Viewport = {
     initialScale: 1.0,
     maximumScale: 1.0,
   };
+
+export const revalidate = 3600; // revalidate this page every hour
+
+
+export const fetchCache = 'force-no-store'; // this page will not be cached and will always fetch fresh data
+
+export const dynamicParams = true; // this page does not support dynamic route segments
+
+export const preferredRegion = 'auto'; // this page can be rendered in any region
+
+export const unstable_allowDynamic = [
+  '/components/NavBar',
+  '/components/Footer',
+  '/components/Particles',
+];
+
+export const unstable_allowDynamicGlobs = [
+  '/components/*',
+];
+
+export const unstable_cache = 'no-store'; // this page will not be cached and will always fetch fresh data 
+
+export const unstable_revalidate = 3600; // revalidate this page every hour
+
+export const unstable_runtimeJS = false; // this page will not include runtime JavaScript
+
+export const unstable_isr = false; // this page does not support Incremental Static Regeneration
+
+export const unstable_preload = true; // this page will be preloaded for better performance
+
+export const unstable_prefetch = true; // this page will be prefetched for better performance
+
+export const unstable_static = false; // this page is not static and will be dynamically rendered
+
+export const unstable_staticParams = []; // this page does not have any static params
+
+export const unstable_staticPaths = []; // this page does not have any static paths
+
+export const unstable_staticProps = {}; // this page does not have any static props
+
+export const unstable_staticPropsGlobs = []; // this page does not have any static props globs
+
+export const unstable_staticPropsPaths = []; // this page does not have any static props paths
+
+export const unstable_staticPropsParams = []; // this page does not have any static props params
+
+export const unstable_staticPropsParamsGlobs = []; // this page does not have any static props params globs
+
+export const unstable_staticPropsParamsPaths = []; // this page does not have any static props params paths
+
+export const unstable_staticPropsParamsPathsGlobs = []; // this page does not have any static props params paths globs
+
+export const unstable_staticPropsParamsPathsGlobsCache = 'no-store'; // this page will not be cached and will always fetch fresh data
+
+export const unstable_staticPropsParamsPathsGlobsRevalidate = 3600; // revalidate this page every hour
+
+export const unstable_staticPropsParamsPathsGlobsRuntime = 'edge'; // this page will be rendered at the edge for better performance
+
+export const unstable_staticPropsParamsPathsGlobsPreferredRegion = 'auto'; // this page can be rendered in any region 
+
+export const unstable_staticPropsParamsPathsGlobsDynamic = 'force-dynamic'; // this page will be dynamically rendered at runtime
 
 export default function RootLayout({ children }) {
 
