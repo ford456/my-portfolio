@@ -22,8 +22,13 @@ const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
 
 export const metadata = {
   title: "Patcharadol | Portfolio",
-  description: "Patcharadol Portfolio Website",
-  icons: { shortcut: "/PortLogoWhite.svg" },
+  description: "Patcharadol Portfolio Website for Graphic Designer, Motion Designer, 3D Modeler and Web Developer Freelance",
+  icons: { 
+    icon: "/PortLogoWhite.svg",
+    shortcut: "/PortLogoWhite.svg",
+    apple: "/PortLogoWhite.svg",
+    other: { rel: "apple-touch-icon", url: "/PortLogoWhite.svg" }
+  },
   keywords: [
     "Patcharadol",
     "Portfolio",
@@ -34,13 +39,22 @@ export const metadata = {
     "3D Artist",
     "3D Modeler","Freelance",],
   authors: [{ name: "Patcharadol", url: "https://patcharadol-portfolio.vercel.app" }],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
+  creator: "Patcharadol",
+  publisher: "Patcharadol",
+  openGraph: {
+    title: "Patcharadol | Portfolio",
+    description: "Patcharadol Portfolio Website for Graphic Designer, Motion Designer, 3D Modeler and Web Developer Freelance",
+    url: "https://patcharadol-portfolio.vercel.app",
+    siteName: "Patcharadol Portfolio",},
 };
 
-
+export const Viewport = {
+  
+    themeColor: 'black',
+    width: 'device-width',
+    initialScale: 1.0,
+    maximumScale: 1.0,
+  };
 
 export default function RootLayout({ children }) {
 
