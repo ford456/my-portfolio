@@ -999,7 +999,7 @@ const ProjectDatas = [
 
 
         },
-        date: "22/04/2025",
+        date: "28/08/2025",
         /*content: (
             <div className=''>
                 <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
