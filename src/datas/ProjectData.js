@@ -941,5 +941,41 @@ const ProjectDatas = [
         //     </div>
         // )
     },
+    {
+        id: "28",
+        title: "All in Design | 3D Exhibition",
+        description: "การออกแบบผังนิทรรศการรุปแบบ 3D โดยใช้โปนแกรม Blender ในการขึ้นโครงสร้างจัดการวางแผนผังสำหรับจัดงาน เพื่อให้สามารถมองเห็นภาพรวมของงานและสามารถนำไปเป็นสื่อแบบประชาสัมพันธ์ในรูปแบบต่างๆ ได้อย่างมีประสิทธิภาพ",
+        img1: "https://img5.pic.in.th/file/secure-sv1/Allin02.png",
+        
+        tag: {
+            tag1: "3D Modeling",
+            
+
+        },
+        skill: {
+            skill1: "Blender",
+
+        },
+        date: "18/03/2025",
+        content: (
+            <div className=''>
+                <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
+
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
+                    
+                <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/COlSUSWI9Bw?si=y6CrXllcAJx7eqOk" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+                </div>
+                
+                
+            </div>)
+        // content: (
+        //     <div className='grid grid-cols-3 gap-5 px-5'>
+        //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
+        //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
+                
+
+        //     </div>
+        // )
+    },
 ]
 export default ProjectDatas
