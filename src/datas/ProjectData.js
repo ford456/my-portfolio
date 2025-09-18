@@ -92,7 +92,12 @@ const ProjectDatas = [
         date: "05/02/2025",
         content: (
             <div>
-                <h3 className='text-4xl text-start font-bold pb-5'>Website</h3>
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip my-8'>
+                    
+                <iframe className="w-full h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[320px]" title="wonder" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/34f9427a9035409dbd29404c5cd6a108/embed?autospin=1&autostart=1&camera=0&ui_theme=dark"> </iframe>
+                </div>
+                
+                <h3 className='text-4xl text-start font-bold py-5'>Website</h3>
                 <hr />
                 <div className=''>
                     <Link href="https://skfb.ly/p9t7s" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'> <span className=' text-blue-400'>P_name_F</span> apple - Download Free 3D model by P_name_F (@PnameF) </Link>
