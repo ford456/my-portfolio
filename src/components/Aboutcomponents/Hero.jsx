@@ -22,7 +22,7 @@ export default function HeroAbout() {
             <div className='relative flex flex-row sm:right-0 md:right-15 lg:right-0 2xl:right-5 items-center justify-center md:justify-end lg:justify-center 2xl:justify-end h-full mx-auto px-5'>
                 {/* รูปภาพด้านซ้าย */}
                 <div className='absolute  -top-20 lg:left-100 lg:top-80 md:-left-40 md:-top-60 max-h-[300px] sm:max-h-[400px] md:max-h-[660px] lg:max-h-[600px] lg:scale-500 md:scale-40 md:transform md:translate-y-0 lg:transform lg:-translate-y-1/2 opacity-35 md:opacity-70 lg:opacity-35 2xl:opacity-70 overflow-clip'>
-                    <img src='/mypic.png' alt='mypic' className=' h-auto  lg:max-h-[100px] lg:w-auto' />
+                    <img src='https://img2.pic.in.th/pic/mypic.png' alt='mypic' className=' h-auto  lg:max-h-[100px] lg:w-auto' />
                 </div>
                 <div className='flex flex-col gap-x-2 justify-items-start z-10 2xl:mr-10' >
                     <AnimatedContent
