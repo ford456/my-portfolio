@@ -966,12 +966,15 @@ const ProjectDatas = [
             <div className=''>
                 <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
 
-                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip my-8'>
                     
                 <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/COlSUSWI9Bw?si=y6CrXllcAJx7eqOk" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                 </div>
                 
-                
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip my-8'>
+                    
+                <iframe className="w-full h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[500px]" title="wonder" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/6098f16c170a4d038cf8d4d628b023a0/embed?autostart=1&preload=1&dnt=1&camera=0&transparent=1"> </iframe>
+                </div>
             </div>)
         // content: (
         //     <div className='grid grid-cols-3 gap-5 px-5'>
