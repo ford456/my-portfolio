@@ -945,7 +945,7 @@ const ProjectDatas = [
         id: "28",
         title: "All in Design | 3D Exhibition",
         description: "การออกแบบผังนิทรรศการรุปแบบ 3D โดยใช้โปนแกรม Blender ในการขึ้นโครงสร้างจัดการวางแผนผังสำหรับจัดงาน เพื่อให้สามารถมองเห็นภาพรวมของงานและสามารถนำไปเป็นสื่อแบบประชาสัมพันธ์ในรูปแบบต่างๆ ได้อย่างมีประสิทธิภาพ",
-        img1: "https://img5.pic.in.th/file/secure-sv1/Allin02.png",
+        img1: "https://img2.pic.in.th/pic/Allin.png",
         
         tag: {
             tag1: "3D Modeling",
