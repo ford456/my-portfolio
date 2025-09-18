@@ -977,5 +977,39 @@ const ProjectDatas = [
         //     </div>
         // )
     },
+    {
+        id: "29",
+        title: "Stand-up Pouch dried orange Product Banner Design",
+        description: "เป็นผลงานการออกแบบแบนเนอร์ผลิตภัณฑ์อาหารอบแห้งจากส้ม โดยใช้โปรแกรม Adobe Illustrator และ Adobe Photoshop ในการออกแบบและจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความสอดคล้องกับผลิตภัณฑ์ และยังออกแบบบรรจุภัณฑ์ Stand-up Pouch ในรูปแบบ 3D Mockup เพื่อให้เห็นภาพรวมของผลิตภัณฑ์ได้อย่างชัดเจน",
+        img1: "https://img5.pic.in.th/file/secure-sv1/Poster-FB-mockup.md.png",
+
+        tag: {
+
+            tag1: "Graphic Design",
+            tag2: "Brand Design",
+
+
+        },
+        skill: {
+            skill1: "Adobe Illustrator",
+            skill2: "Adobe Photoshop",
+            
+
+
+
+
+        },
+        date: "22/04/2025",
+        /*content: (
+            <div className=''>
+                <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
+
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
+                    
+                <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/JTlNCjkpKBk?si=rxag8v-Mnp6cPNkp" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+                </div>
+            </div>
+        )*/
+    },
 ]
 export default ProjectDatas
