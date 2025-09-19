@@ -906,6 +906,7 @@ const ProjectDatas = [
         tag: {
             tag1: "3D Modeling",
             tag2: "Animation",
+            tag3: "Video editor",
 
         },
         skill: {
@@ -954,6 +955,7 @@ const ProjectDatas = [
         
         tag: {
             tag1: "3D Modeling",
+            tag2: "Video editor",
             
 
         },
