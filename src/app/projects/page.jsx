@@ -122,7 +122,7 @@ export default function ArtPro() {
   {/*const sortedSkill = searchedProducts.slice().sort((a, b) => a.skill.localeCompare(b.skill)); //// เรียงข้อมูลตามชื่อ*/ }
 
   // 🔹 แสดง 6 ชิ้นแรก ถ้า showAll เป็น false
-  const displayedProducts = showAll ? sortedDatas : sortedDatas.slice(0, 6);
+  const displayedProducts = showAll ? sortedDatas : sortedDatas.slice(0, 9);
 
   const tagBtnBase =
     "text-xs lg:text-sm px-4 py-2 rounded-full border border-2 lg:border-3 transition-all duration-200 ease-out transform will-change-[transform,opacity]";
@@ -259,7 +259,7 @@ export default function ArtPro() {
 
           {/* 🔻 ปุ่มดูเพิ่มเติม / แสดงน้อยลง */}
           {
-            sortedDatas.length > 6 && (
+            sortedDatas.length > 9 && (
               <div className="text-center my-5  hover:text-blue-500">
                 <button
                   onClick={() => {
