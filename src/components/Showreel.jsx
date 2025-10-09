@@ -35,7 +35,7 @@ export default function Showreel() {
                             threshold={0.2}
                             delay={300}>
                             <iframe className='rounded-3xl max-w-[560px] max-h-[315px] md:max-w-[625px] md:max-h-[352px] lg:w-1280 lg:h-720 '
-                                src="https://www.youtube.com/embed/guq4w89fy5A?si=xNvN5Kye_CxBh2xT" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+                                src="https://www.youtube.com/embed/fDwcXvyimLU?si=4cgotUUzdu-IFjGO" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                         </AnimatedContent>
                     </div>
                     <div className=' flex flex-col px-5 overflow-clip '>
