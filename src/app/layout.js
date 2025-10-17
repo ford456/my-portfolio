@@ -128,7 +128,7 @@ export default function RootLayout({ children }) {
       >
         
         <NavBar />
-        <img src="/PortLogoWhite.svg" alt="Logo" className='flex fixed mt-5 opacity-80 h-12 w-12 right-5 md:left-10 z-90' />
+        
         <div style={{ width: '100%', height: '100%', position: 'fixed', zIndex: -1 }} >
           <Particles
             particleColors={['#ffffff', '#ffffff']}

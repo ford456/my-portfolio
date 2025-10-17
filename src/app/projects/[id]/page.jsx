@@ -55,7 +55,7 @@ export default function Details({ params }) {
     }, []);
     return (
 
-        <div className="container mx-auto p-5 md:p-20 max-w-[1320px] pt-25">
+        <div className="relative mx-auto p-5 md:p-20 max-w-[1320px] pt-25">
             <AnimatedContent
                 className=''
                 distance={80}
@@ -67,7 +67,7 @@ export default function Details({ params }) {
                 scale={1}
                 threshold={0.2}
                 delay={300}>
-                <h1 className="cursor-default text-lg md:text-3xl font-medium mb-5 md:mx-2 indent-15 whitespace-pre-line">{product.title}</h1></AnimatedContent>
+                <h1 className="cursor-default text-lg md:text-3xl font-medium mb-5 md:mx-2 indent-15 whitespace-pre-line md:pt-15">{product.title}</h1></AnimatedContent>
 
             <AnimatedContent
                 className=''
