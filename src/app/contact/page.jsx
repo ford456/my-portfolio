@@ -196,7 +196,7 @@ export default  function Page() {
 
             <ul className='flex flex-row gap-3'>
               <li><a href="https://www.facebook.com/Fxrd.dd/" target='_blank' ><FaFacebook className="text-xl" /></a></li>
-              <li><a href="https://www.instagram.com/lumi_nxus" target='_blank' ><FaInstagram className="text-2xl" /></a></li>
+              <li><a href="https://www.instagram.com/friendaly.stu" target='_blank' ><FaInstagram className="text-2xl" /></a></li>
 
             </ul>
           </div>
