@@ -10,8 +10,11 @@ import Link from 'next/link';
 export default function HomeBanner() {
     return (
         <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>
-            <div className='bg-[url(https://img5.pic.in.th/file/secure-sv1/Home-Bannera1931523a74c5f18.jpg)] bg-center bg-cover min-h-[280px] sm:h-[400px] lg:h-[700px] max-w-auto px-3 sm:px-3 lg:px-10 pt-20 lg:pt-5 relative overflow-clip'>
+            <div className='pt-10 lg:pt-5'>
+                <div className='bg-[url(https://img5.pic.in.th/file/secure-sv1/Home-Bannera1931523a74c5f18.jpg)] bg-center bg-cover min-h-[280px] sm:h-[400px] lg:h-[700px] max-w-auto px-3 sm:px-3 lg:px-10 pt-20 lg:pt-5 relative overflow-clip '>
+                </div>
             </div>
+
         </Link>
 
         // <div className='cursor-default bg-linear-to-bl from-blue-800/55 to-black/55 h-[300px] lg:h-[700px] max-w-auto  px-3 sm:px-3 lg:px-10 pt-20 lg:pt-5 relative overflow-clip'>

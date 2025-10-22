@@ -7,8 +7,8 @@ import AnimatedContent from './AnimatedContent';
 
 export default function Skills() {
     return (
-        <header className=' w-auto min-h-[400px] h-auto  py-10 overflow-clip relative'>
-            <div className='bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] bg-top bg-cover h-20 lg:h-70 '></div>
+        <header className=' w-auto min-h-[500px] h-auto  py-10 overflow-clip relative'>
+            <div className='bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] bg-top bg-cover h-20 sm:h-40 md:h-50 lg:h-70 '></div>
             <AnimatedContent
                 distance={150}
                 direction="vertical"
@@ -26,7 +26,7 @@ export default function Skills() {
                     </div>
                     <div className='flex flex-col text-sm sm:text-lg lg:text-xl gap-y-5 lg:pt-10 '>
                         <h2 className='text-base indent-8'><span className='text-2xl'>I'm </span> a graphic designer, motion graphic designer and video editor based in Bangkok, Thailand. Creative and detail-oriented designer with nearly one year of experience in graphic design, motion graphics, and video editing. Skilled in teamwork, time management, and producing innovative visuals that enhance communication and drive sales performance. Open to new challenges, a fast learner, and committed to continuous professional growth.</h2>
-                        <div className='grid grid-cols-2  md:grid md:grid-cols-2 gap-5 lg:gap-x-10 pt-5 items-center'>
+                        <div className='grid grid-cols-2  lg:grid lg:grid-cols-2 gap-5 lg:gap-x-10 pt-5 items-center'>
                             {SkillData.map(item => (
                                 <div
                                     key={item.id}
@@ -42,7 +42,7 @@ export default function Skills() {
                                         <ProgressBar
                                             progress={item.quality}
                                             level={item.level}
-                                            className='w-20 h-4 md:w-50 md:h-4'
+                                            className='w-20 h-4 lg:w-50 lg:h-4'
                                             FontZise='text-[10px] md:text-xs '
                                         />
                                     </ul>

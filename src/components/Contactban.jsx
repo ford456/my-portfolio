@@ -76,11 +76,11 @@ export default  function Page() {
   // grid grid-cols-1 md:grid-cols-2
 
   return (
-    <main className="bg-none w-full h-[500px] lg:h-screen flex justify-center items-center px-10 py-10 overflow-clip">
-      <div className="grid grid-cols-1  xl:grid-cols-2 xl:gap-4 2xl:px-10 items-center">
-        <div className="flex flex-col  items-center justify-center scale-90">
+    <main className=" relative bg-none w-full min-h-[500px] lg:h-screen flex justify-center items-center px-10 py-10 overflow-clip">
+      <div className=" static grid grid-cols-1  xl:grid-cols-2 xl:gap-4 2xl:px-10 items-center">
+        <div className="flex flex-col static items-center justify-center scale-90">
           <AnimatedContent
-            className=''
+            className='inline-block py-3'
             distance={80}
             direction="horizontal"
             reverse={true}
@@ -190,7 +190,7 @@ export default  function Page() {
           scale={1.1}
           threshold={0.2}
           delay={300}>
-          <div className='hidden 2xl:flex 2xl:flex-col overflow-clip justify-center items-center'>
+          <div className='hidden xl:flex xl:flex-col overflow-clip justify-center items-center'>
 
             <img src="https://img5.pic.in.th/file/secure-sv1/e8be85d91ee07dc1d024b719f7bc12cb.png" alt="mypic" className=' rounded-full max-h-120 mb-5' />
 
