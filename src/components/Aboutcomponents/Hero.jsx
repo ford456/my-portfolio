@@ -18,13 +18,14 @@ export default function HeroAbout() {
     ]
 
     return (
-        <div className='cursor-default bg-linear-to-bl from-blue-800/55 to-black/55 h-[300px] lg:h-[700px] max-w-auto  px-3 sm:px-3 lg:px-10 pt-20 lg:pt-5 relative overflow-clip'>
-            <div className='relative flex flex-row sm:right-0 md:right-15 lg:right-0 2xl:right-5 items-center justify-center md:justify-end lg:justify-center 2xl:justify-end h-full mx-auto px-5'>
-                {/* รูปภาพด้านซ้าย */}
-                <div className='absolute  -top-20 lg:left-100 lg:top-80 md:-left-40 md:-top-60 max-h-[300px] sm:max-h-[400px] md:max-h-[660px] lg:max-h-[600px] lg:scale-500 md:scale-40 md:transform md:translate-y-0 lg:transform lg:-translate-y-1/2 opacity-35 md:opacity-70 lg:opacity-35 2xl:opacity-70 overflow-clip'>
-                    <img src='https://img2.pic.in.th/pic/mypic.png' alt='mypic' className=' h-auto  lg:max-h-[100px] lg:w-auto' />
+        <div className='cursor-default flex sm:grid sm:grid-cols-2 h-[200px] sm:h-[300] lg:h-[700px] max-w-auto  px-3 sm:px-3 lg:px-10 pt-20 lg:pt-5 relative ml-5 items-center justify-items-center overflow-clip'>
+            {/* รูปภาพด้านซ้าย */}
+                <div className=''>
+                    <img src='https://img5.pic.in.th/file/secure-sv1/e8be85d91ee07dc1d024b719f7bc12cb.png' alt='mypic' className=' h-auto w-[100px] sm:w-[200] sm:max-h-[600px] lg:w-auto' />
                 </div>
-                <div className='flex flex-col gap-x-2 justify-items-start z-10 2xl:mr-10' >
+            <div className='relative flex flex-row justify-items-start items-center h-full'>
+                
+                <div className='flex flex-col gap-x-2 2xl:mr-10 scale-75 sm:scale-90 lg:scale-100' >
                     <AnimatedContent
                         className=''
                         distance={80}
@@ -51,7 +52,7 @@ export default function HeroAbout() {
                     delay={300}>
                       <TypewriterEffectSmooth
                         words={words}
-                        className='text-blue-400 text-2xl lg:text-5xl 2xl:text-6xl leading-0.5 lg:leading-none'
+                        className='text-blue-400 text-lg lg:text-5xl 2xl:text-6xl leading-0.5 lg:leading-none'
                         cursorClassName=' bg-yellow-500 w-[4px] mt-1 lg:mt-3 2xl:mt-5 h-5 lg:h-12'
                     />  
                     </AnimatedContent>
@@ -68,7 +69,7 @@ export default function HeroAbout() {
                         scale={1}
                         threshold={0.2}
                         delay={3000}>
-                        <h2 className='text-blue-50/50 text-[10px] lg:text-lg 2xl:text-xl ' >Graphic Designer | Motion Graphic Designer | 3D Modeling Designer</h2>
+                        <h2 className=' text-[10px] lg:text-lg 2xl:text-xl ' >Graphic Designer | Motion Graphic Designer | 3D Modeling Designer</h2>
                     </AnimatedContent>
                 </div>
             </div>

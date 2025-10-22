@@ -28,7 +28,7 @@ export default function HomeHeader() {
   }, []);
 
   return (
-    <header className='bg-linear-to-b from-black to-black/0 ax-w-auto min-h-[400px] h-auto pt-10 py-10 overflow-clip'>
+    <header className='bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] w-auto min-h-[400px] h-auto pt-10 py-10 overflow-clip'>
       <AnimatedContent
         distance={150}
         direction="vertical"
@@ -41,7 +41,7 @@ export default function HomeHeader() {
         delay={300}
       >
 
-        <div className='container justify-center mx-auto px-5 p-5 pt-3 md:pt-0'>
+        <div className='container lg:scale-75 justify-center mx-auto px-5 p-5 pt-3 md:pt-0'>
 
           <h1 className='text-2xl md:text-4xl font-semibold text-center lg:pr-8 pt-4'>
             My <span className='text-blue-500'>Skills</span>
@@ -77,9 +77,9 @@ export default function HomeHeader() {
                 colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                 animationSpeed={3}
                 showBorder={true}
-                className="max-h-[400px]  lg:mt-15 lg:mr-5 2xl:mr-20 2xl:right-5"
+                className="max-h-[400px] bg-none lg:mt-15 lg:mr-5 2xl:mr-20 2xl:right-5"
               >
-                <div className=' container flex flex-col bg-none outline-2 outline-offset-4 md:max-h-[600px] lg:h-[400px] max-w-[300px] rounded-4xl p-5 mx-auto my-10 lg:my-10 2xl:m-10 justify-center items-center' >
+                <div className=' container flex flex-col outline-2 outline-offset-4 md:max-h-[600px] lg:h-[400px] max-w-[300px] rounded-4xl p-5 mx-auto my-10 lg:my-10 2xl:m-10 justify-center items-center' >
                   <div className='pr-0 2xl:pr-0 '>
                     <div className='text-2xl lg:text-3xl 2xl:text-4xl text-center'>
                       <h2>Less than <br /><span className='text-4xl lg:text-7xl 2xl:text-8xl font-bold'>1</span> <br />Year <br />Experience Working, but eager to learn.</h2>

@@ -93,7 +93,7 @@ export default function Details({ params }) {
                     {/* แสดงวันที่สร้างผลงาน */}
                     <div className="flex flex-row items-center gap-2 mt-2 md:mt-0">
                         <MdOutlineDateRange className=' size-6' />
-                        <h6 className="cursor-default text-gray-100 text-md md:text-xl  text-justify "  > {product.date}</h6>
+                        <h6 className="cursor-default  text-md md:text-xl  text-justify "  > {product.date}</h6>
                     </div>
 
                 </ul></AnimatedContent>
@@ -146,7 +146,7 @@ export default function Details({ params }) {
                 scale={1}
                 threshold={0.2}
                 delay={300}>
-                <h6 className="cursor-default text-gray-300 text-md md:text-xl my-10 indent-15 text-justify whitespace-pre-line hyphens-auto" lang="th" >{product.description}</h6>
+                <h6 className="cursor-default  text-md md:text-xl my-10 indent-15 text-justify whitespace-pre-line hyphens-auto" lang="th" >{product.description}</h6>
             </AnimatedContent>
             <AnimatedContent
                 className=''
@@ -178,7 +178,7 @@ export default function Details({ params }) {
                     {product.skill &&
                         Object.values(product.skill).sort((a, b) => a.localeCompare(b)).map((skillName, index) => (
                             <li key={index}>
-                                <h6 className={`max-w-auto p-2 px-2 rounded-xl outline-2 ${skillColorMap[skillName] || " outline-gray-300"}`}>
+                                <h6 className={`max-w-auto p-2 px-2 rounded-xl outline-2 ${skillColorMap[skillName] || " outline-black"}`}>
                                     {skillName}
                                 </h6>
 
@@ -188,7 +188,7 @@ export default function Details({ params }) {
             </AnimatedContent>
             {/* ปุ่มกลับ */}
             <div className='flex flex-row justify-center items-center  '>
-                <Link href={`/projects`} className=" mt-6 hover:bg-blue-600 hover:outline-0 px-4 py-2 rounded-md outline-2 text-white ">Go Back</Link>
+                <Link href={`/projects`} className=" mt-6 hover:bg-blue-600 hover:outline-0 px-4 py-2 rounded-md outline-2 text-gray-700 hover:text-white ">Go Back</Link>
             </div>
 
         </div>

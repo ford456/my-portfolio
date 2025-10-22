@@ -9,20 +9,20 @@ export const ExperiencesData = [
     content: (
       <div>
         <p
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           Motion Graphics | 4 month
         </p>
         <p
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          className=" text-xs md:text-sm font-normal mb-8">
           พฤษภาคม - สิงหาคม 2568
         </p>
         
         <li
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           ออกแบบและจัดทำสื่อภาพเคลื่อนไหว (motion graphic) โดยพัฒนาจากผลงาน Artwork ที่จัดทำโดยฝ่าย Graphic designer พร้อมทั้งดำเนินการปรับขนาดสื่อ (Resize) ให้เหมาะสมกับสัดส่วนและความละเอียดของจอ LED หลากหลายรูปแบบที่ใช้ในการนำเสนอผลงาน
         </li>
         <li
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           รับผิดชอบดูแลการอัปโหลดและจัดเรียงสื่อภาพเข้าสู่ระบบควบคุมการแสดงผล เพื่อให้การนำเสนอผ่านจอ LED เป็นไปอย่างมีประสิทธิภาพ
         </li>
         
@@ -61,27 +61,27 @@ export const ExperiencesData = [
     content: (
       <div>
         <p
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           Motion Graphics | 4 month
         </p>
         <p
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          className=" text-xs md:text-sm font-normal mb-8">
           2567 - 2568
         </p>
         <li
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           Key Visual on Stage Event
         </li>
         <li
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           Motion Logo
         </li>
         <li
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           Motion Game
         </li>
         <div
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8 mt-5 flex flex-col gap-2">
+          className=" text-xs md:text-sm font-normal mb-8 mt-5 flex flex-col gap-2">
           <h1 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal ">
             Contact:
             </h1>
@@ -150,23 +150,23 @@ export const ExperiencesData = [
     content: (
       <div>
         <p
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           ฝ่ายแผนงานนิทรรศการ และฝ่ายสื่อสารองค์กร | 4 month
         </p>
         <p
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          className=" text-xs md:text-sm font-normal mb-8">
           มิถุนายน - กันยายน 2567
         </p>
         <li
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           วางแผนการจัดนิทรรศการ แก้ไขปัญหาต่าง ๆ
         </li>
         <li
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
+          className=" text-xs md:text-sm font-normal ">
           ช่วยออกแบบสื่อประชาสัมพันธ์ต่าง ๆ
         </li>
         <li
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          className=" text-xs md:text-sm font-normal mb-8">
           ออกแบบเว็บไซต์นิทรรศการ
         </li>
         <div className="grid grid-cols-1 lg:grid  lg:grid-cols-2 gap-4">

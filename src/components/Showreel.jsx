@@ -4,7 +4,7 @@ import AnimatedContent from './AnimatedContent'
 
 export default function Showreel() {
     return (
-        <div className='relative bg-none h-auto w-full py-15   max-w-[92.5rem] max-w-auto'>
+        <div className='relative bg-none h-auto w-full lg:py-15  max-w-[92.5rem] max-w-auto'>
             <div className=' flex flex-col items-center justify-center mx-auto'>
                 <div className='2xl:hidden flex '>
                     <AnimatedContent
@@ -76,11 +76,11 @@ export default function Showreel() {
                             scale={1.1}
                             threshold={0.2}
                             delay={300}>
-                            <ul className='text-center lg:text-start pt-10'>
+                            <ul className='text-center text-white lg:text-start pt-10'>
                                 <button className="bg-blue-500 p-3 px-5 rounded-full transition duration-300 hover:outline-2 outline-blue-500 outline-offset-0 hover:scale-110  hover:outline-blue-500 hover:outline-offset-4">
                                     <Link href={'/projects'} target='_parent'
                                     >
-                                        SHOW MY PROJECTS MORE
+                                        VIWE PROJECTS MORE
                                     </Link>
                                 </button>
 

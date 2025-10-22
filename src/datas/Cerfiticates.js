@@ -8,7 +8,7 @@ export const Cerfiticates = [
         title: "Certificate of Completion Complete Web & Mobile Designer",
         Content: (
             <div >
-                <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                <p className=" text-xs md:text-sm font-normal mb-8">
                     Complete Web & Mobile Designer: UX/UI, Figma, +more
                 </p>
                 <img
@@ -28,7 +28,7 @@ export const Cerfiticates = [
         title: "Generative AI และการใช้งาน ChatGPT เพื่อใช้ในการศึกษาค้นคว้า",
         Content: (
             <div  className="flex flex-col items-center">
-                <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8 indent-8">
+                <p className=" text-xs md:text-sm font-normal mb-8 indent-8">
                     รายวิชานี้มุ่งให้ผู้เรียนเข้าใจพื้นฐาน Generative AI และการใช้ ChatGPT อย่างเหมาะสมในงานวิชาการ พร้อมฝึกทักษะ prompt และวิเคราะห์ผลอย่างมีวิจารณญาณ
                 </p>
                 <img
@@ -48,7 +48,7 @@ export const Cerfiticates = [
         title: "Graphic Design Masterclass - Learn GREAT Design",
         Content: (
             <div className="flex flex-col items-center">
-                <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8 indent-8">
+                <p className=" text-xs md:text-sm font-normal mb-8 indent-8">
                     The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding, Logo Design
                 </p>
                 <img
@@ -68,7 +68,7 @@ export const Cerfiticates = [
         title: "UI/UX Design With Figma : 5+ Real World Projects",
         Content: (
             <div className="flex flex-col items-center">
-                <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8 indent-8">
+                <p className=" text-xs md:text-sm font-normal mb-8 indent-8">
                     Become a Designer in 2025! Learn how to use Figma to design beautiful mobile & web apps Learn-by-doing approach.
                 </p>
                 <img

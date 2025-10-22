@@ -148,9 +148,9 @@ export default function ArtPro() {
         <h1 className="text-7xl font-medium text-center p-3 pb-6 my-10" >Projects</h1>
         {/* 🔍 กล่องค้นหา */}
         <div className='flex flex-row justify-center items-center my-2'>
-          <IoSearch className='pointer-events-none relative left-8 text-xl fill-gray-400' />
+          <IoSearch className='pointer-events-none relative left-8 text-xl fill-black' />
           <input
-            className="static text-gray-300 w-[85%] h-[40px] border-2 border-gray-300 rounded-xl p-2 pl-10 focus:outline-[#c1788b] focus:outline-offset-2"
+            className="static text-black w-[85%] h-[40px] border-2 border-black rounded-xl p-2 pl-10 focus:outline-blue-400 focus:outline-offset-4"
             type="text"
             placeholder='ค้นหาด้วยชื่อผลงาน หรือประเภท หรือ Skills'
             value={searchTerm}
@@ -189,7 +189,7 @@ export default function ArtPro() {
                     className={`${tagBtnBase} ` +
                       (isActive
                         ? " text-blue-700 border-blue-700 opacity-100 scale-100 "
-                        : "bg-transparent border-white hover:text-blue-400 hover:border-blue-400 scale-95")
+                        : "bg-transparent border-black hover:text-blue-400 hover:border-blue-400 scale-95")
                     }
                     aria-pressed={isActive}
                   >
@@ -216,7 +216,7 @@ export default function ArtPro() {
                     className={`${tagBtnBase} ` +
                       (isActive
                         ? " text-pink-700 border-pink-700 opacity-100 scale-100 "
-                        : "bg-transparent border-white hover:text-pink-400 hover:border-pink-400 scale-95")
+                        : "bg-transparent border-black hover:text-pink-400 hover:border-pink-400 scale-95")
                     }
                     aria-pressed={isActive}
                   >

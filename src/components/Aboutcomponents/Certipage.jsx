@@ -18,7 +18,7 @@ export default function Certipage() {
   return (
     <div>
       {/* 🔸 แสดงสินค้า */}
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 px-5 md:px-20  bt-5'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 px-5 md:px-20'>
         {displayedProducts.length > 0 ? (
           displayedProducts.map((product) => (
             <AnimatedContent

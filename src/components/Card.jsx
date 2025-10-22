@@ -57,11 +57,11 @@ export default function Card({
                     src={data.img1}
                     alt={data.title}
                 />
-                <h3 className="text-[#FFFFF] text-start font-medium text-xl indent-8 pb-2 pt-6">
+                <h3 className="text-[#FFFFF] text-start font-medium text-xl indent-8 pb-2 pt-6 px-2">
                     {data.title}
                 </h3>
 
-<hr/>
+                <hr />
                 {/* 🔹 ดึง tag แบบ dynamic */}
                 <ul className="my-2 justify-start items-center px-2 flex flex-wrap md:flex text-sm md:flex-row gap-3">
                     <div className='flex flex-row items-center gap-1 py-3 pl-2'>
@@ -70,15 +70,15 @@ export default function Card({
                     </div>
                     {data.tag &&
                         Object.values(data.tag)
-                        .sort((a, b) => a.localeCompare(b))
-                        .map((tagName, index) => (
-                            <li key={index}>
-                                <h6 className={`${textClassName} max-w-auto p-2 px-2 rounded-xl outline-2 ${tagColorMap[tagName] || " outline-gray-300"}`}>
-                                    {tagName}
-                                </h6>
+                            .sort((a, b) => a.localeCompare(b))
+                            .map((tagName, index) => (
+                                <li key={index}>
+                                    <h6 className={`${textClassName} max-w-auto p-2 px-2 rounded-xl outline-2 ${tagColorMap[tagName] || " outline-gray-300"}`}>
+                                        {tagName}
+                                    </h6>
 
-                            </li>
-                        ))}
+                                </li>
+                            ))}
                 </ul>
             </div>
         </div>

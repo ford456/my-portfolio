@@ -41,11 +41,11 @@ export const Timeline = ({
             className="w-full md:px-10"
             ref={containerRef}>
             <div className="max-w-5xl mx-auto py-5 sm:py-20 px-4 md:px-8 lg:px-10">
-                <h2 className="text-lg md:text-4xl mb-4 font-bold text-white max-w-4xl">
+                <h2 className="text-lg md:text-4xl mb-4 font-bold  max-w-4xl">
                     Changelog from <br /><span className=" text-blue-500">my journey</span>
                 </h2>
                 <p
-                    className="text-neutral-700 dark:text-neutral-300 text-[10px] md:text-base max-w-sm">
+                    className=" text-[10px] md:text-base max-w-sm">
                     I&apos;ve been working on job and Internship for Less than 1 Year. Here&apos;s
                     a timeline of my journey.
                 </p>
@@ -56,7 +56,7 @@ export const Timeline = ({
                         <div
                             className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
                             <div
-                                className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
+                                className="h-10 absolute left-3 md:left-3 w-10 rounded-full flex items-center justify-center">
                                 <div className="absolute z-0  h-3 w-3 rounded-full animate-ping bg-sky-400 border border-blue-300 dark:border-b-blue-900 p-2" />
                                 <div
                                     className=" h-4 w-4 z-10 rounded-full bg-blue-500 border border-blue-300 dark:border-b-blue-900 p-2" />

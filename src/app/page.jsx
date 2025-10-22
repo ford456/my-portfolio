@@ -4,8 +4,9 @@ import Showreel from "../components/Showreel";
 import HomeBanner from "../components/HomeBanner";
 import HomeHeader from '../components/HomeHeader'
 import Aboutme from "../components/Aboutme";
-import Page from "./contact/page";
+import Page from "../components/Contactban";
 import { Suspense } from "react";
+import Skills from "../components/Skills";
 
 export default function Home() {
 
@@ -13,10 +14,13 @@ export default function Home() {
     <>
       
       <HomeBanner />
-      <Aboutme />
-      <HomeHeader />
+      <Skills/>
+      {/* <HomeHeader /> */}
       <Showreel />
-      <Page />
+      <div className="justify-center lg:m-20">
+      <Page/>
+      </div>
+      
 
 
     </>
