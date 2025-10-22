@@ -142,19 +142,9 @@ export default function AboutMe() {
                     </AnimatedContent>
                 </div>
                 <div className="bg-none  w-full p-3 col-span-2 overflow-clip">
-                    <AnimatedContent
-                        className=''
-                        distance={80}
-                        direction="horizontal"
-                        reverse={true}
-                        config={{ tension: 80, friction: 20 }}
-                        initialOpacity={0}
-                        animateOpacity
-                        scale={1}
-                        threshold={0.2}
-                        delay={300}>
+                    
                         <Experiences />
-                    </AnimatedContent>
+                    
                 </div>
                 <div className='bg-none 2xl:mt-10 w-full p-3 col-span-3 border-t-2 overflow-clip' >
                     <AnimatedContent
