@@ -440,13 +440,13 @@ const ProjectDatas = [
         date: "30/09/2022",
         content: (
             <div className=''>
-                <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
+                <h3 className='text-4xl text-center font-bold pb-5'> Video</h3>
 
                 <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
 
                     <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/5XKtcPqrRi0?si=ybfA-lCZ_i9gtB1B" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                 </div>
-                <h3 className='text-4xl text-center font-bold pb-10'> Behide Scene</h3>
+                <h3 className='text-4xl text-center font-bold pt-5 pb-5'> Behide Scene</h3>
 
                 <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
 
@@ -597,19 +597,19 @@ const ProjectDatas = [
         },
         date: "03/06/2024",
         content: (
-
-            <div>
-                <h2 className='cursor-default text-lg md:text-3xl font-medium mb-5 md:mx-2  whitespace-pre-line' >Social<span className='text-blue-500'> Media</span> </h2>
-                <hr />
-                <div className='mt-2 flex'>
-                    <h3>Instagram:</h3>
-                    <Link href="https://www.instagram.com/dmup.club/" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>ชมรม Design Me(dia)</Link>
-                </div>
-                <div className='mt-2 flex'>
-                    <h3>Facebook:</h3>
-                    <Link href="https://web.facebook.com/dmup.club" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>ชมรม Design Me(dia) มหาวิทยาลัยพะเยา</Link>
-                </div>
-            </div>
+            <div></div>
+            // <div>
+            //     <h2 className='cursor-default text-lg md:text-3xl font-medium mb-5 md:mx-2  whitespace-pre-line' >Social<span className='text-blue-500'> Media</span> </h2>
+            //     <hr />
+            //     <div className='mt-2 flex'>
+            //         <h3>Instagram:</h3>
+            //         <Link href="https://www.instagram.com/dmup.club/" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>ชมรม Design Me(dia)</Link>
+            //     </div>
+            //     <div className='mt-2 flex'>
+            //         <h3>Facebook:</h3>
+            //         <Link href="https://web.facebook.com/dmup.club" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>ชมรม Design Me(dia) มหาวิทยาลัยพะเยา</Link>
+            //     </div>
+            // </div>
 
             // <div className='grid grid-cols-3 gap-5 px-5'>
             //     <div className=' row-span-1 overflow-clip rounded-lg 2xl:rounded-3xl'>
