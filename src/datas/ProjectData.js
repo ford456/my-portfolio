@@ -10,7 +10,7 @@ const ProjectDatas = [
         img1: "/pj/img/all1.jpeg",
         img2: "",
         img3: "",
-        video:"",
+        video: "",
         tag: {
 
             tag1: "Font-end",
@@ -42,7 +42,7 @@ const ProjectDatas = [
 
         img2: "",
         img3: "",
-        video:"",
+        video: "",
         tag: {
 
             tag1: "Graphic Design",
@@ -60,7 +60,7 @@ const ProjectDatas = [
 
                 <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
                     <video className='w-full h-auto ' controls controlsList="nodownload"
-                                    disablePictureInPicture  src='/pj/VD/Vcat-fusion.mp4' />
+                        disablePictureInPicture src='/pj/VD/Vcat-fusion.mp4' />
 
                 </div>
                 <div className='pt-15 indent-36'>
@@ -78,7 +78,7 @@ const ProjectDatas = [
 
         img2: "",
         img3: "",
-        video:"",
+        video: "",
         tag: {
 
             tag1: "3D Modeling",
@@ -93,10 +93,10 @@ const ProjectDatas = [
         content: (
             <div>
                 <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip my-8'>
-                    
-                <iframe className="w-full h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[320px]" title="wonder" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/34f9427a9035409dbd29404c5cd6a108/embed?autospin=1&autostart=1&camera=0&ui_theme=dark"> </iframe>
+
+                    <iframe className="w-full h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[320px]" title="wonder" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/34f9427a9035409dbd29404c5cd6a108/embed?autospin=1&autostart=1&camera=0&ui_theme=dark"> </iframe>
                 </div>
-                
+
                 <h3 className='text-4xl text-start font-bold py-5'>Website</h3>
                 <hr />
                 <div className=''>
@@ -734,7 +734,7 @@ const ProjectDatas = [
         //     <div className='grid grid-cols-3 gap-5 px-5'>
         //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
         //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
-                
+
 
         //     </div>
         // )
@@ -758,7 +758,7 @@ const ProjectDatas = [
         //     <div className='grid grid-cols-3 gap-5 px-5'>
         //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
         //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
-                
+
 
         //     </div>
         // )
@@ -782,7 +782,7 @@ const ProjectDatas = [
         //     <div className='grid grid-cols-3 gap-5 px-5'>
         //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
         //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
-                
+
 
         //     </div>
         // )
@@ -806,7 +806,7 @@ const ProjectDatas = [
         //     <div className='grid grid-cols-3 gap-5 px-5'>
         //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
         //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
-                
+
 
         //     </div>
         // )
@@ -816,7 +816,7 @@ const ProjectDatas = [
         title: "Handa TheGolden Night 2025 ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Motion Graphic สำหรับงานปาร์ตี้หลังการสัมมนาเปิดตัวรถรุ่นใหม่ของฮอนด้า ซึ่งทางของบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด เป็น organizer ให้กับงานนี้ \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด และ Footage ต่างๆ จัดวางและตัดต่อให้เข้ากับเสียงเพลงที่จะใช้ในการแสดงโชว์เปิดตัวงานปาร์ตี้",
         img1: " /pj/img/Intern/Honda.jpg",
-        
+
         tag: {
             tag1: "Motion Graphic",
 
@@ -831,16 +831,16 @@ const ProjectDatas = [
                 <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
 
                 <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
-                    
-                <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/jJ9L6B_VFJk?si=CFyIv4ecm32fN42D" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+
+                    <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/jJ9L6B_VFJk?si=CFyIv4ecm32fN42D" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                 </div>
             </div>)
         // content: (
-        
+
         //     <div className='grid grid-cols-3 gap-5 px-5'>
         //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
         //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
-                
+
 
         //     </div>
         // )
@@ -865,7 +865,7 @@ const ProjectDatas = [
         //     <div className='grid grid-cols-3 gap-5 px-5'>
         //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
         //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
-                
+
 
         //     </div>
         // )
@@ -875,7 +875,7 @@ const ProjectDatas = [
         title: "Motion Graphic work at Maider co.,ltd",
         description: "ออกแบบและจัดทำสื่อภาพเคลื่อนไหว (motion graphic) โดยพัฒนาจากผลงาน Artwork ที่จัดทำโดยฝ่าย Graphic designer พร้อมทั้งดำเนินการปรับขนาดสื่อ (Resize) ให้เหมาะสมกับสัดส่วนและความละเอียดของจอ LED หลากหลายรูปแบบที่ใช้ในการนำเสนอผลงาน \n รับผิดชอบดูแลการอัปโหลดและจัดเรียงสื่อภาพเข้าสู่ระบบควบคุมการแสดงผล เพื่อให้การนำเสนอผ่านจอ LED เป็นไปอย่างมีประสิทธิภาพ",
         img1: "https://img5.pic.in.th/file/secure-sv1/Artboard-17d05cca56af391fc.png",
-        
+
         tag: {
             tag1: "Motion Graphic",
 
@@ -890,15 +890,15 @@ const ProjectDatas = [
                 <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
 
                 <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
-                    
-                <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/4bxnyiEwoSE?si=4wM-RMheGvcSRwQQ" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+
+                    <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/4bxnyiEwoSE?si=4wM-RMheGvcSRwQQ" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                 </div>
             </div>)
         // content: (
         //     <div className='grid grid-cols-3 gap-5 px-5'>
         //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
         //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
-                
+
 
         //     </div>
         // )
@@ -908,7 +908,7 @@ const ProjectDatas = [
         title: "Rose Advernture | 3D Animation sort film",
         description: "การออกแบบตัวละคร 3D Animation โดยใช้โปรแกรม Maya ในการสร้างโมเดลตัวละครและฉากต่างๆ รวมถึงการทำ Rigging เพื่อให้ตัวละครสามารถเคลื่อนไหวได้อย่างสมจริง จากนั้นจึงนำโมเดลที่ได้ไปทำการจัดแสง (Lighting) และการเรนเดอร์ (Rendering) เพื่อให้ได้ภาพที่มีคุณภาพสูงและเหมาะสมกับการนำเสนอในรูปแบบของสื่อดิจิทัล \n\n การสร้างสรรค์เรื่องราว (Storytelling) ที่น่าสนใจและมีความหมาย โดยเน้นการสื่อสารผ่านภาพและเสียง เพื่อให้ผู้ชมสามารถเข้าใจและรับรู้ถึงความรู้สึกที่ต้องการถ่ายทอดผ่านตัวละครและเหตุการณ์ต่างๆ ในเรื่องราวนั้นๆ",
         img1: "https://img2.pic.in.th/pic/Screenshot-2025-09-01-185509.png",
-        
+
         tag: {
             tag1: "3D Modeling",
             tag2: "Animation",
@@ -925,35 +925,35 @@ const ProjectDatas = [
                 <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
 
                 <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
-                    
-                <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/J5SjNjH8Wwk?si=KjIR_Bi9M9RafGiG" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+
+                    <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/J5SjNjH8Wwk?si=KjIR_Bi9M9RafGiG" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                 </div>
                 <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip mt-8'>
-                    
-                <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/jbW3sSjAAqw?si=xBuDXa5eslV8o1hA" title="YouTube video player"  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+
+                    <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/jbW3sSjAAqw?si=xBuDXa5eslV8o1hA" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                 </div>
                 <div className='flex flex-col sm:flex-row gap-4 px-5 mt-8'>
-                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip mt-8'>
-                    
-                <iframe className="w-fit h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[320px]" title="Rose" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/c89b893d51264ebdb45fd4a4b9a95332/embed?autospin=1&autostart=1&preload=1&dnt=1"> </iframe>
+                    <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip mt-8'>
+
+                        <iframe className="w-fit h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[320px]" title="Rose" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/c89b893d51264ebdb45fd4a4b9a95332/embed?autospin=1&autostart=1&preload=1&dnt=1"> </iframe>
+                    </div>
+                    <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip mt-8'>
+
+                        <iframe className="w-fit h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[320px]" title="wonder" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/b2e8a33aed21403ebec9e406055d3bc6/embed?autospin=1&autostart=1&preload=1&dnt=1"> </iframe>
+                    </div>
                 </div>
-                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip mt-8'>
-                    
-                <iframe className="w-fit h-[200px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[320px]" title="wonder" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/b2e8a33aed21403ebec9e406055d3bc6/embed?autospin=1&autostart=1&preload=1&dnt=1"> </iframe>
-                </div>
-                </div>
-                
+
             </div>)
         // content: (
         //     <div className='grid grid-cols-3 gap-5 px-5'>
         //         <div className='bg-none max-w-4xl mx-auto rounded-4xl overflow-clip'>
         //             <video className='w-full h-auto ' controls src='/pj/VD/.mp4' /></div>
-                
+
 
         //     </div>
         // )
     },
-    
+
     {
         id: "29",
         title: "Stand-up Pouch dried orange Product Banner Design",
@@ -970,7 +970,7 @@ const ProjectDatas = [
         skill: {
             skill1: "Adobe Illustrator",
             skill2: "Adobe Photoshop",
-            
+
 
 
 
@@ -987,6 +987,91 @@ const ProjectDatas = [
                 </div>
             </div>
         )*/
+    },
+
+    {
+        id: "30",
+        title: "Dancing with Ghosts [DEMO] | YouTube Thumbnail",
+        description: "เป็นผลงานการออกแบบภาพปกวิดีโอ YouTube Thumbnail สำหรับวิดีโอเกม Dancing with Ghosts [DEMO] โดยใช้โปรแกรม Adobe Illustrator และ Adobe Photoshop ในการออกแบบและจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและดึงดูดความสนใจของผู้ชม รวมถึงการตัดต่อคลิปวิดีโอสั้นๆ เพื่อใช้เป็นตัวอย่างในการโปรโมทวิดีโอเกมดังกล่าว",
+        img1: "https://img5.pic.in.th/file/secure-sv1/Dancing-with-Ghosts.jpg",
+
+        tag: {
+
+            tag1: "Graphic Design",
+            tag2: "Video Editor",
+
+
+
+        },
+        skill: {
+            skill1: "Adobe Illustrator",
+            skill2: "Adobe Photoshop",
+            skill3: "Adobe Premiere Pro",
+
+
+
+
+
+        },
+        date: "17/10/2025",
+        content: (
+            <div className=''>
+                <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
+
+                <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
+
+                    <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/7cv4TZ3HVJs?si=Fx0Rr4_rkDTeWhU_" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+                </div>
+                <div className='flex flex-col gap-2'>
+                    <h3 className='text-4xl text-center font-bold pt-10 pb-5'>Short Video Link</h3>
+                    <Link href="https://youtube.com/shorts/VVKaZuGK3zY?si=21OmzALoHx7uZ5jc" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>https://youtube.com/shorts/VVKaZuGK3zY?si=21OmzALoHx7uZ5jc</Link>
+                    <Link href="https://youtube.com/shorts/KKd06NVIWSA?si=fJ1a8E7mp_mkBVo5" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>https://youtube.com/shorts/KKd06NVIWSA?si=fJ1a8E7mp_mkBVo5</Link>
+                </div>
+            </div>
+
+        )
+    },
+    {
+        id: "31",
+        title: "วิธีลง Mod ภาษาไทย Darkest Dungeon [ล่าสุด] | YouTube Thumbnail",
+        description: "เป็นผลงานการออกแบบภาพปกวิดีโอ YouTube Thumbnail สำหรับสอนการติดตั้งมอดเกม Darkest Dungeon โดยใช้โปรแกรม Adobe Illustrator และ Adobe Photoshop ในการออกแบบและจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและดึงดูดความสนใจของผู้ชม",
+        img1: "https://img5.pic.in.th/file/secure-sv1/82262efdac66a7682c0e31877418837a.png",
+
+        tag: {
+
+            tag1: "Graphic Design",
+            
+
+
+
+        },
+        skill: {
+            skill1: "Adobe Illustrator",
+            skill2: "Adobe Photoshop",
+            
+
+
+
+
+
+        },
+        date: "20/06/2025",
+        // content: (
+        //     <div className=''>
+        //         <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
+
+        //         <div className='bg-none max-w-4xl max-h-1/2 mx-auto rounded-4xl overflow-clip'>
+
+        //             <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/7cv4TZ3HVJs?si=Fx0Rr4_rkDTeWhU_" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+        //         </div>
+        //         <div className='flex flex-col gap-2'>
+        //             <h3 className='text-4xl text-center font-bold pt-10 pb-5'>Short Video Link</h3>
+        //             <Link href="https://youtube.com/shorts/VVKaZuGK3zY?si=21OmzALoHx7uZ5jc" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>https://youtube.com/shorts/VVKaZuGK3zY?si=21OmzALoHx7uZ5jc</Link>
+        //             <Link href="https://youtube.com/shorts/KKd06NVIWSA?si=fJ1a8E7mp_mkBVo5" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>https://youtube.com/shorts/KKd06NVIWSA?si=fJ1a8E7mp_mkBVo5</Link>
+        //         </div>
+        //     </div>
+
+        // )
     },
 ]
 export default ProjectDatas
