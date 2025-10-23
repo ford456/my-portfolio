@@ -9,14 +9,23 @@ import Link from 'next/link';
 
 export default function HomeBanner() {
     return (
-        <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>
-            <div className='pt-10 lg:pt-5'>
-                <div className='bg-[url(https://img5.pic.in.th/file/secure-sv1/Home-Bannera1931523a74c5f18.jpg)] bg-center bg-cover min-h-[280px] sm:h-[400px] lg:h-[700px] max-w-auto px-3 sm:px-3 lg:px-10 pt-20 lg:pt-5 relative overflow-clip '>
+        // <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>
+        //     <div className=''>
+        //         <div className='bg-[url(https://img5.pic.in.th/file/secure-sv1/Home-Bannera1931523a74c5f18.jpg)] bg-center bg-cover min-h-[280px] sm:h-[400px] lg:h-[600px] max-w-auto px-3 sm:px-3 lg:px-10 relative overflow-clip '>
+        //         </div>
+        //     </div>
+
+        // </Link>
+        <div className=' grid grid-cols-12 grid-rows-6 gap-2 bg-[url(https://img5.pic.in.th/file/secure-sv1/Home-Banner.jpg)] bg-center bg-cover bg-no-repeat h-[250px] sm:h-[400px] lg:h-[600px] max-w-auto px-3 sm:px-3 lg:px-10 relative overflow-clip'>
+            <div className=' col-start-3 sm:col-start-4 md:col-start-4 lg:col-start-4 col-span-4 sm:col-span-3 md:col-span-3 lg:col-span-3 row-start-5 flex items-center justify-center'>
+                <div className='scale-55 md:scale-90 lg:scale-100'>
+                    <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>
+                        <div className='text-center bg-none py-3 px-4 rounded-full outline-3 mt-5'> About Me </div>
+                    </Link>
                 </div>
             </div>
 
-        </Link>
-
+        </div>
         // <div className='cursor-default bg-linear-to-bl from-blue-800/55 to-black/55 h-[300px] lg:h-[700px] max-w-auto  px-3 sm:px-3 lg:px-10 pt-20 lg:pt-5 relative overflow-clip'>
         //     <div className='relative flex items-center justify-center lg:justify-start h-full mx-auto'>
         //         {/* รูปภาพด้านซ้าย */}

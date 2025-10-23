@@ -15,13 +15,36 @@ const NavBar = () => {
 
     }
 
+    const [isFixed, setIsFixed] = useState(false);
     
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+
+            if (scrollY > 150 && !isFixed) {
+                setIsFixed(true);
+                
+            } else if (scrollY <= 150 && isFixed) {
+                
+                setIsFixed(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [isFixed]);
+
     return (
         <>
             {/* Navbar แสดงเฉพาะบนหน้าจอใหญ่ (md ขึ้นไป) */}
             <div
-                className=" fixed hidden md:flex z-30 justify-center transition-transform duration-300"
-
+                className={`
+        ${isFixed ? "fixed top-0 left-0 w-full z-50" : "sticky top-0 z-40"} 
+        hidden md:flex justify-center
+        transition-all duration-300
+        
+      `}
             >
                 <nav className="relative bg-linear-to-b from-white to-0  w-screen px-15 py-[1em]  bg-opacity-90 backdrop-blur-sm">
 
@@ -54,7 +77,7 @@ const NavBar = () => {
             </div>
 
             {/* Navbar สำหรับมือถือ (แสดงเฉพาะเมื่อ toggle เปิด) */}
-            <div className="md:hidden fixed z-30">
+            <div className={`${isFixed ? "fixed top-0 left-0 w-full z-50" : "sticky top-0 z-40"} md:hidden `}>
                 <div className='grid grid-cols-2 w-screen bg-linear-to-b from-white to-0 bg-opacity-90 backdrop-blur-sm p-2 bg-opacity-90 items-center mx-auto px-5 pt-5'>
                     <img src="/PortLogoWhite.svg" alt="Logo" className=' brightness-0 justify-items-start ml-5  h-12 w-12 ' />
                     <HiOutlineBars3
@@ -91,9 +114,9 @@ const NavBar = () => {
                         </li>
                         <li>
                             <button className=" text-3xl" onClick={updateToggle}>
-                            <CgClose />
-                        </button>
-                            </li>
+                                <CgClose />
+                            </button>
+                        </li>
                     </ul>
 
                 </div>
