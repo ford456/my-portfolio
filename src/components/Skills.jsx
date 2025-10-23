@@ -68,7 +68,7 @@ export default function Skills() {
                                         <ProgressBar
                                             progress={item.quality}
                                             level={item.level}
-                                            className='w-20 h-4 lg:w-50 lg:h-4'
+                                            className='w-30 h-4 sm:w-35 md:w-20 lg:w-33 xl:w-50 lg:h-4'
                                             FontZise='text-[10px] md:text-xs '
                                         />
                                     </ul>
