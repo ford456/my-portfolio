@@ -4,8 +4,8 @@ import AnimatedContent from './AnimatedContent'
 
 export default function Showreel() {
     return (
-        <div className='relative bg-none h-auto w-full lg:py-15  max-w-[92.5rem] max-w-auto'>
-            <div className=' flex flex-col items-center justify-center mx-auto'>
+        <div className='relative bg-none h-auto w-full lg:py-15 max-h-auto max-w-auto'>
+            <div className=' flex flex-col  items-center justify-items-center mx-auto'>
                 <div className='2xl:hidden flex '>
                     <AnimatedContent
                         distance={150}
@@ -34,7 +34,7 @@ export default function Showreel() {
                             scale={1}
                             threshold={0.2}
                             delay={300}>
-                            <iframe className='rounded-3xl max-w-[560px] max-h-[315px] md:max-w-[625px] md:max-h-[352px] lg:w-1280 lg:h-720 '
+                            <iframe className='aspect-video rounded-3xl max-w-[560px] max-h-[315px] md:max-w-[625px] md:max-h-[352px] lg:w-1280 lg:h-720 2xl:max-w-[1280px] 2xl:max-h-[720px] '
                                 src="https://www.youtube.com/embed/fDwcXvyimLU?si=4cgotUUzdu-IFjGO" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                         </AnimatedContent>
                     </div>

@@ -8,7 +8,7 @@ import Certipage from './Certipage';
 export default function AboutMe() {
     return (
         <div className=' cursor-default' >
-            <div className=' bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] h-[80] sm:h-[200] lg:h-screen max-h-[300px] bg-cover'></div>
+            <div className=' bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] h-[80] sm:h-[200] lg:h-screen md:max-h-[150px] lg:max-h-[200px] xl:max-h-[300px] 2xl:max-h-[500px] bg-cover'></div>
             <div className=' grid grid-cols-3 max-w-auto min-h-[400px] h-auto px-2 sm:px-5 2xl:px-15 pb-10  lg:pb-30 justify-items-center '>
                 <div className='flex flex-col items-center bg-none border-r-2 w-full p-2 sm:p-5 mb-4 max-w-lg overflow-clip' >
 

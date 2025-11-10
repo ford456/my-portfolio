@@ -8,7 +8,7 @@ import AnimatedContent from './AnimatedContent';
 export default function Skills() {
     return (
         <header className=' w-auto min-h-[600px] h-auto  py-10 overflow-clip relative'>
-            <div className='bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] bg-top bg-cover h-20 sm:h-40 md:h-50 lg:h-70 '></div>
+            <div className='bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] bg-top bg-cover h-20 sm:h-40 md:h-50 lg:h-70 xl:h-90 2xl:h-120'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-20 mx-15 h-auto'>
                 <AnimatedContent
@@ -22,7 +22,7 @@ export default function Skills() {
                     threshold={0.2}
                     delay={300}
                 >
-                    <div className=' bg-none '>
+                    <div className=' bg-none justify-items-center '>
                         <img src="https://img2.pic.in.th/pic/IMG_Social.png" alt="Socials" className='' />
                     </div>
                 </AnimatedContent>
@@ -61,15 +61,15 @@ export default function Skills() {
                                     <img
                                         src={item.img || "/default-image.png"}
                                         alt={item.Sname}
-                                        className='w-auto h-15 sm:w-auto sm:h-[50px] rounded-lg sm:rounded-xl p-2'
+                                        className=' aspect-square w-auto h-15 sm:w-auto sm:h-[50px] rounded-lg sm:rounded-xl p-2 2xl:h-19 2xl:w-auto 2xl:rounded-3xl '
                                     />
                                     <ul className={`transition-transform duration-300 flex flex-col p-2`}>
-                                        <h1 className=' text-xs lg:text-base m-2'>{item.Sname}</h1>
+                                        <h1 className=' text-xs lg:text-base mb-2 2xl:text-2xl'>{item.Sname}</h1>
                                         <ProgressBar
                                             progress={item.quality}
                                             level={item.level}
-                                            className='w-30 h-4 sm:w-35 md:w-20 lg:w-33 xl:w-50 lg:h-4'
-                                            FontZise='text-[10px] md:text-xs '
+                                            className='w-30 h-4 sm:w-35 md:w-20 lg:w-33 xl:w-50 lg:h-4 2xl:w-70 2xl:h-6'
+                                            FontZise='text-[10px] lg:text-xs 2xl:text-base'
                                         />
                                     </ul>
                                 </div>
