@@ -767,7 +767,7 @@ const ProjectDatas = [
         id: "22",
         title: "Logo Motion THE PIXEL ONE PRODUCTION CO.,LTD ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Motion Graphic สำหรับโลโก้ของทางบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด เพื่อใช้ในโอกาสต่าง ๆ เช่น Showreel คลิปนำเสนอผลงานจัดอีเวนท์ต่างๆ \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด โดยมีการใช้เทคนิคการทำ Animation และการจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความเคลื่อนไหวที่สนุกสนาน",
-        img1: "/pj/img/Intern/PX.png",
+        img1: "https://img2.pic.in.th/PX.png",
         video: '/pj/VD/PX.mp4',
         tag: {
             tag1: "Motion Graphic",
@@ -815,7 +815,7 @@ const ProjectDatas = [
         id: "24",
         title: "Handa TheGolden Night 2025 ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Motion Graphic สำหรับงานปาร์ตี้หลังการสัมมนาเปิดตัวรถรุ่นใหม่ของฮอนด้า ซึ่งทางของบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด เป็น organizer ให้กับงานนี้ \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด และ Footage ต่างๆ จัดวางและตัดต่อให้เข้ากับเสียงเพลงที่จะใช้ในการแสดงโชว์เปิดตัวงานปาร์ตี้",
-        img1: " /pj/img/Intern/Honda.jpg",
+        img1: "https://img5.pic.in.th/file/secure-sv1/Honda.jpg",
 
         tag: {
             tag1: "Motion Graphic",
@@ -849,9 +849,7 @@ const ProjectDatas = [
         id: "25",
         title: "KV Motion THE INFLUENCER TUEK TUK Party BDMS ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Key Visual Motion สำหรับงานปาร์ตี้สังสรรค์ THE INFLUENCER TUEK TUK Party ของทางบริษัท BDMS โดยเป็นการใช้บริการจัดทำ Event Agency ของบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด โดยมีการใช้เทคนิคการทำ Animation และการจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความเคลื่อนไหวที่สนุกสนาน",
-        img1: "/pj/img/Intern/KVBDMS.png",
-        video: '/pj/VD/KVBDMS01.mp4',
-        video2: '/pj/VD/KVBDMS-hori.mp4',
+        img1: "https://img2.pic.in.th/KVBDMS.png",
         tag: {
             tag1: "Motion Graphic",
 
