@@ -7,7 +7,7 @@ const ProjectDatas = [
 
         title: "All in Design Website  |  Font-end",
         description: "เป็นเว็บไซต์ที่สร้างขึ้นเพื่อแสดงผลงานนิทรรศการแสดงผลงานศิลปนิพนธ์นิสิตระดับชั้นปีที่ 4 สาขาวิชาคอมพิวเตอร์กราฟิกและมัลติมีเดีย คณะเทคโนโลยีสารสนเทศและการสื่อสาร มหาวิทยาลัยพะเยา ประจำปีการศึกษา 2567 เพื่อใช้ในการแสดงผลงานวิจัยในรูปแบบออนไลน์ โดยเนื้อหาภายในจะเป็นที่มา, วัตถุประสงค์และผู้จัดทำผลงานวิจัย ซึ่งมีการจัดหมวดหมู่อย่างเป็นระเบียบให้สะดวกต่อการค้นหาผลงานวิจัย \n \nซึ่งจุดประสงค์ที่จัดทำเว็บไซต์นี้ขึ้นเพื่อเป็นประโยชน์ต่อการศึกษาและการเก็บรวบรวมผลงานวิจัยของนิสิต",
-        img1: "/pj/img/all1.jpeg",
+        img1: "https://img5.pic.in.th/file/secure-sv1/all1.jpeg",
         img2: "",
         img3: "",
         video: "",
@@ -38,7 +38,7 @@ const ProjectDatas = [
 
         title: "Cats Fusion | Line Sticker Creator",
         description: " เหล่าแมวพันธุ์ผสม V.1 เป็นสติกเกอร์เคลื่อนไหวมีความน่ารัก โดยมีการออกแบบที่เน้นความเป็นเอกลักษณ์ของแมวพันธุ์ผสมสัตว์อื่นๆ ซึ่งสติ๊กเกอร์นี้เหมาะสำหรับในการประยุกต์ใช้ในสถานการณ์ต่างๆ เช่น การขอบคุณ รับทราบ ตอบรับ เป็นต้น",
-        img1: "/pj/img/cat-fusion.jpg",
+        img1: "https://img2.pic.in.th/cat-fusion.jpg",
 
         img2: "",
         img3: "",
@@ -74,7 +74,7 @@ const ProjectDatas = [
 
         title: "Apple 3D model",
         description: "",
-        img1: "/pj/img/APP.jpg",
+        img1: "https://img5.pic.in.th/file/secure-sv1/APP053315ef269683fb.jpg",
 
         img2: "",
         img3: "",
@@ -110,7 +110,7 @@ const ProjectDatas = [
 
         title: "White Bubble | Brand Design",
         description: "เป็นการออกแบบโลโก้และแบรนด์ของ White Bubble ซึ่งเป็นผลิตภัณฑ์ทำความสะอาดใบหน้าโดยผลงานวิจัยของนิสิตคณะเภสัชศาสตร์ สาขาวิทยาศาสตร์เครื่องสำอาง มหาวิทยาลัยพะเยา ซึ่งความหมายของแบรนด์จะสื่อถึงความสะอาด นุ่มเหมือนฟองอากาศ",
-        img1: "/pj/img/WB/WB-brand1.jpg",
+        img1: "https://img2.pic.in.th/WB-brand1.jpg",
 
         tag: {
 
@@ -126,10 +126,10 @@ const ProjectDatas = [
         date: "30/01/2025",
         content: (
             <div className='grid grid-cols-3 gap-5 px-5 overflow-clip'>
-                <img src="/pj/img/WB/WB-brand2.jpg" className="col-span-3 rounded-xl 2xl:rounded-4xl w-full h-full" />
-                <img src="/pj/img/WB/WB-brand5.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
-                <img src="/pj/img/WB/WB-brand4.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
-                <img src="/pj/img/WB/WB-brand3.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
+                <img src="https://img5.pic.in.th/file/secure-sv1/WB-brand2.jpg" className="col-span-3 rounded-xl 2xl:rounded-4xl w-full h-full" />
+                <img src="https://img2.pic.in.th/WB-brand5.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
+                <img src="https://img5.pic.in.th/file/secure-sv1/WB-brand4.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
+                <img src="https://img5.pic.in.th/file/secure-sv1/WB-brand3.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
             </div>
         )
     },
@@ -138,7 +138,7 @@ const ProjectDatas = [
 
         title: "เรามารู้จัก Introvert & Extrovert กันเถอะ | Thesis Project",
         description: "เป็นผลงานวิจัยเกี่ยวกับ Introvert & Extrovert ซึ่งออกแบบให้เป็นภาพกราฟิกเคลื่อนไหวที่ดูน่าสนุกเพลิดเพลินพร้อมกับเสียงบรรยายจาก AI อธิบายเนื้อหาของบุคลิกภาพที่ซับซ้อนของมนุษย์ โดยผลงานวิจัยนี้จะช่วยเสริมสร้างความเข้าใจในตัวเองและคนรอบข้าง เพื่อให้สามารถปรับตัวเข้ากับสังคมได้ดีขึ้นหรือสามารถอยู่ร่วมกันได้อย่างมีความสุข",
-        img1: "/pj/img/THESIS.png",
+        img1: "https://img5.pic.in.th/file/secure-sv1/THESIS.png",
         img2: "",
         img3: "",
         tag: {
@@ -791,7 +791,7 @@ const ProjectDatas = [
         id: "23",
         title: "Logo Motion BoostUp ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Motion Graphic สำหรับโลโก้ของ BoostUp ซึ่งเป็นหนึ่งในเครือของบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด เพื่อใช้ในโอกาสต่าง ๆ เช่น Showreel คลิปนำเสนอผลงานจัดอีเวนท์ต่างๆ \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด โดยมีการใช้เทคนิคการทำ Animation และการจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความเคลื่อนไหวที่สนุกสนาน",
-        img1: "/gif/MotionBU.gif",
+        img1: "https://img5.pic.in.th/file/secure-sv1/MotionBU.gif",
         video: '',
         tag: {
             tag1: "Motion Graphic",
