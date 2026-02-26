@@ -86,7 +86,9 @@ export const unstable_isr = false; // this page does not support Incremental Sta
 
 export const unstable_preload = true; // this page will be preloaded for better performance
 
-export const unstable_prefetch = true; // this page will be prefetched for better performance
+export const unstable_prefetch = {
+  mode: "static"
+}
 
 export const unstable_static = false; // this page is not static and will be dynamically rendered
 
