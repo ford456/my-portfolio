@@ -61,14 +61,14 @@ export default function Skills() {
                                     <img
                                         src={item.img || "/default-image.png"}
                                         alt={item.Sname}
-                                        className=' aspect-square w-auto h-15 sm:w-auto sm:h-[50px] rounded-lg sm:rounded-xl p-2 2xl:h-19 2xl:w-auto 2xl:rounded-3xl '
+                                        className=' aspect-square w-auto h-15 sm:w-auto sm:h-[50px] rounded-lg sm:rounded-xl p-2 2xl:h-15 2xl:w-auto 2xl:rounded-3xl '
                                     />
                                     <ul className={`transition-transform duration-300 flex flex-col p-2`}>
-                                        <h1 className=' text-xs lg:text-base mb-2 2xl:text-2xl'>{item.Sname}</h1>
+                                        <h1 className=' text-xs lg:text-base mb-2 2xl:text-lg'>{item.Sname}</h1>
                                         <ProgressBar
                                             progress={item.quality}
                                             level={item.level}
-                                            className='w-30 h-4 sm:w-35 md:w-20 lg:w-33 xl:w-50 lg:h-4 2xl:w-70 2xl:h-6'
+                                            className='w-30 h-4 max-sm:max-w-15 sm:w-35 md:w-20 lg:w-33 xl:w-50 lg:h-4 2xl:w-50 2xl:h-6'
                                             FontZise='text-[10px] lg:text-xs 2xl:text-base'
                                         />
                                     </ul>

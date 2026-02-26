@@ -22,7 +22,7 @@ export default function Showreel() {
                     </AnimatedContent>
                 </div>
                 <div className='grid grid-cols-1 2xl:grid-cols-3 gap-5 justify-items-center mt-5 mx-5 lg:mx-10 px-5'>
-                    <div className='col-span-2 bg-none w-full justify-items-center overflow-clip'>
+                    <div className='col-span-2 bg-none  justify-items-center'>
 
                         <AnimatedContent
                             distance={150}
@@ -34,7 +34,7 @@ export default function Showreel() {
                             scale={1}
                             threshold={0.2}
                             delay={300}>
-                            <iframe className='aspect-video rounded-3xl max-w-[560px] max-h-[315px] md:max-w-[625px] md:max-h-[352px] lg:w-1280 lg:h-720 2xl:max-w-[1280px] 2xl:max-h-[720px] '
+                            <iframe className='aspect-video rounded-3xl w-[1280px] h-[720px] max-w-[305px] max-h-[168px] sm:max-w-[560px] sm:max-h-[315px] md:max-w-[625px] md:max-h-[352px] '
                                 src="https://www.youtube.com/embed/fDwcXvyimLU?si=4cgotUUzdu-IFjGO" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                         </AnimatedContent>
                     </div>
