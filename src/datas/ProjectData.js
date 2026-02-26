@@ -170,7 +170,7 @@ const ProjectDatas = [
 
         title: "PnameF Twitch Elements&Scene Theme | Twitch",
         description: "เป็นการออกแบบธีมสำหรับ Twitch ของ PnameF เพื่อใช้ประกอบการสตรีมเกม โดยมีการออกแบบที่เน้นความเป็นเอกลักษณ์ของ PnameF ที่เป็นมนุษย์ครึ่งแมว ดังนั้นจึงเลือกแมวมาเป็นองค์ประกอบหลักของการทำและธีมที่ได้กำหนดไว้นั้นเป็นธีมร้านขนมคาเฟ่ เพราะจะสื่อถึงร้านที่ทุกคนเข้ามาพักผ่อนอยู่ร่วมกับน้องแมวในทุกวัน",
-        img1: "/pj/img/PF.png",
+        img1: "https://img5.pic.in.th/file/secure-sv1/PFbab665b0ca4fd91a.png",
         img2: "",
         img3: "",
         tag: {
@@ -250,7 +250,7 @@ const ProjectDatas = [
 
         title: "The CS | Short film Teaser",
         description: "เป็นผลงานไฟนอลโปรเจกต์ในรายวิชา Visual Effects ซึ่งการทำตัวอย่างภาพยนตร์สั้นเกี่ยวกับโรงเรียนแห่งหนึ่งที่มีคลาสเรียนที่มีชื่อว่า CS โดยห้องเรียนนี้มีพลังพิเศษแฝงในตัวนักเรียนทุกคนที่อยู่ในคลาสนี้ และไขปริศษาต่าง ๆ เกี่ยวกับโรงเรียนแห่งนี้  \n\n ซึ่งในโปรเจกต์นี้ได้รับหน้าที่เป็นคนตัดต่อและทำเอฟเฟกต์ต่าง ๆ",
-        img1: "/pj/img/TheCSPoster.jpg",
+        img1: "https://img5.pic.in.th/file/secure-sv1/TheCSPoster.jpg",
         img2: "",
         img3: "",
         tag: {
@@ -270,7 +270,7 @@ const ProjectDatas = [
         content: (
             <div className=''>
                 <div className='flex flex-col justify-center items-center my-10'>
-                    <img src="/pj/img/TheCS.png" className="rounded-xl 2xl:rounded-4xl w-1/2 h-auto" />
+                    <img src="https://img5.pic.in.th/file/secure-sv1/TheCS.png" className="rounded-xl 2xl:rounded-4xl w-1/2 h-auto" />
                 </div>
 
                 <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
@@ -287,7 +287,7 @@ const ProjectDatas = [
 
         title: "Halloween Coloring for kind book",
         description: "เป็นการใช้ AI generated ในโปรแกรม Adobe illustrator ในการ Generate ภาพต่างๆ นำมาจัดทำเป็นหนังสือวาดภาพระบายสีสำหรับเด็กและวางจำหน่ายบนเว็บไซ์ Amezon",
-        img1: "/pj/img/Book01.png",
+        img1: "https://img2.pic.in.th/Book01.png",
         img2: "",
         img3: "",
         tag: {
@@ -320,7 +320,7 @@ const ProjectDatas = [
 
         title: "PnameF Shirt Design | Twitch: P_name_F",
         description: "เป็นการออกแบบเสื้อเพื่อวางจำหน่ายบนสตรีม Twitch ช่องของ P_name_F เพื่อหาช่องทางรายได้จากการขายสินค้าให้กับผู้ติดตามที่ต้องการสะสมผลงานของ P_name_F",
-        img1: "/pj/img/PF/PF-t01.png",
+        img1: "https://img2.pic.in.th/PF-t01.png",
 
         tag: {
 
@@ -641,7 +641,7 @@ const ProjectDatas = [
 
         title: "งานถ่ายภาพสำหรับงานนิทรรศการ All in Design",
         description: "เป็นการถ่ายภาพเพื่อใช้การจัดทำสูจิบัตรและป้ายโชว์ผลงานและสื่อต่างๆ โดยเป็นการถ่ายภาพภายในสตูดิโอซึ่งมีการจัดแสงและองค์ประกอบต่างๆ ที่ใช้ในภาพรวมทั้งการแต่งตัวแชวแฟนตาซี",
-        img1: "/pj/img/all1.jpeg",
+        img1: "https://img5.pic.in.th/file/secure-sv1/all1.jpeg",
 
         tag: {
 
@@ -743,7 +743,7 @@ const ProjectDatas = [
         id: "21",
         title: "KV Motion CREW AS ONE Party LinQtec ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Key Visual Motion สำหรับงานปาร์ตี้สังสรรค์ CREW AS ONE Party ของทางบริษัท LinQtec โดยเป็นการใช้บริการจัดทำ Event Agency ของบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด โดยมีการใช้เทคนิคการทำ Animation และการจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความเคลื่อนไหวที่สนุกสนาน",
-        img1: "/pj/img/Intern/KVLQ.jpg",
+        img1: "https://img5.pic.in.th/file/secure-sv1/KVLQ.jpg",
         video: '/gif/KVLT01.mp4',
         tag: {
             tag1: "Motion Graphic",
