@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Loading() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200">
+    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-blue-100 to-purple-200">
       <motion.div
         className="flex flex-col items-center gap-6"
         initial={{ opacity: 0, y: 20 }}
