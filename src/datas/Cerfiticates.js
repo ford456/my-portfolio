@@ -12,7 +12,7 @@ export const Cerfiticates = [
                     Complete Web & Mobile Designer: UX/UI, Figma, +more
                 </p>
                 <img
-                    src="/Cer/Cer01.JPG"
+                    src="https://img5.pic.in.th/file/secure-sv1/Cer01.jpg"
                     alt="Certificate of Completion"
                     width={500}
                     height={500}
@@ -32,7 +32,7 @@ export const Cerfiticates = [
                     รายวิชานี้มุ่งให้ผู้เรียนเข้าใจพื้นฐาน Generative AI และการใช้ ChatGPT อย่างเหมาะสมในงานวิชาการ พร้อมฝึกทักษะ prompt และวิเคราะห์ผลอย่างมีวิจารณญาณ
                 </p>
                 <img
-                    src="/Cer/Cer02.jpg"
+                    src="https://img5.pic.in.th/file/secure-sv1/Cer02.jpg"
                     alt="Certificate of Generative AI"
                     width={500}
                     height={500}
@@ -52,7 +52,7 @@ export const Cerfiticates = [
                     The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding, Logo Design
                 </p>
                 <img
-                    src="/Cer/Cer03.jpg"
+                    src="https://img5.pic.in.th/file/secure-sv1/Cer03.jpg"
                     alt="Graphic Design Masterclass"
                     width={500}
                     height={500}
@@ -72,7 +72,7 @@ export const Cerfiticates = [
                     Become a Designer in 2025! Learn how to use Figma to design beautiful mobile & web apps Learn-by-doing approach.
                 </p>
                 <img
-                    src="/Cer/Cer04.jpg"
+                    src="https://img2.pic.in.th/Cer04.jpg"
                     alt="Graphic Design Masterclass"
                     width={500}
                     height={500}
