@@ -6,6 +6,8 @@ import ProjectDatas from '../../datas/ProjectData'; // นำเข้าข้�
 
 import Card from '../../components/Card'; // นำเข้าคอมโพเนนต์ Card
 
+import { useSearchParams, useRouter } from 'next/navigation';
+
 import { IoSearch } from "react-icons/io5";
 import Link from 'next/link';
 import AnimatedContent from '../../components/AnimatedContent';
@@ -72,11 +74,17 @@ export default function ArtPro() {
 
   const Datas = ProjectDatas; // นำเข้าข้อมูลจาก ProjectData
   const [showAll, setShowAll] = useState(false); // ควบคุมการแสดงสินค้า
-  const [searchTerm, setSearchTerm] = useState(""); // เก็บค่าค้นหา
 
-  // 🔸 ประกาศ state
-  const [selectedTag, setSelectedTag] = useState("all");
-  const [selectedSkill, setSelectedSkill] = useState("all");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const selectedTag = searchParams.get("tag") || "all";
+  const selectedSkill = searchParams.get("skill") || "all";
+  const searchTerm = searchParams.get("search") || "";
+  const deslugify = (str) =>
+    str?.replace(/-/g, " ").toLowerCase();
+
+
 
   // 🔹 ดึง tag ทั้งหมด
   const allTags = Array.from(
@@ -89,6 +97,10 @@ export default function ArtPro() {
       Datas.flatMap(data => Object.values(data.skill || {}))
     )
   );
+  const slugify = (str) =>
+    str.toLowerCase().replace(/\s+/g, "-");
+  const tagSlug = selectedTag !== "all" ? slugify(selectedTag) : "";
+  const skillSlug = selectedSkill !== "all" ? slugify(selectedSkill) : "";
 
   // 🔸 ฟิลเตอร์ข้อมูลตาม search และ tag
   const searchedProducts = Datas.filter((product) => {
@@ -127,6 +139,26 @@ export default function ArtPro() {
   const tagBtnBase =
     "text-xs lg:text-sm px-4 py-2 rounded-full border border-2 lg:border-3 transition-all duration-200 ease-out transform will-change-[transform,opacity]";
 
+  const updateFilters = (updates) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    Object.entries(updates).forEach(([key, value]) => {
+      if (!value || value === "all") {
+        params.delete(key);
+      } else {
+        params.set(key, value);
+      }
+    });
+
+    router.push(`/projects?${params.toString()}`, { scroll: false });
+  };
+
+  const buildPath = (id, tagSlug, skillSlug) => {
+    return [id, tagSlug, skillSlug].filter(Boolean).join("/");
+    
+  };
+
+  
 
   return (
 
@@ -155,10 +187,11 @@ export default function ArtPro() {
             placeholder='ค้นหาด้วยชื่อผลงาน หรือประเภท หรือ Skills'
             value={searchTerm}
             onChange={(e) => {
-              setSearchTerm(e.target.value);
-              setSelectedTag("all");     // 🔹 reset tag
-              setSelectedSkill("all");   // 🔹 reset skill
-
+              updateFilters({
+                search: e.target.value,
+                tag: "all",
+                skill: "all",
+              });
             }}
           />
         </div></AnimatedContent>
@@ -185,7 +218,13 @@ export default function ArtPro() {
                 return (
                   <button
                     key={type}
-                    onClick={() => { setSelectedTag(type); setSelectedSkill("all"); requestAnimationFrame(scrollToFirstCard); }}
+                    onClick={() => {
+                      updateFilters({
+                        tag: type,
+                        skill: "all",
+                      });
+                      requestAnimationFrame(scrollToFirstCard);
+                    }}
                     className={`${tagBtnBase} ` +
                       (isActive
                         ? " text-blue-700 border-blue-700 opacity-100 scale-100 "
@@ -212,7 +251,13 @@ export default function ArtPro() {
                 return (
                   <button
                     key={type}
-                    onClick={() => { setSelectedSkill(type); setSelectedTag("all"); requestAnimationFrame(scrollToFirstCard); }}
+                    onClick={() => {
+                      updateFilters({
+                        skill: type,
+                        tag: "all",
+                      });
+                      requestAnimationFrame(scrollToFirstCard);
+                    }}
                     className={`${tagBtnBase} ` +
                       (isActive
                         ? " text-pink-700 border-pink-700 opacity-100 scale-100 "
@@ -232,26 +277,30 @@ export default function ArtPro() {
           {/* 🔸 แสดงสินค้า  */}
           <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3  gap-x-6 px-5 mt-10'>
             {displayedProducts.length > 0 ? (
-              displayedProducts.map((product, index) => (
-                <div id={index === 0 ? "first-card" : undefined} key={product.id}>
-                  <AnimatedContent
-                    key={product.id}
-                    className=''
-                    distance={80}
-                    direction="vertical"
-                    reverse={false}
-                    config={{ tension: 80, friction: 20 }}
-                    initialOpacity={0}
-                    animateOpacity
-                    scale={1.1}
-                    threshold={0.2}
-                    delay={500}>
-                    <Link href={`/projects/${product.id}`} target='_parent'>
-                      <Card data={product}
-                        textClassName='text-xs' />
-                    </Link></AnimatedContent>
-                </div>
-              ))
+              displayedProducts.map((product, index) => {
+                const path = buildPath(product.id, tagSlug, skillSlug);
+                
+                return (
+                  <div id={index === 0 ? "first-card" : undefined} key={product.id}>
+                    <AnimatedContent
+                      key={product.id}
+                      className=''
+                      distance={80}
+                      direction="vertical"
+                      reverse={false}
+                      config={{ tension: 80, friction: 20 }}
+                      initialOpacity={0}
+                      animateOpacity
+                      scale={1.1}
+                      threshold={0.2}
+                      delay={500}>
+                      <Link href={`/projects/${path}`} target='_parent'>
+                        <Card data={product}
+                          textClassName='text-xs' />
+                      </Link></AnimatedContent>
+                  </div>
+                );
+              })
             ) : (
               <p className="md:col-2 text-center text-red-500 py-10">ไม่พบข้อมูลที่ตรงกับ "{searchTerm}"</p>
             )}

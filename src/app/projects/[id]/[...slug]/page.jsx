@@ -5,20 +5,49 @@ import { useEffect } from 'react';
 import { MdOutlineDateRange } from "react-icons/md";
 
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import ProjectDatas from '../../../../datas/ProjectData'; // นำเข้าข้อมูลจาก ProjectData';
 
-import ProjectDatas from '../../../datas/ProjectData'; // นำเข้าข้อมูลจาก ProjectData';
-
-import { TagColorMap } from '../../../components/Card';
-import AnimatedContent from '../../../components/AnimatedContent';
+import { TagColorMap } from '../../../../components/Card';
+import AnimatedContent from '../../../../components/AnimatedContent';
 // import { useRouter } from 'next/router'; // ใช้สำหรับการนำทาง
 // import { useParams } from 'next/navigation'; // ใช้สำหรับดึง params จาก URL   
 
 export default function Details({ params }) {
 
-    
+
     const resolvedParams = React.use(params);
 
     const id = resolvedParams?.id;
+    const slug = resolvedParams?.slug || null;
+
+    const tag = slug?.[0] || null;
+    const skill = slug?.[1] || null;
+
+    const slugToQuery = (slugArr = []) => {
+        const [tag, skill] = slugArr || [];
+
+        const params = new URLSearchParams();
+
+        if (tag) params.set("tag", tag.replace(/-/g, " "));
+        if (skill) params.set("skill", skill.replace(/-/g, " "));
+
+        return params.toString();
+    };
+
+    const searchParams = useSearchParams();
+    const queryString = searchParams.toString();
+
+    // 👇 เอา slug มาสร้าง query เพิ่ม
+    const slugQuery = slugToQuery(slug);
+
+    // 👇 รวมกัน (priority: query จริง > slug)
+    const finalQuery = queryString || slugQuery;
+
+    // 👇 สร้าง URL
+    const backHref = finalQuery
+        ? `/projects?${finalQuery}`
+        : `/projects`;
 
     const product = ProjectDatas.find(
         (p) => String(p.id) === String(id)
