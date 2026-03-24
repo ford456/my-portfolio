@@ -39,8 +39,9 @@ export default function Skills() {
                         delay={500}
                     >
                         <h2 className='text-base indent-8'><span className='text-2xl'>I'm </span> a graphic designer, motion graphic designer and video editor based in Bangkok, Thailand. Creative and detail-oriented designer with nearly one year of experience in graphic design, motion graphics, and video editing. Skilled in teamwork, time management, and producing innovative visuals that enhance communication and drive sales performance. Open to new challenges, a fast learner, and committed to continuous professional growth.</h2>
+                        <h1 className='pt-10 text-4xl font-bold'>Skills</h1>
                     </AnimatedContent>
-                    <div className='grid grid-cols-2  lg:grid lg:grid-cols-2 gap-5 lg:gap-x-10 pt-5 items-center'>
+                    <div className='grid grid-cols-2  lg:grid lg:grid-cols-2 gap-5 lg:gap-x-10 items-center'>
                         {SkillData.map(item => (
                             <AnimatedContent
                                 distance={80}
@@ -57,7 +58,7 @@ export default function Skills() {
                                 <div
 
                                     data-id={item.id}
-                                    className={` transition-scale duration-200 ease-in-out bg-none w-auto h-auto flex flex-col sm:flex-row items-center `}>
+                                    className={` transition-scale duration-200 ease-in-out bg-none w-auto h-auto flex flex-col sm:flex-row items-center scale-100 hover:scale-110 `}>
                                     <img
                                         src={item.img || "/default-image.png"}
                                         alt={item.Sname}
@@ -65,12 +66,12 @@ export default function Skills() {
                                     />
                                     <ul className={`transition-transform duration-300 flex flex-col p-2`}>
                                         <h1 className=' text-xs lg:text-base mb-2 2xl:text-lg'>{item.Sname}</h1>
-                                        <ProgressBar
+                                        {/* <ProgressBar
                                             progress={item.quality}
                                             level={item.level}
                                             className='w-30 h-4 max-sm:max-w-15 sm:w-35 md:w-20 lg:w-33 xl:w-50 lg:h-4 2xl:w-50 2xl:h-6'
                                             FontZise='text-[10px] lg:text-xs 2xl:text-base'
-                                        />
+                                        /> */}
                                     </ul>
                                 </div>
                             </AnimatedContent>
