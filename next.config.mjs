@@ -18,14 +18,9 @@ const nextConfig = {
         },
         {
             protocol: 'https',
-            hostname: 'img5.pic.in.th',
-            search: '',
-        },
-        {
-            protocol: 'https',
-            hostname: 'img2.pic.in.th',
-            search: '',
-        },
+            hostname: '*.pic.in.th',
+            
+        }
         ],
     },
     allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],

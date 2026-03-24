@@ -7,7 +7,7 @@ const ProjectDatas = [
 
         title: "All in Design Website  |  Font-end",
         description: "เป็นเว็บไซต์ที่สร้างขึ้นเพื่อแสดงผลงานนิทรรศการแสดงผลงานศิลปนิพนธ์นิสิตระดับชั้นปีที่ 4 สาขาวิชาคอมพิวเตอร์กราฟิกและมัลติมีเดีย คณะเทคโนโลยีสารสนเทศและการสื่อสาร มหาวิทยาลัยพะเยา ประจำปีการศึกษา 2567 เพื่อใช้ในการแสดงผลงานวิจัยในรูปแบบออนไลน์ โดยเนื้อหาภายในจะเป็นที่มา, วัตถุประสงค์และผู้จัดทำผลงานวิจัย ซึ่งมีการจัดหมวดหมู่อย่างเป็นระเบียบให้สะดวกต่อการค้นหาผลงานวิจัย \n \nซึ่งจุดประสงค์ที่จัดทำเว็บไซต์นี้ขึ้นเพื่อเป็นประโยชน์ต่อการศึกษาและการเก็บรวบรวมผลงานวิจัยของนิสิต",
-        img1: "https://img5.pic.in.th/file/secure-sv1/all1.jpeg",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774360094/all1_di63zy.jpg",
         img2: "",
         img3: "",
         video: "",
@@ -74,7 +74,7 @@ const ProjectDatas = [
 
         title: "Apple 3D model",
         description: "",
-        img1: "https://img5.pic.in.th/file/secure-sv1/APP053315ef269683fb.jpg",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774359784/APP_qs6tzw.jpg",
 
         img2: "",
         img3: "",
@@ -126,10 +126,10 @@ const ProjectDatas = [
         date: "30/01/2025",
         content: (
             <div className='grid grid-cols-3 gap-5 px-5 overflow-clip'>
-                <img src="https://img5.pic.in.th/file/secure-sv1/WB-brand2.jpg" className="col-span-3 rounded-xl 2xl:rounded-4xl w-full h-full" />
+                <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360872/WB-brand2_w2youj.jpg" className="col-span-3 rounded-xl 2xl:rounded-4xl w-full h-full" />
                 <img src="https://img2.pic.in.th/WB-brand5.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
-                <img src="https://img5.pic.in.th/file/secure-sv1/WB-brand4.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
-                <img src="https://img5.pic.in.th/file/secure-sv1/WB-brand3.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
+                <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360851/WB-brand4_fkwgnk.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
+                <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360849/WB-brand3_srpmfm.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
             </div>
         )
     },
@@ -138,7 +138,7 @@ const ProjectDatas = [
 
         title: "เรามารู้จัก Introvert & Extrovert กันเถอะ | Thesis Project",
         description: "เป็นผลงานวิจัยเกี่ยวกับ Introvert & Extrovert ซึ่งออกแบบให้เป็นภาพกราฟิกเคลื่อนไหวที่ดูน่าสนุกเพลิดเพลินพร้อมกับเสียงบรรยายจาก AI อธิบายเนื้อหาของบุคลิกภาพที่ซับซ้อนของมนุษย์ โดยผลงานวิจัยนี้จะช่วยเสริมสร้างความเข้าใจในตัวเองและคนรอบข้าง เพื่อให้สามารถปรับตัวเข้ากับสังคมได้ดีขึ้นหรือสามารถอยู่ร่วมกันได้อย่างมีความสุข",
-        img1: "https://img5.pic.in.th/file/secure-sv1/THESIS.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774359945/THESIS_g9cszl.png",
         img2: "",
         img3: "",
         tag: {
@@ -170,7 +170,7 @@ const ProjectDatas = [
 
         title: "PnameF Twitch Elements&Scene Theme | Twitch",
         description: "เป็นการออกแบบธีมสำหรับ Twitch ของ PnameF เพื่อใช้ประกอบการสตรีมเกม โดยมีการออกแบบที่เน้นความเป็นเอกลักษณ์ของ PnameF ที่เป็นมนุษย์ครึ่งแมว ดังนั้นจึงเลือกแมวมาเป็นองค์ประกอบหลักของการทำและธีมที่ได้กำหนดไว้นั้นเป็นธีมร้านขนมคาเฟ่ เพราะจะสื่อถึงร้านที่ทุกคนเข้ามาพักผ่อนอยู่ร่วมกับน้องแมวในทุกวัน",
-        img1: "https://img5.pic.in.th/file/secure-sv1/PFbab665b0ca4fd91a.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774360453/PF_puoogn.png",
         img2: "",
         img3: "",
         tag: {
@@ -250,7 +250,7 @@ const ProjectDatas = [
 
         title: "The CS | Short film Teaser",
         description: "เป็นผลงานไฟนอลโปรเจกต์ในรายวิชา Visual Effects ซึ่งการทำตัวอย่างภาพยนตร์สั้นเกี่ยวกับโรงเรียนแห่งหนึ่งที่มีคลาสเรียนที่มีชื่อว่า CS โดยห้องเรียนนี้มีพลังพิเศษแฝงในตัวนักเรียนทุกคนที่อยู่ในคลาสนี้ และไขปริศษาต่าง ๆ เกี่ยวกับโรงเรียนแห่งนี้  \n\n ซึ่งในโปรเจกต์นี้ได้รับหน้าที่เป็นคนตัดต่อและทำเอฟเฟกต์ต่าง ๆ",
-        img1: "https://img5.pic.in.th/file/secure-sv1/TheCSPoster.jpg",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774360511/TheCSPoster_ftkvsk.jpg",
         img2: "",
         img3: "",
         tag: {
@@ -270,7 +270,7 @@ const ProjectDatas = [
         content: (
             <div className=''>
                 <div className='flex flex-col justify-center items-center my-10'>
-                    <img src="https://img5.pic.in.th/file/secure-sv1/TheCS.png" className="rounded-xl 2xl:rounded-4xl w-1/2 h-auto" />
+                    <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360778/TheCS_pcr8ak.png" className="rounded-xl 2xl:rounded-4xl w-1/2 h-auto" />
                 </div>
 
                 <h3 className='text-4xl text-center font-bold pb-10'> Video</h3>
@@ -576,7 +576,7 @@ const ProjectDatas = [
 
         title: "ภาพถ่ายงานโปรโมทชมรม Design Media",
         description: "เป็นการถ่ายภาพเพื่อใช้โปรโมทชมรม Design Media ในกิจกรรมเปิดโลกกิจกรรมปี2024 ของมหาวิทยาลัยพะเยาทั้งในช่อง Instagram และ Facebook",
-        img1: "/pj/img/DM/DMUP.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774360105/DMUP_tlxlqh.png",
 
         tag: {
 
@@ -641,7 +641,7 @@ const ProjectDatas = [
 
         title: "งานถ่ายภาพสำหรับงานนิทรรศการ All in Design",
         description: "เป็นการถ่ายภาพเพื่อใช้การจัดทำสูจิบัตรและป้ายโชว์ผลงานและสื่อต่างๆ โดยเป็นการถ่ายภาพภายในสตูดิโอซึ่งมีการจัดแสงและองค์ประกอบต่างๆ ที่ใช้ในภาพรวมทั้งการแต่งตัวแชวแฟนตาซี",
-        img1: "https://img5.pic.in.th/file/secure-sv1/all1.jpeg",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774360094/all1_di63zy.jpg",
 
         tag: {
 
@@ -743,7 +743,7 @@ const ProjectDatas = [
         id: "21",
         title: "KV Motion CREW AS ONE Party LinQtec ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Key Visual Motion สำหรับงานปาร์ตี้สังสรรค์ CREW AS ONE Party ของทางบริษัท LinQtec โดยเป็นการใช้บริการจัดทำ Event Agency ของบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด โดยมีการใช้เทคนิคการทำ Animation และการจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความเคลื่อนไหวที่สนุกสนาน",
-        img1: "https://img5.pic.in.th/file/secure-sv1/KVLQ.jpg",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774358280/KVLQ_hoaxcl.jpg",
         video: '/gif/KVLT01.mp4',
         tag: {
             tag1: "Motion Graphic",
@@ -791,7 +791,7 @@ const ProjectDatas = [
         id: "23",
         title: "Logo Motion BoostUp ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Motion Graphic สำหรับโลโก้ของ BoostUp ซึ่งเป็นหนึ่งในเครือของบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด เพื่อใช้ในโอกาสต่าง ๆ เช่น Showreel คลิปนำเสนอผลงานจัดอีเวนท์ต่างๆ \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด โดยมีการใช้เทคนิคการทำ Animation และการจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความเคลื่อนไหวที่สนุกสนาน",
-        img1: "https://img5.pic.in.th/file/secure-sv1/MotionBU.gif",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774359808/MotionBU_sisjia.gif",
         video: '',
         tag: {
             tag1: "Motion Graphic",
@@ -815,7 +815,7 @@ const ProjectDatas = [
         id: "24",
         title: "Handa TheGolden Night 2025 ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Motion Graphic สำหรับงานปาร์ตี้หลังการสัมมนาเปิดตัวรถรุ่นใหม่ของฮอนด้า ซึ่งทางของบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด เป็น organizer ให้กับงานนี้ \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด และ Footage ต่างๆ จัดวางและตัดต่อให้เข้ากับเสียงเพลงที่จะใช้ในการแสดงโชว์เปิดตัวงานปาร์ตี้",
-        img1: "https://img5.pic.in.th/file/secure-sv1/Honda.jpg",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774358275/Honda_pnmixr.jpg",
 
         tag: {
             tag1: "Motion Graphic",
@@ -872,7 +872,7 @@ const ProjectDatas = [
         id: "26",
         title: "Motion Graphic work at Maider co.,ltd",
         description: "ออกแบบและจัดทำสื่อภาพเคลื่อนไหว (motion graphic) โดยพัฒนาจากผลงาน Artwork ที่จัดทำโดยฝ่าย Graphic designer พร้อมทั้งดำเนินการปรับขนาดสื่อ (Resize) ให้เหมาะสมกับสัดส่วนและความละเอียดของจอ LED หลากหลายรูปแบบที่ใช้ในการนำเสนอผลงาน \n รับผิดชอบดูแลการอัปโหลดและจัดเรียงสื่อภาพเข้าสู่ระบบควบคุมการแสดงผล เพื่อให้การนำเสนอผ่านจอ LED เป็นไปอย่างมีประสิทธิภาพ",
-        img1: "https://img5.pic.in.th/file/secure-sv1/Artboard-17d05cca56af391fc.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774359185/maider-cover_fjsaxk.png",
 
         tag: {
             tag1: "Motion Graphic",
@@ -956,7 +956,7 @@ const ProjectDatas = [
         id: "29",
         title: "Stand-up Pouch dried orange Product Banner Design",
         description: "เป็นผลงานการออกแบบแบนเนอร์ผลิตภัณฑ์อาหารอบแห้งจากส้ม โดยใช้โปรแกรม Adobe Illustrator และ Adobe Photoshop ในการออกแบบและจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความสอดคล้องกับผลิตภัณฑ์ และยังออกแบบบรรจุภัณฑ์ Stand-up Pouch ในรูปแบบ 3D Mockup เพื่อให้เห็นภาพรวมของผลิตภัณฑ์ได้อย่างชัดเจน",
-        img1: "https://img5.pic.in.th/file/secure-sv1/Poster-FB-mockup.md.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774359396/Poster_FB_mockup_e1doxh.png",
 
         tag: {
 
@@ -991,7 +991,7 @@ const ProjectDatas = [
         id: "30",
         title: "Dancing with Ghosts [DEMO] | YouTube Thumbnail",
         description: "เป็นผลงานการออกแบบภาพปกวิดีโอ YouTube Thumbnail สำหรับวิดีโอเกม Dancing with Ghosts [DEMO] โดยใช้โปรแกรม Adobe Illustrator และ Adobe Photoshop ในการออกแบบและจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและดึงดูดความสนใจของผู้ชม รวมถึงการตัดต่อคลิปวิดีโอสั้นๆ เพื่อใช้เป็นตัวอย่างในการโปรโมทวิดีโอเกมดังกล่าว",
-        img1: "https://img5.pic.in.th/file/secure-sv1/Dancing-with-Ghosts.jpg",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774358918/Dancing_with_Ghosts_xczsix.jpg",
 
         tag: {
 
@@ -1033,7 +1033,7 @@ const ProjectDatas = [
         id: "31",
         title: "วิธีลง Mod ภาษาไทย Darkest Dungeon [ล่าสุด] | YouTube Thumbnail",
         description: "เป็นผลงานการออกแบบภาพปกวิดีโอ YouTube Thumbnail สำหรับสอนการติดตั้งมอดเกม Darkest Dungeon โดยใช้โปรแกรม Adobe Illustrator และ Adobe Photoshop ในการออกแบบและจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและดึงดูดความสนใจของผู้ชม",
-        img1: "https://img5.pic.in.th/file/secure-sv1/82262efdac66a7682c0e31877418837a.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774359536/%E0%B8%9B%E0%B8%81_msmbrn.png",
 
         tag: {
 

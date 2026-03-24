@@ -28,7 +28,7 @@ export default function HomeHeader() {
   }, []);
 
   return (
-    <header className='bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] w-auto min-h-[400px] h-auto pt-10 py-10 overflow-clip'>
+    <header className='bg-[url(https://res.cloudinary.com/donnu2idb/image/upload/v1774361399/BGBanner02_y4fb3l.png)] w-auto min-h-[400px] h-auto pt-10 py-10 overflow-clip'>
       <AnimatedContent
         distance={150}
         direction="vertical"

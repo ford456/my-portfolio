@@ -16,7 +16,7 @@ export default function HomeBanner() {
         //     </div>
 
         // </Link>
-        <div className=' grid grid-cols-12 grid-rows-6 gap-2 bg-[url(https://img5.pic.in.th/file/secure-sv1/Home-Banner02.jpg)] bg-center bg-cover bg-no-repeat h-[220px] sm:h-[400px] lg:h-[600px] 2xl:h-[900px] max-w-auto px-3 sm:px-3 lg:px-10 relative overflow-clip'>
+        <div className=' grid grid-cols-12 grid-rows-6 gap-2 bg-[url(https://res.cloudinary.com/donnu2idb/image/upload/v1774361647/Home_Banner02_hdwdw5.jpg)] bg-center bg-cover bg-no-repeat h-[220px] sm:h-[400px] lg:h-[600px] 2xl:h-[900px] max-w-auto px-3 sm:px-3 lg:px-10 relative overflow-clip'>
             <div className=' col-start-3 sm:col-start-4 md:col-start-4 lg:col-start-4 col-span-5 sm:col-span-3 md:col-span-3 lg:col-span-3 row-start-5 flex items-center justify-center'>
                 <div className='scale-45 sm:scale-55 md:scale-90 lg:scale-100 2xl:scale-150 '>
                     <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>

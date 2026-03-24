@@ -8,7 +8,7 @@ import AnimatedContent from './AnimatedContent';
 export default function Skills() {
     return (
         <header className=' w-auto min-h-[600px] h-auto  py-10 overflow-clip relative'>
-            <div className='bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] bg-top bg-cover h-20 sm:h-40 md:h-50 lg:h-70 xl:h-90 2xl:h-120'></div>
+            <div className='bg-[url(https://res.cloudinary.com/donnu2idb/image/upload/v1774361399/BGBanner02_y4fb3l.png)] bg-top bg-cover h-20 sm:h-40 md:h-50 lg:h-70 xl:h-90 2xl:h-120'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-20 mx-15 h-auto'>
                 <AnimatedContent

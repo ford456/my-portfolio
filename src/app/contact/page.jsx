@@ -192,7 +192,7 @@ export default  function Page() {
           delay={300}>
           <div className='hidden 2xl:flex 2xl:flex-col overflow-clip justify-center items-center'>
 
-            <img src="https://img5.pic.in.th/file/secure-sv1/e8be85d91ee07dc1d024b719f7bc12cb.png" alt="mypic" className=' rounded-full max-h-120 mb-5' />
+            <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1774361429/%E0%B8%A3%E0%B8%B8%E0%B8%9B_dfcso1.png" alt="mypic" className=' rounded-full max-h-120 mb-5' />
 
             <ul className='flex flex-row gap-3'>
               <li><a href="https://www.facebook.com/Fxrd.dd/" target='_blank' ><FaFacebook className="text-3xl" /></a></li>

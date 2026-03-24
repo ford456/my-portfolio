@@ -8,7 +8,7 @@ import Certipage from './Certipage';
 export default function AboutMe() {
     return (
         <div className=' cursor-default' >
-            <div className=' bg-[url(https://img5.pic.in.th/file/secure-sv1/BGBanner02.png)] h-[80] sm:h-[200] lg:h-screen md:max-h-[150px] lg:max-h-[200px] xl:max-h-[300px] 2xl:max-h-[500px] bg-cover'></div>
+            <div className=' bg-[url(https://res.cloudinary.com/donnu2idb/image/upload/v1774361399/BGBanner02_y4fb3l.png)] h-[80] sm:h-[200] lg:h-screen md:max-h-[150px] lg:max-h-[200px] xl:max-h-[300px] 2xl:max-h-[500px] bg-cover'></div>
             <div className=' grid grid-cols-3 max-w-auto min-h-[400px] h-auto px-2 sm:px-5 2xl:px-15 pb-10  lg:pb-30 justify-items-center '>
                 <div className='flex flex-col items-center bg-none border-r-2 w-full p-2 sm:p-5 mb-4 max-w-lg overflow-clip' >
 
@@ -136,7 +136,7 @@ export default function AboutMe() {
                         </div>
                         <div className='flex flex-wrap justify-center my-3 2xl:my-5'>
                             <button className="bg-blue-600 hover:bg-blue-500 text-white font-bold text-[9px] md:text-base 2xl:text-lg py-2 px-4 rounded-full mt-5 mb-5">
-                                <Link href='/PDF/CV.pdf' target='_blank' >Download Resume</Link>
+                                <Link href='https://res.cloudinary.com/donnu2idb/image/upload/v1774361260/CV_xxxkvs.pdf' target='_blank' >Download Resume</Link>
                             </button>
                         </div>
                     </AnimatedContent>

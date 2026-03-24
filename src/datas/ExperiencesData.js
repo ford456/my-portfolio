@@ -35,7 +35,7 @@ export const ExperiencesData = [
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]" />
           <img
-            src="https://img5.pic.in.th/file/secure-sv1/SS-Bad-guy-2.png"
+            src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360949/SS_Bad_guy_2_tr1qck.png"
             alt="SS Bad guy 2"
             width={500}
             height={500}
@@ -47,7 +47,7 @@ export const ExperiencesData = [
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]" />
           <img
-            src="https://img5.pic.in.th/file/secure-sv1/BK-TomJerry.png"
+            src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360914/BK_TomJerry_hmj072.png"
             alt="BK Tom&Jerry"
             width={500}
             height={500}
@@ -102,7 +102,7 @@ export const ExperiencesData = [
         </div >
         <div className="grid grid-cols-1 lg:grid  lg:grid-cols-2 gap-4">
           <img
-            src="https://img5.pic.in.th/file/secure-sv1/MotionBU.gif"
+            src="https://res.cloudinary.com/donnu2idb/image/upload/v1774359808/MotionBU_sisjia.gif"
             alt="Motione Logo BoostUp"
             width={500}
             height={500}
@@ -174,13 +174,13 @@ export const ExperiencesData = [
         </li>
         <div className="grid grid-cols-1 lg:grid  lg:grid-cols-2 gap-4">
           <img
-            src="https://img5.pic.in.th/file/secure-sv1/all1.jpeg"
+            src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360094/all1_di63zy.jpg"
             alt="All in Design"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]" />
           <img
-            src="https://img5.pic.in.th/file/secure-sv1/all1-2.jpg"
+            src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360163/all1-2_yayc1k.jpg"
             alt="All in Design"
             width={500}
             height={500}

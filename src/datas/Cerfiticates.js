@@ -12,7 +12,7 @@ export const Cerfiticates = [
                     Complete Web & Mobile Designer: UX/UI, Figma, +more
                 </p>
                 <img
-                    src="https://img5.pic.in.th/file/secure-sv1/Cer01.jpg"
+                    src="https://res.cloudinary.com/donnu2idb/image/upload/v1774361118/Cer01_q2hzys.jpg"
                     alt="Certificate of Completion"
                     width={500}
                     height={500}
@@ -32,7 +32,7 @@ export const Cerfiticates = [
                     รายวิชานี้มุ่งให้ผู้เรียนเข้าใจพื้นฐาน Generative AI และการใช้ ChatGPT อย่างเหมาะสมในงานวิชาการ พร้อมฝึกทักษะ prompt และวิเคราะห์ผลอย่างมีวิจารณญาณ
                 </p>
                 <img
-                    src="https://img5.pic.in.th/file/secure-sv1/Cer02.jpg"
+                    src="https://res.cloudinary.com/donnu2idb/image/upload/v1774361101/Cer02_w6ybqw.jpg"
                     alt="Certificate of Generative AI"
                     width={500}
                     height={500}
@@ -52,7 +52,7 @@ export const Cerfiticates = [
                     The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding, Logo Design
                 </p>
                 <img
-                    src="https://img5.pic.in.th/file/secure-sv1/Cer03.jpg"
+                    src="https://res.cloudinary.com/donnu2idb/image/upload/v1774361102/Cer03_ifm2nh.jpg"
                     alt="Graphic Design Masterclass"
                     width={500}
                     height={500}
