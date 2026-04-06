@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
+import { FaYoutube } from "react-icons/fa6";
 
 const ProjectDatas = [
     {
@@ -1020,10 +1021,11 @@ const ProjectDatas = [
 
                     <iframe className='w-full h-[300px] sm:h-[500px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]' src="https://www.youtube.com/embed/7cv4TZ3HVJs?si=Fx0Rr4_rkDTeWhU_" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                 </div>
-                <div className='flex flex-col gap-2'>
-                    <h3 className='text-4xl text-center font-bold pt-10 pb-5'>Short Video Link</h3>
-                    <Link href="https://youtube.com/shorts/VVKaZuGK3zY?si=21OmzALoHx7uZ5jc" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>https://youtube.com/shorts/VVKaZuGK3zY?si=21OmzALoHx7uZ5jc</Link>
-                    <Link href="https://youtube.com/shorts/KKd06NVIWSA?si=fJ1a8E7mp_mkBVo5" target='_blank' className='hover:text-blue-400 hover:underline hover:underline-offset-8 indent-15'>https://youtube.com/shorts/KKd06NVIWSA?si=fJ1a8E7mp_mkBVo5</Link>
+                <h3 className='text-4xl text-center font-bold pt-10 pb-5'>Short Video Link</h3>
+                <div className='flex flex-row justify-center gap-4 text-4xl'>
+                    
+                    <Link href="https://youtube.com/shorts/VVKaZuGK3zY?si=21OmzALoHx7uZ5jc" target='_blank' className='hover:text-red-600 scale-100  hover:scale-120 hover:underline hover:underline-offset-8 indent-15 transition-transform duration-300 ease-in-out'><FaYoutube /></Link>
+                    <Link href="https://youtube.com/shorts/KKd06NVIWSA?si=fJ1a8E7mp_mkBVo5" target='_blank' className='hover:text-red-600 scale-100  hover:scale-120 hover:underline hover:underline-offset-8 indent-15 transition-transform duration-300 ease-in-out'><FaYoutube /></Link>
                 </div>
             </div>
 
