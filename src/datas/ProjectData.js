@@ -665,12 +665,12 @@ const ProjectDatas = [
 
             <div className='grid grid-cols-3 gap-5 px-5'>
                 <div className='col-span-2 row-span-3 overflow-clip rounded-lg 2xl:rounded-3xl'>
-                    <img src="/pj/img/Pall1/PF01.jpg" className="object-cover object-center h-full w-full" />
+                    <img src="https://res.cloudinary.com/donnu2idb/image/upload/q_auto/f_auto/v1775485604/PF01_cedmra.jpg" className="object-cover object-center h-full w-full" />
                 </div>
 
-                <img src="/pj/img/Pall1/PF02.jpg" className=" w-full h-auto rounded-lg 2xl:rounded-3xl" />
-                <img src="/pj/img/Pall1/PF03.jpg" className=" w-full h-full rounded-lg 2xl:rounded-3xl" />
-                <img src="/pj/img/Pall1/PF04.jpg" className=" w-full h-auto rounded-lg 2xl:rounded-3xl" />
+                <img src="https://res.cloudinary.com/donnu2idb/image/upload/q_auto/f_auto/v1775485600/PF02_zfi2ia.jpg" className=" w-full h-auto rounded-lg 2xl:rounded-3xl" />
+                <img src="https://res.cloudinary.com/donnu2idb/image/upload/q_auto/f_auto/v1775485622/PF03_cy3vln.jpg" className=" w-full h-full rounded-lg 2xl:rounded-3xl" />
+                <img src="https://res.cloudinary.com/donnu2idb/image/upload/q_auto/f_auto/v1775485625/PF04_gk42vw.jpg" className=" w-full h-auto rounded-lg 2xl:rounded-3xl" />
 
             </div>
         )
@@ -956,7 +956,7 @@ const ProjectDatas = [
         id: "29",
         title: "Stand-up Pouch dried orange Product Banner Design",
         description: "เป็นผลงานการออกแบบแบนเนอร์ผลิตภัณฑ์อาหารอบแห้งจากส้ม โดยใช้โปรแกรม Adobe Illustrator และ Adobe Photoshop ในการออกแบบและจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความสอดคล้องกับผลิตภัณฑ์ และยังออกแบบบรรจุภัณฑ์ Stand-up Pouch ในรูปแบบ 3D Mockup เพื่อให้เห็นภาพรวมของผลิตภัณฑ์ได้อย่างชัดเจน",
-        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1774359396/Poster_FB_mockup_e1doxh.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1775486264/Poster_FB_mockup_02_wwtdhu.jpg",
 
         tag: {
 
