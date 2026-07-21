@@ -39,7 +39,7 @@ const ProjectDatas = [
 
         title: "Cats Fusion | Line Sticker Creator",
         description: " เหล่าแมวพันธุ์ผสม V.1 เป็นสติกเกอร์เคลื่อนไหวมีความน่ารัก โดยมีการออกแบบที่เน้นความเป็นเอกลักษณ์ของแมวพันธุ์ผสมสัตว์อื่นๆ ซึ่งสติ๊กเกอร์นี้เหมาะสำหรับในการประยุกต์ใช้ในสถานการณ์ต่างๆ เช่น การขอบคุณ รับทราบ ตอบรับ เป็นต้น",
-        img1: "https://img2.pic.in.th/cat-fusion.jpg",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1784650307/cat-fusion_fep9az.jpg",
 
         img2: "",
         img3: "",
@@ -111,7 +111,7 @@ const ProjectDatas = [
 
         title: "White Bubble | Brand Design",
         description: "เป็นการออกแบบโลโก้และแบรนด์ของ White Bubble ซึ่งเป็นผลิตภัณฑ์ทำความสะอาดใบหน้าโดยผลงานวิจัยของนิสิตคณะเภสัชศาสตร์ สาขาวิทยาศาสตร์เครื่องสำอาง มหาวิทยาลัยพะเยา ซึ่งความหมายของแบรนด์จะสื่อถึงความสะอาด นุ่มเหมือนฟองอากาศ",
-        img1: "https://img2.pic.in.th/WB-brand1.jpg",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1784651811/WB-brand1_qglxgn.jpg",
 
         tag: {
 
@@ -128,7 +128,7 @@ const ProjectDatas = [
         content: (
             <div className='grid grid-cols-3 gap-5 px-5 overflow-clip'>
                 <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360872/WB-brand2_w2youj.jpg" className="col-span-3 rounded-xl 2xl:rounded-4xl w-full h-full" />
-                <img src="https://img2.pic.in.th/WB-brand5.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
+                <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1784651789/WB-brand5_chru2v.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
                 <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360851/WB-brand4_fkwgnk.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
                 <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1774360849/WB-brand3_srpmfm.jpg" className="rounded-xl 2xl:rounded-4xl w-full h-auto" />
             </div>
@@ -288,7 +288,7 @@ const ProjectDatas = [
 
         title: "Halloween Coloring for kind book",
         description: "เป็นการใช้ AI generated ในโปรแกรม Adobe illustrator ในการ Generate ภาพต่างๆ นำมาจัดทำเป็นหนังสือวาดภาพระบายสีสำหรับเด็กและวางจำหน่ายบนเว็บไซ์ Amezon",
-        img1: "https://img2.pic.in.th/Book01.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1784652166/Book01_avy4mb.png",
         img2: "",
         img3: "",
         tag: {
@@ -321,7 +321,7 @@ const ProjectDatas = [
 
         title: "PnameF Shirt Design | Twitch: P_name_F",
         description: "เป็นการออกแบบเสื้อเพื่อวางจำหน่ายบนสตรีม Twitch ช่องของ P_name_F เพื่อหาช่องทางรายได้จากการขายสินค้าให้กับผู้ติดตามที่ต้องการสะสมผลงานของ P_name_F",
-        img1: "https://img2.pic.in.th/PF-t01.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1784652197/PF-t01_kllowh.png",
 
         tag: {
 
@@ -768,7 +768,7 @@ const ProjectDatas = [
         id: "22",
         title: "Logo Motion THE PIXEL ONE PRODUCTION CO.,LTD ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Motion Graphic สำหรับโลโก้ของทางบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด เพื่อใช้ในโอกาสต่าง ๆ เช่น Showreel คลิปนำเสนอผลงานจัดอีเวนท์ต่างๆ \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด โดยมีการใช้เทคนิคการทำ Animation และการจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความเคลื่อนไหวที่สนุกสนาน",
-        img1: "https://img2.pic.in.th/PX.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1784652297/PX_jkjpv8.png",
         video: '/pj/VD/PX.mp4',
         tag: {
             tag1: "Motion Graphic",
@@ -850,7 +850,7 @@ const ProjectDatas = [
         id: "25",
         title: "KV Motion THE INFLUENCER TUEK TUK Party BDMS ",
         description: "[ฝึกงาน] เป็นผลงานการทำ Key Visual Motion สำหรับงานปาร์ตี้สังสรรค์ THE INFLUENCER TUEK TUK Party ของทางบริษัท BDMS โดยเป็นการใช้บริการจัดทำ Event Agency ของบริษัท เดอะ พิกเซลวัน โพรดักชั่น จำกัด \n \n ซึ่งได้จัดทำ Motion Graphic โดยใช้โปรแกรม Adobe After Effects ในการทำงานทั้งหมด โดยมีการใช้เทคนิคการทำ Animation และการจัดวางองค์ประกอบต่างๆ ให้ดูน่าสนใจและมีความเคลื่อนไหวที่สนุกสนาน",
-        img1: "https://img2.pic.in.th/KVBDMS.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1784652556/KVBDMS_jdkakp.png",
         tag: {
             tag1: "Motion Graphic",
 
@@ -906,7 +906,7 @@ const ProjectDatas = [
         id: "27",
         title: "Rose Advernture | 3D Animation sort film",
         description: "การออกแบบตัวละคร 3D Animation โดยใช้โปรแกรม Maya ในการสร้างโมเดลตัวละครและฉากต่างๆ รวมถึงการทำ Rigging เพื่อให้ตัวละครสามารถเคลื่อนไหวได้อย่างสมจริง จากนั้นจึงนำโมเดลที่ได้ไปทำการจัดแสง (Lighting) และการเรนเดอร์ (Rendering) เพื่อให้ได้ภาพที่มีคุณภาพสูงและเหมาะสมกับการนำเสนอในรูปแบบของสื่อดิจิทัล \n\n การสร้างสรรค์เรื่องราว (Storytelling) ที่น่าสนใจและมีความหมาย โดยเน้นการสื่อสารผ่านภาพและเสียง เพื่อให้ผู้ชมสามารถเข้าใจและรับรู้ถึงความรู้สึกที่ต้องการถ่ายทอดผ่านตัวละครและเหตุการณ์ต่างๆ ในเรื่องราวนั้นๆ",
-        img1: "https://img2.pic.in.th/pic/Screenshot-2025-09-01-185509.png",
+        img1: "https://res.cloudinary.com/donnu2idb/image/upload/v1784652733/Rose_AV_o6gagb.png",
 
         tag: {
             tag1: "3D Modeling",
