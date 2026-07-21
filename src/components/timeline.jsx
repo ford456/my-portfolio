@@ -38,9 +38,9 @@ export const Timeline = ({
 
     return (
         <div
-            className="w-full md:px-10"
+            className="relative w-full md:px-10"
             ref={containerRef}>
-            <div className="max-w-5xl mx-auto py-5 sm:py-20 px-4 md:px-8 lg:px-10">
+            <div className="relative max-w-5xl mx-auto py-5 sm:py-20 px-4 md:px-8 lg:px-10">
                 <h2 className="text-lg md:text-4xl mb-4 font-bold  max-w-4xl">
                     Changelog from <br /><span className=" text-blue-500">my journey</span>
                 </h2>

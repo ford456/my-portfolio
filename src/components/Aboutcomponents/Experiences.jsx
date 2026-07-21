@@ -111,7 +111,7 @@ export default function Experiences() {
     },*/
   ;
   return (
-    <div className=" static w-full">
+    <div className="relative w-full">
       <Timeline data={data} />
     </div>
   );
