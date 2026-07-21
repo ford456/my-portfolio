@@ -39,6 +39,7 @@ export function middleware(request: NextRequest) {
       data:
       blob:
       https:
+      https://img2.pic.in.th
       https://res.cloudinary.com;
 
     media-src
@@ -48,6 +49,7 @@ export function middleware(request: NextRequest) {
     connect-src
       'self'
       https:
+      https://img2.pic.in.th
       https://api.cloudinary.com
       https://res.cloudinary.com
       https://va.vercel-scripts.com;
