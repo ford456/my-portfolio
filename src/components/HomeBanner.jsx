@@ -16,15 +16,45 @@ export default function HomeBanner() {
         //     </div>
 
         // </Link>
-        <div className=' grid grid-cols-12 grid-rows-6 gap-2 bg-[url(https://res.cloudinary.com/donnu2idb/image/upload/v1774361647/Home_Banner02_hdwdw5.jpg)] bg-center bg-cover bg-no-repeat h-[220px] sm:h-[400px] lg:h-[600px] 2xl:h-[900px] max-w-auto px-3 sm:px-3 lg:px-10 relative overflow-clip'>
-            <div className=' col-start-3 sm:col-start-4 md:col-start-4 lg:col-start-4 col-span-5 sm:col-span-3 md:col-span-3 lg:col-span-3 row-start-5 flex items-center justify-center'>
-                <div className='scale-45 sm:scale-55 md:scale-90 lg:scale-100 2xl:scale-150 '>
-                    <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>
-                        <div className='text-center bg-none py-3 px-4 rounded-full outline-3 mt-5'> About Me </div>
-                    </Link>
+
+        <div className='bg-[#ebebeb]'>
+
+            {/* desktop view */}
+            <div className=' hidden md:grid grid-cols-2 gap-[16px] md:mx-[90px] max-lg:mx-[140px] lg:mx-[140px] md:h-auto max-md:h-[420px] max-lg:h-[470px] lg:h-auto max-xl:h-[830px] max-2xl:h-[1080px] 2xl:h-[1080px] max-3xl:h-[1440px] max-w-auto relative overflow-clip'>
+                <div className='mt-[50px] 2xl:mt-[120px] justify-items-start cursor-default'>
+                    <img src='https://res.cloudinary.com/dlt9egtdv/image/upload/v1783109637/Hello_plqati.png' alt='mypic' className='flow-root pointer-events-none h-1/11 lg:w-auto' />
+                    <h1 className='flow-root md:pt-3 max-lg:text-[20px] lg:text-[28px] xl:text-3xl max-xl:text-3xl font-bold text-start md:leading-7 max-md:leading-8 lg:leading-12 max-lg:leading-12'>I'm <span className='font-normal text-blue-700 underline max-md:underline-offset-2 md:underline-offset-6 '>Patcharadol Soimanee</span>, <br />Based in Bangkok,Thailand.</h1>
+                    <text className='flow-root whitespace-pre-line max-w-md max-md:text-[7px] md:text-[10px] lg:text-sm pt-1' >Creative and detail-oriented multidisciplinary designer specializing in graphic design, motion graphics, and video editing. Committed to delivering high-quality visual solutions and continuous rofessional growth. </text>
+                    <div className='max-md:scale-40 md:scale-60 max-lg:scale-80 lg:scale-80'>
+                        <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>
+                            <div className='text-center bg-none py-2 px-5 rounded-full outline-2 mx-5 mt-2 hover:text-white hover:bg-blue-700'> About Me </div>
+                        </Link>
+                    </div>
+                </div>
+                <div className='justify-items-end'>
+                    <img src='https://res.cloudinary.com/dlt9egtdv/image/upload/v1783119848/%E0%B8%9B%E0%B8%81cover_qeeizc.png' alt='mypic' className=' pointer-events-none h-auto lg:w-auto' />
                 </div>
             </div>
 
+            {/* Mobile View */}
+            <div className='flex flex-col md:hidden pt-[20px] px-[50px] bg-none sm:h-auto md:h-auto max-w-auto relative overflow-clip'>
+                <div className='flex flex-col items-center'>
+                    <img src='https://res.cloudinary.com/dlt9egtdv/image/upload/v1783109637/Hello_plqati.png' alt='mypic' className='flow-root pointer-events-none max-md:h-[60px] lg:w-auto ' />
+                    <h1 className='flow-root max-md:pt-3 max-md:text-3xl max-lg:text-[25px] font-bold text-start max-md:leading-8.5'>I'm <span className='font-normal text-blue-700 underline max-md:underline-offset-2 md:underline-offset-6 '>Patcharadol Soimanee</span>, <br />Based in Bangkok,Thailand.</h1>
+                    <text className='flow-root whitespace-pre-line max-w-md max-md:text-[12px] pt-2' >Creative and detail-oriented multidisciplinary designer specializing in graphic design, motion graphics, and video editing. Committed to delivering high-quality visual solutions and continuous rofessional growth. </text>
+                </div>
+                <div className=' flex justify-center '>
+                    <div className=''>
+                        <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>
+                            <div className='text-center text-[12px] bg-none py-2 px-4 rounded-full outline-2 my-2 hover:text-white hover:bg-blue-700'> About Me </div>
+                        </Link>
+                    </div>
+                </div>
+                <div className='justify-items-center'>
+                    <img src='https://res.cloudinary.com/dlt9egtdv/image/upload/v1783119848/%E0%B8%9B%E0%B8%81cover_qeeizc.png' alt='mypic' className=' pointer-events-none h-auto lg:w-auto max-h-[350px]' />
+                </div>
+
+            </div>
         </div>
         // <div className='cursor-default bg-linear-to-bl from-blue-800/55 to-black/55 h-[300px] lg:h-[700px] max-w-auto  px-3 sm:px-3 lg:px-10 pt-20 lg:pt-5 relative overflow-clip'>
         //     <div className='relative flex items-center justify-center lg:justify-start h-full mx-auto'>

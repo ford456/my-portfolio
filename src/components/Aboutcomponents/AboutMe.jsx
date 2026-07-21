@@ -3,12 +3,13 @@ import AnimatedContent from '../AnimatedContent'
 import Experiences from './Experiences'
 import Link from 'next/link'
 import Certipage from './Certipage';
+import Linejob from '../Linejob';
 
 
 export default function AboutMe() {
     return (
         <div className=' cursor-default' >
-            <div className=' bg-[url(https://res.cloudinary.com/donnu2idb/image/upload/v1774361399/BGBanner02_y4fb3l.png)] h-[80] sm:h-[200] lg:h-screen md:max-h-[150px] lg:max-h-[200px] xl:max-h-[300px] 2xl:max-h-[500px] bg-cover'></div>
+            <Linejob />
             <div className=' grid grid-cols-3 max-w-auto min-h-[400px] h-auto px-2 sm:px-5 2xl:px-15 pb-10  lg:pb-30 justify-items-center '>
                 <div className='flex flex-col items-center bg-none border-r-2 w-full p-2 sm:p-5 mb-4 max-w-lg overflow-clip' >
 

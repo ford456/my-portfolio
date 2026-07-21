@@ -46,9 +46,9 @@ const NavBar = () => {
         
       `}
             >
-                <nav className="relative bg-linear-to-b from-white to-0  w-screen px-15 py-[1em]  bg-opacity-90 backdrop-blur-sm">
+                <nav className="relative bg-linear-to-b from-white to-0 max-xl:px-[100px] xl:px-[140px] w-screen h-[56px] bg-opacity-90 backdrop-blur-sm">
 
-                    <div className="container mx-auto grid grid-cols-2 items-center">
+                    <div className="container grid grid-cols-2 items-center mx-auto">
                         <img src="/PortLogoWhite.svg" alt="Logo" className='brightness-0 h-12 w-12 ' />
                         <ul className="flex flex-row md:my-5 mt-5 mb-3 md:mx-10 justify-end">
                             <li className="mx-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
@@ -78,11 +78,11 @@ const NavBar = () => {
 
             {/* Navbar สำหรับมือถือ (แสดงเฉพาะเมื่อ toggle เปิด) */}
             <div className={`${isFixed ? "fixed top-0 left-0 w-full z-50" : "sticky top-0 z-40"} md:hidden `}>
-                <div className='grid grid-cols-2 w-screen bg-linear-to-b from-white to-0 bg-opacity-90 backdrop-blur-sm p-2 bg-opacity-90 items-center mx-auto px-5 pt-5'>
-                    <img src="/PortLogoWhite.svg" alt="Logo" className=' brightness-0 justify-items-start ml-5  h-12 w-12 ' />
+                <div className='grid grid-cols-2 w-screen bg-linear-to-b from-white to-0 bg-opacity-90 backdrop-blur-sm h-[80px] bg-opacity-90 items-center mx-auto px-[50px] pt-5'>
+                    <img src="/PortLogoWhite.svg" alt="Logo" className=' brightness-0 justify-items-start  h-12 w-12 ' />
                     <HiOutlineBars3
                         onClick={updateToggle}
-                        className="cursor-pointer text-3xl justify-items-start ml-auto mr-5 "
+                        className="cursor-pointer text-3xl justify-items-start ml-auto "
                     />
                 </div>
 

@@ -76,8 +76,8 @@ export default  function Page() {
   // grid grid-cols-1 md:grid-cols-2
 
   return (
-    <main className="bg-none w-full h-auto flex justify-center items-center px-10 py-10 overflow-clip">
-      <div className="grid grid-cols-1 h-screen xl:grid-cols-2 xl:gap-4 2xl:px-10 items-center">
+    <main className="bg-none w-full h-auto flex justify-center items-center px-[140px] py-10 overflow-clip">
+      <div className="grid grid-cols-1 h-[720px] xl:grid-cols-2 xl:gap-4 2xl:px-10 items-center">
         <div className="flex flex-col  items-center justify-center scale-90">
           <AnimatedContent
             className=''

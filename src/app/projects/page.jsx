@@ -137,7 +137,7 @@ export default function ArtPro() {
   const displayedProducts = showAll ? sortedDatas : sortedDatas.slice(0, 9);
 
   const tagBtnBase =
-    "text-xs lg:text-sm px-4 py-2 rounded-full border border-2 lg:border-3 transition-all duration-200 ease-out transform will-change-[transform,opacity]";
+    "text-xs lg:text-sm px-6 py-1.5 rounded-full border border-1 lg:border-2 transition-all duration-200 ease-out transform will-change-[transform,opacity]";
 
   const updateFilters = (updates) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -165,7 +165,7 @@ export default function ArtPro() {
 
 
 
-    <div className='bg-none container mx-auto max-w-fit 2xl:max-w-[1320px] pt-20'>
+    <div className='bg-none container mx-[140px] max-w-fit 2xl:max-w-[1320px] pt-20'>
       <AnimatedContent
         className=''
         distance={80}
@@ -275,7 +275,7 @@ export default function ArtPro() {
         <sup className='md:col-span-3 lg:col-span-5 max-w-auto px-3'>
 
           {/* 🔸 แสดงสินค้า  */}
-          <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3  gap-x-6 px-5 mt-10'>
+          <div className='grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-3  gap-x-6 px-5 mt-10'>
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product, index) => {
                 const path = buildPath(product.id, tagSlug, skillSlug);

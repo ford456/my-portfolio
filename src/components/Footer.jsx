@@ -4,7 +4,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer className='bg-black px-10 md:px-6 p-4 contianer grid grid-cols-3 justify-center'>
+        <footer className='bg-[#1d3a51] px-10 md:px-6 p-4 contianer grid grid-cols-3 justify-center'>
             <div className='text-white text-sm md:text-base md:ml-10  mx-auto'>
                 <p className='pr-2'>© 2025 Patcharadol Portfolio. All Rights Reserved. </p>
             </div >
