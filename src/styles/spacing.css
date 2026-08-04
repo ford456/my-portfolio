@@ -1,0 +1,8 @@
+@theme {
+    --spacing-unit: 8px;
+    --spacing-margin-mobile: 20px;
+    --spacing-section-gap-mobile: 80px;
+    --spacing-gutter: 24px;
+    --spacing-section-gap-desktop: 160px;
+    --spacing-container-max: 1280px;
+}

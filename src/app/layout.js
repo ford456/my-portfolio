@@ -25,16 +25,15 @@ const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
 export const metadata = {
   title: "Patcharadol | Portfolio",
   description: "Patcharadol Portfolio Website for Graphic Designer, Motion Designer, 3D Modeler and Web Developer Freelance",
-  icons: {
-    icon: "/PortLogoWhite.svg",
-    shortcut: "/PortLogoWhite.svg",
-    apple: "/PortLogoWhite.svg",
-    other: { rel: "apple-touch-icon", url: "/PortLogoWhite.svg" }
-  },
   keywords: [
+    "พัชรดล",
+    "สร้อยมะณี",
     "Patcharadol",
+    "Soimanee",
     "Portfolio",
     "Developer",
+    "motion",
+    "Graphic",
     "Web Developer",
     "Graphic Designer",
     "motion designer",
@@ -44,10 +43,25 @@ export const metadata = {
   creator: "Patcharadol",
   publisher: "Patcharadol",
   openGraph: {
+    type: "website",
     title: "Patcharadol | Portfolio",
     description: "Patcharadol Portfolio Website for Graphic Designer, Motion Designer, 3D Modeler and Web Developer Freelance",
     url: "https://patcharadol-portfolio.vercel.app",
     siteName: "Patcharadol Portfolio",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dlt9egtdv/image/upload/v1783119848/%E0%B8%9B%E0%B8%81cover_qeeizc.png",  
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Patcharadol | Portfolio",
+    description: "Patcharadol Portfolio Website for Graphic Designer, Motion Designer, 3D Modeler and Web Developer Freelance",
+    creator: "@Patcharadol",
+    images: [
+      "https://res.cloudinary.com/dlt9egtdv/image/upload/v1783119848/%E0%B8%9B%E0%B8%81cover_qeeizc.png",
+    ],
   },
 };
 

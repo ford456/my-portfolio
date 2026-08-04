@@ -17,21 +17,23 @@ export default function HomeBanner() {
 
         // </Link>
 
-        <div className='bg-[#ebebeb]'>
+        <div className='bg-[#ebebeb] max-w-[1600px] 4k:max-w-[2200px] relative mx-auto'>
 
             {/* desktop view */}
-            <div className=' hidden md:grid grid-cols-2 gap-[16px] md:mx-[90px] max-lg:mx-[140px] lg:mx-[140px] md:h-auto max-md:h-[420px] max-lg:h-[470px] lg:h-auto max-xl:h-[830px] max-2xl:h-[1080px] 2xl:h-[1080px] max-3xl:h-[1440px] max-w-auto relative overflow-clip'>
-                <div className='mt-[50px] 2xl:mt-[120px] justify-items-start cursor-default'>
-                    <img src='https://res.cloudinary.com/dlt9egtdv/image/upload/v1783109637/Hello_plqati.png' alt='mypic' className='flow-root pointer-events-none h-1/11 lg:w-auto' />
-                    <h1 className='flow-root md:pt-3 max-lg:text-[20px] lg:text-[28px] xl:text-3xl max-xl:text-3xl font-bold text-start md:leading-7 max-md:leading-8 lg:leading-12 max-lg:leading-12'>I'm <span className='font-normal text-blue-700 underline max-md:underline-offset-2 md:underline-offset-6 '>Patcharadol Soimanee</span>, <br />Based in Bangkok,Thailand.</h1>
-                    <text className='flow-root whitespace-pre-line max-w-md max-md:text-[7px] md:text-[10px] lg:text-sm pt-1' >Creative and detail-oriented multidisciplinary designer specializing in graphic design, motion graphics, and video editing. Committed to delivering high-quality visual solutions and continuous rofessional growth. </text>
-                    <div className='max-md:scale-40 md:scale-60 max-lg:scale-80 lg:scale-80'>
-                        <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>
-                            <div className='text-center bg-none py-2 px-5 rounded-full outline-2 mx-5 mt-2 hover:text-white hover:bg-blue-700'> About Me </div>
-                        </Link>
-                    </div>
+            <div className=' hidden md:grid grid-cols-2 gap-[16px] md:mx-[90px] max-lg:mx-[140px] lg:mx-[140px] md:h-auto max-md:h-[420px] max-lg:h-[470px] lg:h-auto max-xl:h-[830px] max-2xl:h-[1080px] 2xl:h-[1080px] max-3xl:h-[1440px] max-w-auto relative content-end overflow-clip'>
+                <div className='mt-[50px] 2xl:mt-[120px] cursor-default '>
+                    {/* <div className="flex flex-col max-lg:items-center lg:items-start max-lg:text-center "> */}
+                        <img src='https://res.cloudinary.com/dlt9egtdv/image/upload/v1783109637/Hello_plqati.png' alt='mypic' className='flow-root pointer-events-none h-1/11 lg:w-auto' />
+                        <h1 className='flow-root md:pt-3 max-lg:text-[20px] lg:text-[28px] xl:text-3xl 2xl:text-7xl font-bold text-start md:leading-7 max-md:leading-8 lg:leading-12 max-lg:leading-12 2xl:leading-24'>I'm <span className='font-normal text-blue-700 underline max-md:underline-offset-2 md:underline-offset-6 '>Patcharadol Soimanee</span>, <br />Based in Bangkok,Thailand.</h1>
+                        <text className='max-2xl:flow-root max-2xl:whitespace-pre-line max-w-md max-md:text-[7px] md:text-[10px] lg:text-sm 2xl:text-2xl pt-1' >Creative and detail-oriented multidisciplinary designer specializing in graphic design, motion graphics, and video editing. Committed to delivering high-quality visual solutions and continuous rofessional growth. </text>
+                        <div className='flex justify-center max-md:scale-40 md:scale-60 max-lg:scale-80 lg:scale-80 xl:scale-90 2xl:scale-150 2xl:mt-5 4k:scale-110'>
+                            <Link href="/about" className="" target='_parent' onClick={() => setToggle(false)}>
+                                <div className='text-center bg-none py-2 px-5 rounded-full outline-2 mx-5 mt-2 hover:text-white hover:bg-blue-700'> About Me </div>
+                            </Link>
+                        </div>
+                    {/* </div> */}
                 </div>
-                <div className='justify-items-end'>
+                <div className='justify-items-center content-end'>
                     <img src='https://res.cloudinary.com/dlt9egtdv/image/upload/v1783119848/%E0%B8%9B%E0%B8%81cover_qeeizc.png' alt='mypic' className=' pointer-events-none h-auto lg:w-auto' />
                 </div>
             </div>

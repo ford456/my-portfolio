@@ -16,7 +16,7 @@ const NavBar = () => {
     }
 
     const [isFixed, setIsFixed] = useState(false);
-    
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,9 +24,9 @@ const NavBar = () => {
 
             if (scrollY > 150 && !isFixed) {
                 setIsFixed(true);
-                
+
             } else if (scrollY <= 150 && isFixed) {
-                
+
                 setIsFixed(false);
             }
         };
@@ -41,16 +41,18 @@ const NavBar = () => {
             <div
                 className={`
         ${isFixed ? "fixed top-0 left-0 w-full z-50" : "sticky top-0 z-40"} 
-        hidden md:flex justify-center
+        hidden md:flex justify-center 
         transition-all duration-300
         
       `}
             >
-                <nav className="relative bg-linear-to-b from-white to-0 max-xl:px-[100px] xl:px-[140px] w-screen h-[56px] bg-opacity-90 backdrop-blur-sm">
+                <nav className="content-center 2xl:text-2xl relative bg-linear-to-b from-white to-0 max-lg:px-[50px] lg:px-[100px]  xl:px-[140px] w-screen h-[56px] 2xl:h-[80px] bg-opacity-90 backdrop-blur-sm">
 
                     <div className="container grid grid-cols-2 items-center mx-auto">
-                        <img src="/PortLogoWhite.svg" alt="Logo" className='brightness-0 h-12 w-12 ' />
-                        <ul className="flex flex-row md:my-5 mt-5 mb-3 md:mx-10 justify-end">
+                        <Link href="/" target='_parent' className='flex flex-row gap-1 font-black text-2xl items-center'>
+                            <img src="/PortLogoWhite.svg" alt="Logo" className='brightness-0 h-12 w-auto 2xl:h-20  ' /> Freindaly
+                        </Link>
+                        <ul className="flex flex-row max-xl:grid max-xl:grid-cols-6 gap-x-2 justify-end md:text-sm ">
                             <li className="mx-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
                                 <Link href="/" className=" hover:text-blue-500" target='_parent' >
                                     Home
@@ -69,6 +71,11 @@ const NavBar = () => {
                             <li className="mx-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
                                 <Link href="/contact" className=" hover:text-blue-500" target='_parent' >
                                     Contact
+                                </Link>
+                            </li>
+                            <li className="mx-2 col-span-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                                <Link href="/contact" className="py-1 px-5 bg-blue-500 text-white rounded-xl outline-0 hover:outline-blue-500 hover:outline-2 hover:outline-offset-2 " target='_parent' >
+                                    Hire Me
                                 </Link>
                             </li>
                         </ul>
@@ -91,25 +98,30 @@ const NavBar = () => {
 
             {toggle && (
                 <div className="md:hidden fixed inset-x-0 top-0 z-100 transition-transform duration-300 ease-in-out bg-linear-to-b from-white to-0 bg-opacity-90 backdrop-blur-sm p-2 bg-opacity-90 flex flex-col justify-center items-center">
-                    <ul className="m-5 mb-4 gap-x-5 gap-y-2 text-center flex flex-row items-center justify-center flex-wrap">
+                    <ul className="m-5 mb-4 gap-x-5 gap-y-2 text-center flex flex-row items-center justify-center flex-wrap md:text-sm">
                         <li>
-                            <Link href="/" className=" text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
+                            <Link href="/" className="  text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link href="/about" className=" text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
+                            <Link href="/about" className="  text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
                                 About
                             </Link>
                         </li>
                         <li>
-                            <Link href="/projects" className=" text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
+                            <Link href="/projects" className="  text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
                                 Projects
                             </Link>
                         </li>
                         <li>
-                            <Link href="/contact" className=" text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
+                            <Link href="/contact" className="  text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
                                 Contact
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/contact" className=" py-1 px-5 bg-blue-500 text-white rounded-xl outline-0 hover:outline-blue-500 hover:outline-2 hover:outline-offset-2 " target='_parent' onClick={() => setToggle(false)}>
+                                Hire Me
                             </Link>
                         </li>
                         <li>
