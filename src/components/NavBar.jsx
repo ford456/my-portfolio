@@ -48,9 +48,9 @@ const NavBar = () => {
             >
                 <nav className="content-center 2xl:text-2xl relative bg-linear-to-b from-white to-0 max-lg:px-[50px] lg:px-[100px]  xl:px-[140px] w-screen h-[56px] 2xl:h-[80px] bg-opacity-90 backdrop-blur-sm">
 
-                    <div className="container grid grid-cols-2 items-center mx-auto">
+                    <div className="container grid grid-cols-2 justify-self-center items-center w-full mx-[50px] ">
                         <Link href="/" target='_parent' className='flex flex-row gap-1 font-black text-2xl items-center'>
-                            <img src="/PortLogoWhite.svg" alt="Logo" className='brightness-0 h-12 w-auto 2xl:h-20  ' /> Freindaly
+                            <img src="/PortLogoWhite.svg" alt="Logo" className='brightness-0 h-12 w-auto 2xl:h-15  ' /> Freindaly
                         </Link>
                         <ul className="flex flex-row max-xl:grid max-xl:grid-cols-6 gap-x-2 justify-end md:text-sm ">
                             <li className="mx-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">

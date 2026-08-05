@@ -165,7 +165,7 @@ export default function Projectsection() {
                             </div>
                             <div className="mt-6 flex justify-between items-start md:hidden">
                                 <div>
-                                    <h3 className="font-bold text-headline-md text-deep-navy">{project14.title}</h3>
+                                    <h3 className="font-bold text-[24px] text-deep-navy">{project14.title}</h3>
                                     <p className="text-on-surface-variant font-body-md mt-1 max-w-md truncate">{project14.description}</p>
                                 </div>
                             </div>

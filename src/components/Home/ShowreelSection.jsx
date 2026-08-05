@@ -38,7 +38,7 @@ export default function ShowreelSection() {
                     scale={1}
                     threshold={0.2}
                     delay={300}>
-                    <iframe className='relative group aspect-video w-full rounded-xl overflow-hidden shadow-2xl '
+                    <iframe className='relative group justify-self-center aspect-video w-full rounded-xl overflow-hidden shadow-2xl xl:max-w-[1280px] '
                         src="https://www.youtube.com/embed/fDwcXvyimLU?si=4cgotUUzdu-IFjGO" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                 </AnimatedContent>
             </div>
