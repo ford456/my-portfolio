@@ -14,7 +14,7 @@
   --text-caption--line-height: 16px;
   --text-caption--font-weight: 400;
 
-  --text-display-hero: 80px;
+  --text-display-hero: 75px;
   --text-display-hero--line-height: 90px;
   --text-display-hero--font-weight: 700;
   --text-display-hero--letter-spacing: -0.02em;
@@ -43,4 +43,10 @@
    --color-deep-navy: #1D3A51;
    --color-electric-blue: #3B82F6;
    --color-surface-container: #eeedef;
+   --color-outline:#73777d;
+   --color-soft-gray: #EBEBEB;
+   --color-primary: #02243a;
+   --color-surface-container-low: #f4f3f5;
+   --color-secondary: #0058be;
+   --color-outline-variant: #e3e2e4;
 }

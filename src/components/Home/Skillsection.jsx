@@ -31,7 +31,7 @@ export default function Skillsection() {
               delay={300}
               key={item.id}
             >
-              <div data-id={item.id} className={`bg-white p-3 rounded-xl text-deep-navy outline-1 outline-gray-500/20 flex flex-col items-center gap-4 transition-all duration-300 ease-in-out skill-chip-hover cursor-default group`}>
+              <div data-id={item.id} className={`bg-white p-3 rounded-xl h-full text-deep-navy outline-1 outline-gray-500/20 flex flex-col items-center gap-4 transition-all duration-300 ease-in-out skill-chip-hover cursor-default group`}>
                 <div className="w-16 h-16 text-3xl rounded-full bg-gray-200 flex items-center justify-center overflow-clip">
                   {item.icon === 'MdOutlineBrush' && <MdOutlineBrush />}
                   {item.icon === 'MdOutlineAutoAwesomeMotion' && <MdOutlineAutoAwesomeMotion />}

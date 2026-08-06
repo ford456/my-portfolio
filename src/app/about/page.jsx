@@ -3,7 +3,11 @@ import React from 'react';
 import HeroAbout from '../../components/Aboutcomponents/Hero'
 import AboutMe from '../../components/Aboutcomponents/AboutMe';
 import Aboutcover from '../../components/AboutCover';
-
+import Profilesection from '../../components/About/Profilesection';
+import Biographycontent from '../../components/About/Biographycontent';
+import Linejob from '../../components/Linejob'
+import ExpTimeline from './../../components/About/ExpTimeline';
+import SkillsAbout from './../../components/About/SkillsAbout';
 
 function AboutPage() {
 
@@ -13,8 +17,13 @@ function AboutPage() {
 
         <>
             {/* <HeroAbout /> */}
-            <Aboutcover />
-            <AboutMe />
+            <Profilesection />
+            <Linejob/>
+            {/* <Aboutcover /> */}
+            {/* <AboutMe /> */}
+            <Biographycontent />
+            <ExpTimeline/>
+            <SkillsAbout/>
         </>
 
     )

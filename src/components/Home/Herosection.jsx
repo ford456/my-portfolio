@@ -12,7 +12,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0 ">
             </div>
             <div className="lg:max-w-[900px] xl:max-w-[1280px] 2xl:max-w-[1900px] mx-5 justify-items-center px-[20px] md:px-[24px] h-auto w-full grid grid-cols-1 md:grid-cols-12 2xl:grid-cols-16 gap-[8px] relative z-10 pt-[8px] transition-all duration-1000 opacity-100 translate-y-0">
-                <div className="max-md:col-span-5 md:col-span-5 max-lg:col-span-6 2xl:col-span-8 flex flex-col gap-2 ">
+                <div className="max-md:col-span-5 md:col-span-5 max-lg:col-span-6 2xl:col-span-8 flex flex-col gap-2 self-center ">
                     <h1 className='flow-root md:pt-3  max-lg:text-[28px] lg:text-[28px] xl:text-3xl 2xl:text-7xl font-bold text-start md:leading-10 max-md:leading-8 lg:leading-12 max-lg:leading-12 2xl:leading-24'>I'm <span className='font-normal text-blue-700 underline max-md:underline-offset-2 md:underline-offset-6 '>Patcharadol Soimanee</span>, <br />Based in Bangkok,Thailand.</h1>
                     <a className='flow-root whitespace-pre-line max-w-md sm:text: max-md:text-[16px] md:text-[14px] lg:text-sm 2xl:text-2xl pt-1 indent-8' >Creative and detail-oriented multidisciplinary designer specializing in graphic design, motion graphics, and video editing. Committed to delivering high-quality visual solutions and continuous rofessional growth. </a>
                     <div className='flex justify-start 2xl:mt-5 4k:scale-110 max-lg:text-[9px] 2xl:text-2xl my-10'>

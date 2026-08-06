@@ -51,7 +51,7 @@ export default function Projectsection() {
                                 <Link href={`/projects/${project26.id}`} target="_parent" rel="noopener noreferrer">
                                     <img className="w-full h-full object-cover " data-alt="Futuristic motion graphic preview"
                                         src={project26.img1} />
-                                    <div className="overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
+                                    <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
 
                                         <h3 className="font-headline-lg text-headline-md mb-2">{project26.title}</h3>
 
@@ -63,8 +63,8 @@ export default function Projectsection() {
                                         2025</div>
                                 </Link>
                             </div>
-                            <div className="mt-6 md:hidden">
-                                <h3 className="font-headline-md text-deep-navy">{project26.title}</h3>
+                            <div className="mt-6 md:hidden grid grid-cols-1 gap-y-1">
+                                <h3 className="font-bold text-[24px] text-deep-navy">{project26.title}</h3>
                                 <p className="text-on-surface-variant font-body-md max-w-md truncate">{project26.description}</p>
                             </div></AnimatedContent>
                     </div>
@@ -88,7 +88,7 @@ export default function Projectsection() {
                                 <Link href={`/projects/${project15.id}`} target="_parent" rel="noopener noreferrer">
                                 <img className="w-full h-full object-cover" data-alt="Elegant minimalist posters"
                                     src={project15.img1} />
-                                <div className="overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
+                                <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
                                     <h3 className="font-bold text-[24px]">{project15.title}</h3>
                                     <p className="font-body-md opacity-80 max-w-md truncate">{project15.description}</p>
                                 </div></Link>
@@ -97,8 +97,8 @@ export default function Projectsection() {
                                     2025</div>
                                
                             </div>
-                            <div className="mt-6 md:hidden">
-                                <h3 className="font-headline-md text-deep-navy">{project15.title}</h3>
+                            <div className="mt-6 md:hidden grid grid-cols-1 gap-y-1">
+                                <h3 className="font-bold text-[24px] text-deep-navy">{project15.title}</h3>
                                 <p className="text-on-surface-variant font-body-md  max-w-md truncate">{project15.description}</p>
                             </div>
                         </AnimatedContent>
@@ -122,7 +122,7 @@ export default function Projectsection() {
                                 <Link href={`/projects/${project23.id}`} target="_parent" rel="noopener noreferrer">
                                 <img className="w-full h-full object-cover" data-alt="Dynamic video editing frame"
                                     src={project23.img1} />
-                                <div className="overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
+                                <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
                                     <h3 className="font-bold text-[24px]">{project23.title}</h3>
                                     <p className="font-body-md opacity-80 max-w-md truncate">{project23.description}</p>
                                 </div></Link>
@@ -130,7 +130,7 @@ export default function Projectsection() {
                                     className="absolute top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-gray-300 font-bold text-[12px]">
                                     2025</div>
                             </div>
-                            <div className="mt-6 md:hidden">
+                            <div className="mt-6 md:hidden grid grid-cols-1 gap-y-1">
                                 <h3 className="font-bold text-[24px] text-deep-navy">{project23.title}</h3>
                                 <p className="text-on-surface-variant font-body-md max-w-md truncate">{project23.description}</p>
                             </div>
@@ -155,7 +155,7 @@ export default function Projectsection() {
                                 <Link href={`/projects/${project14.id}`} target="_parent" rel="noopener noreferrer">
                                 <img className="w-full h-full object-cover" data-alt="3D character design"
                                     src={project14.img1} />
-                                <div className="overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
+                                <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
                                     <h3 className="font-bold text-headline-md">{project14.title}</h3>
                                     <p className="font-body-md opacity-80 max-w-md truncate">{project14.description}</p>
                                 </div></Link>
@@ -164,7 +164,7 @@ export default function Projectsection() {
                                     2025</div>
                             </div>
                             <div className="mt-6 flex justify-between items-start md:hidden">
-                                <div>
+                                <div className="grid grid-cols-1 gap-y-1">
                                     <h3 className="font-bold text-[24px] text-deep-navy">{project14.title}</h3>
                                     <p className="text-on-surface-variant font-body-md mt-1 max-w-md truncate">{project14.description}</p>
                                 </div>
