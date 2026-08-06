@@ -32,7 +32,7 @@ export default function TimeLineCard({ data, reverse, active, setActiveId, }) {
 
 
     return (
-        <div className={`cursor-default relative flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center mb-24 last:mb-0 timeline-item`}>
+        <div className={`cursor-default  group relative flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center mb-24 last:mb-0 timeline-item`}>
 
             <div className={`w-full md:w-1/2 mb-8 md:mb-0 hidden md:block ${reverse ? "md:text-left md:pl-24" : "md:text-right md:pr-24"}`}>
                 <AnimatedContent
@@ -48,7 +48,7 @@ export default function TimeLineCard({ data, reverse, active, setActiveId, }) {
 
                 ><span
 
-                    className={`font-display-hero-mobile text-display-hero-mobile opacity-50 duration-700 ease-in-out hover:opacity-100 hover:text-electric-blue `}>{data.years}</span>
+                    className={`font-display-hero-mobile text-display-hero-mobile opacity-50 duration-700 ease-in-out group-hover:opacity-100 group-hover:text-electric-blue `}>{data.years}</span>
                 </AnimatedContent>
             </div>
 
@@ -68,7 +68,7 @@ export default function TimeLineCard({ data, reverse, active, setActiveId, }) {
 
                 >
                     <div
-                        className="glass-card p-8 rounded-xl shadow-sm border border-outline-variant/30 hover:border-electric-blue/50 transition-all duration-300">
+                        className=" glass-card p-8 rounded-xl shadow-sm border border-outline-variant/30 hover:border-electric-blue/50 group-hover:scale-105 transition-all duration-600 ease-in-out">
                         <span
                             className="md:hidden font-label-caps text-label-caps text-electric-blue mb-2 block">{data.years}</span>
                         <div className="flex flex-row gap-x-2">

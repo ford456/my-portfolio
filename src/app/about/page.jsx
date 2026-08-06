@@ -8,6 +8,7 @@ import Biographycontent from '../../components/About/Biographycontent';
 import Linejob from '../../components/Linejob'
 import ExpTimeline from './../../components/About/ExpTimeline';
 import SkillsAbout from './../../components/About/SkillsAbout';
+import Certificatescontent from './../../components/About/Certificatescontent';
 
 function AboutPage() {
 
@@ -24,6 +25,7 @@ function AboutPage() {
             <Biographycontent />
             <ExpTimeline/>
             <SkillsAbout/>
+            <Certificatescontent/>
         </>
 
     )
