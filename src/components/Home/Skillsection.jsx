@@ -23,12 +23,12 @@ export default function Skillsection() {
               distance={80}
               direction="vertical"
               reverse={false}
-              config={{ tension: 80, friction: 20 }}
+              config={{ tension: 80, friction: 30 }}
               initialOpacity={0}
               animateOpacity
               scale={1}
               threshold={0.2}
-              delay={300}
+              delay={item.id*200}
               key={item.id}
             >
               <div data-id={item.id} className={`bg-white p-3 rounded-xl h-full text-deep-navy outline-1 outline-gray-500/20 flex flex-col items-center gap-4 transition-all duration-300 ease-in-out skill-chip-hover cursor-default group`}>

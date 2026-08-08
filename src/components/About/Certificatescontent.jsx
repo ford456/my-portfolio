@@ -16,12 +16,12 @@ export default function Certificatescontent() {
                     distance={70}
                     direction="vertical"
                     reverse={false}
-                    config={{ tension: 80, friction: 20 }}
+                    config={{ tension: 50, friction: 30 }}
                     initialOpacity={0}
                     animateOpacity
                     scale={1}
                     threshold={0.2}
-                    delay={600}
+                    delay={i*200}
                     key={i}
                 >
                     <div 

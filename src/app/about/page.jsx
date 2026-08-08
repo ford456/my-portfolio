@@ -9,6 +9,7 @@ import Linejob from '../../components/Linejob'
 import ExpTimeline from './../../components/About/ExpTimeline';
 import SkillsAbout from './../../components/About/SkillsAbout';
 import Certificatescontent from './../../components/About/Certificatescontent';
+import CTAsection from './../../components/About/CTAsection';
 
 function AboutPage() {
 
@@ -26,6 +27,7 @@ function AboutPage() {
             <ExpTimeline/>
             <SkillsAbout/>
             <Certificatescontent/>
+            <CTAsection/>
         </>
 
     )

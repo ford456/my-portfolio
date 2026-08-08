@@ -24,7 +24,7 @@ export default function ExpTimeline() {
 
     return (
         <section ref={containerRef}
-            className="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden">
+            className="relative py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden">
             <h2 className="font-headline-lg text-headline-lg text-deep-navy mb-16 text-center">The Journey</h2>
             <div className="relative timeline-line" >
                 <div

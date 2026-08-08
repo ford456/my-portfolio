@@ -170,7 +170,7 @@ export default function Contactsection() {
                         delay={300}
 
                     >
-                        <form onSubmit={handleSubmit} className=" scale-80 md:scale-90 2xl:scale-100 rounded-2xl max-h-auto max-w-auto ">
+                        <form onSubmit={handleSubmit} className=" p-8 md:p-12 scale-80 md:scale-90 2xl:scale-100 outline-2 outline-white/10 shadow-2xl rounded-2xl max-h-auto max-w-auto ">
 
                             <div className="relative flex flex-col space-y-1 pb-2">
                                 <label htmlFor="subject">Subject:</label>
@@ -196,7 +196,7 @@ export default function Contactsection() {
                                         required
                                         value={values.name}
                                         onChange={handleChange}
-                                        placeholder="Name"
+                                        placeholder="Your Name"
                                         className={`w-full ${Allstype}`}
                                     />
                                 </div>

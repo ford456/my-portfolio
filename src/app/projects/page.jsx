@@ -134,7 +134,7 @@ export default function ArtPro() {
   {/*const sortedSkill = searchedProducts.slice().sort((a, b) => a.skill.localeCompare(b.skill)); //// เรียงข้อมูลตามชื่อ*/ }
 
   // 🔹 แสดง 6 ชิ้นแรก ถ้า showAll เป็น false
-  const displayedProducts = showAll ? sortedDatas : sortedDatas.slice(0, 9);
+  const displayedProducts = showAll ? sortedDatas : sortedDatas.slice(0, 12);
 
   const tagBtnBase =
     "text-xs lg:text-sm px-6 py-1.5 rounded-full border border-1 lg:border-2 transition-all duration-200 ease-out transform will-change-[transform,opacity]";
@@ -155,34 +155,30 @@ export default function ArtPro() {
 
   const buildPath = (id, tagSlug, skillSlug) => {
     return [id, tagSlug, skillSlug].filter(Boolean).join("/");
-    
+
   };
 
-  
+
 
   return (
 
 
 
-
-    <div className='bg-none container mx-[140px] max-w-fit 2xl:max-w-[1320px] pt-20'>
-      <AnimatedContent
-        className=''
-        distance={80}
-        direction="vertical"
-        reverse={false}
-        config={{ tension: 80, friction: 20 }}
-        initialOpacity={0}
-        animateOpacity
-        scale={1.1}
-        threshold={0.2}
-        delay={200}>
-        <h1 className="text-7xl font-medium text-center p-3 pb-6 my-10" >Projects</h1>
+<div className='bg-primary'>
+    <div className='pt-32 pb-section-gap-desktop max-w-container-max mx-auto px-margin-mobile md:px-gutter '>
+        <header className="mb-17">
+          <h1 className="font-display-hero text-display-hero-mobile md:text-display-hero text-white mb-unit-4 max-w-4xl">
+            Curated <span className="text-electric-blue">Masterpieces</span> of Digital Design.
+          </h1>
+          <p className="font-body-lg text-body-lg text-gray-100/60 max-w-2xl">
+            A selection of my professional work ranging from high-fidelity motion graphics to strategic brand identities and interactive media.
+          </p>
+        </header>
         {/* 🔍 กล่องค้นหา */}
-        <div className='flex flex-row justify-center items-center my-2'>
-          <IoSearch className='pointer-events-none relative left-8 text-xl fill-black' />
+        <div className='flex flex-row items-center my-3'>
+          <IoSearch className='pointer-events-none relative left-8 text-xl fill-white' />
           <input
-            className="static text-black w-[85%] h-[40px] border-2 border-black rounded-xl p-2 pl-10 focus:outline-blue-400 focus:outline-offset-4"
+            className="static text-white w-full h-[40px] border-2 border-white rounded-xl p-2 pl-10 focus:outline-blue-400 focus:outline-offset-4"
             type="text"
             placeholder='ค้นหาด้วยชื่อผลงาน หรือประเภท หรือ Skills'
             value={searchTerm}
@@ -194,30 +190,30 @@ export default function ArtPro() {
               });
             }}
           />
-        </div></AnimatedContent>
+        </div>
+        
+          <div className='pl-5 '>
 
-      <main className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6  px-5 md:px-0 bt-5">
-        <AnimatedContent
+
+            {/* 🔸 ปุ่มกรองประเภท */}
+            <div className='flex flex-wrap gap-2 mt-7  md:px-0'>
+              {sortKeepAllFirst(["all", ...allTags]).map((type, index) => {
+                const isActive = selectedTag === type;
+                return (
+                <AnimatedContent
           className=''
-          distance={80}
+          distance={10}
           direction="vertical"
           reverse={false}
-          config={{ tension: 80, friction: 20 }}
+          config={{ tension: 60, friction: 20 }}
           initialOpacity={0}
           animateOpacity
           scale={1}
           threshold={0.2}
-          delay={500}>
-          <div className='px-5 pl-10 2xl:pl-0 pr-5 md:border-r-2 2xl:pr-10 pt-3 my-10'>
-
-
-            {/* 🔸 ปุ่มกรองประเภท */}
-            <div className='flex justify-center flex-wrap gap-2 mt-5  md:px-0'>
-              {sortKeepAllFirst(["all", ...allTags]).map((type) => {
-                const isActive = selectedTag === type;
-                return (
+          delay={index*100}
+          key={type}>
                   <button
-                    key={type}
+                    
                     onClick={() => {
                       updateFilters({
                         tag: type,
@@ -227,17 +223,18 @@ export default function ArtPro() {
                     }}
                     className={`${tagBtnBase} ` +
                       (isActive
-                        ? " text-blue-700 border-blue-700 opacity-100 scale-100 "
-                        : "bg-transparent border-black hover:text-blue-400 hover:border-blue-400 scale-95")
+                        ? " bg-blue-700 text-white border-white opacity-100 scale-100 "
+                        : "bg-transparent text-white border-white hover:bg-white/10  scale-95")
                     }
                     aria-pressed={isActive}
                   >
-                    {type === "all" ? "ทั้งหมด" : type}
+                    {type === "all" ? "All" : type}
                   </button>
+                  </AnimatedContent>
                 )
               })}
             </div>
-            {/* 🔸 ปุ่มกรองประเภท skill */}
+            {/* 🔸 ปุ่มกรองประเภท skill
             <div className="">
               <div className=" pt-15 ">
                 <h2 className="text-xl">Skills</h2>
@@ -269,23 +266,26 @@ export default function ArtPro() {
                   </button>
                 )
               })}
-            </div>
+            </div> */}
           </div>
-        </AnimatedContent>
-        <sup className='md:col-span-3 lg:col-span-5 max-w-auto px-3'>
+        
+
+      <main className="relative">
+        
+        
 
           {/* 🔸 แสดงสินค้า  */}
-          <div className='grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-3  gap-x-6 px-5 mt-10'>
+          <div className='grid max-md:grid-cols-1 max-lg:grid-cols-3 lg:grid-cols-4  gap-x-6 px-5 mt-10'>
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product, index) => {
                 const path = buildPath(product.id, tagSlug, skillSlug);
-                
+
                 return (
                   <div id={index === 0 ? "first-card" : undefined} key={product.id}>
                     <AnimatedContent
                       key={product.id}
                       className=''
-                      distance={80}
+                      distance={30}
                       direction="vertical"
                       reverse={false}
                       config={{ tension: 80, friction: 20 }}
@@ -293,7 +293,7 @@ export default function ArtPro() {
                       animateOpacity
                       scale={1.1}
                       threshold={0.2}
-                      delay={500}>
+                      delay={300}>
                       <Link href={`/projects/${path}`} target='_parent'>
                         <Card data={product}
                           textClassName='text-xs' />
@@ -308,8 +308,8 @@ export default function ArtPro() {
 
           {/* 🔻 ปุ่มดูเพิ่มเติม / แสดงน้อยลง */}
           {
-            sortedDatas.length > 9 && (
-              <div className="text-center my-5  hover:text-blue-500">
+            sortedDatas.length > 12 && (
+              <div className="text-center pt-5  ">
                 <button
                   onClick={() => {
                     const wasShowingAll = showAll;     // เก็บค่าเดิมไว้ก่อน
@@ -321,15 +321,16 @@ export default function ArtPro() {
                       requestAnimationFrame(() => requestAnimationFrame(scrollToFirstCard));
                     }
                   }}
-                  className="bg-[#0000] outline-[#FFFFF] cursor-pointer outline-2 text-[#FFFFF] px-4 py-4 rounded-full">
+                  className="bg-[#0000] outline-white cursor-pointer outline-2 text-white px-4 py-2 rounded-full hover:bg-blue-700 duration-600 ">
                   {showAll ? "แสดงน้อยลง" : "ดูเพิ่มเติม"}
                 </button>
               </div>
             )
           }
-        </sup>
+        
       </main>
     </div >
+    </div>
   );
 }
 
