@@ -137,7 +137,7 @@ const NavBar = () => {
 
             {/* Navbar สำหรับมือถือ (แสดงเฉพาะเมื่อ toggle เปิด) */}
             <div className="fixed top-0 left-0 w-full z-50 md:hidden">
-                <div className='grid grid-cols-2 w-screen bg-[#ebebeb] h-[80px] bg-opacity-90 items-center mx-auto px-[50px] pt-5'>
+                <div className='grid grid-cols-2 w-screen bg-[#ebebeb] h-[60px] bg-opacity-90 items-center mx-auto px-[50px] pt-2'>
                     <img src="/PortLogoWhite.svg" alt="Logo" className=' brightness-0 justify-items-start  h-12 w-12 ' />
                     <HiOutlineBars3
                         onClick={updateToggle}

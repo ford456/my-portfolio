@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Loading() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-blue-100 to-purple-200">
+    <div className="flex min-h-screen items-center justify-center bg-primary">
       <motion.div
         className="flex flex-col items-center gap-6"
         initial={{ opacity: 0, y: 20 }}
@@ -29,19 +29,23 @@ export default function Loading() {
         </motion.div>
 
         {/* ข้อความและ Spinner */}
+        <div className='flex items-center gap-3'>
+          {/* <motion.div
+          className="w-12 h-12 border-4 border-blue-500 border-dashed rounded-full animate-spin"
+          whileHover={{ scale: 1.2 }}
+        /> */}
         <motion.p
-          className="text-2xl font-semibold text-gray-700"
+          className="text-2xl font-semibold text-white"
           animate={{ opacity: [1, 0.5, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           Loading...
         </motion.p>
 
-        <motion.div
-          className="w-12 h-12 border-4 border-blue-500 border-dashed rounded-full animate-spin"
-          whileHover={{ scale: 1.2 }}
-        />
+        
+        </div>
       </motion.div>
+      
     </div>
   );
 }

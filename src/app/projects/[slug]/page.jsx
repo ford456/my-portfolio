@@ -1,69 +1,73 @@
 'use client'
 import * as React from 'react'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { MdOutlineDateRange } from "react-icons/md";
 
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
-import ProjectDatas from '../../../../datas/ProjectData'; // นำเข้าข้อมูลจาก ProjectData';
+import Loading from '../../loading'
 
-import { TagColorMap } from '../../../../components/Card';
-import AnimatedContent from '../../../../components/AnimatedContent';
+
+
+import { TagColorMap } from '../../../components/Card';
+import AnimatedContent from '../../../components/AnimatedContent';
 // import { useRouter } from 'next/router'; // ใช้สำหรับการนำทาง
 // import { useParams } from 'next/navigation'; // ใช้สำหรับดึง params จาก URL   
 
+
+
 export default function Details({ params }) {
 
+    const [projectslug, setProjectDatas] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const resolvedParams = React.use(params);
 
-    const id = resolvedParams?.id;
-    const slug = resolvedParams?.slug || null;
+    const slug = resolvedParams?.slug;
 
-    const tag = slug?.[0] || null;
-    const skill = slug?.[1] || null;
+    useEffect(() => {
+        async function getProjects() {
+            const startTime = Date.now();
+            try {
+                const response = await fetch(`/api/projects/${slug}`)
+                console.log(response)
+                if (!response.ok) {
+                    throw new Error("Failed to fetch projects");
+                }
 
-    const slugToQuery = (slugArr = []) => {
-        const [tag, skill] = slugArr || [];
+                const result = await response.json();
 
-        const params = new URLSearchParams();
+                
 
-        if (tag) params.set("tag", tag.replace(/-/g, " "));
-        if (skill) params.set("skill", skill.replace(/-/g, " "));
+                setProjectDatas(result.data)
+            }
+            catch (error) {
+                console.error(error);
+            }
+            finally {
+                const elapsed = Date.now() - startTime;
+                const remaining = Math.max(3000 - elapsed, 0);
 
-        return params.toString();
-    };
+                setTimeout(() => {
+                    setLoading(false);
+                }, remaining);
+            }
+        }
+        if (slug) {
+            getProjects();
+        }
+    }, [slug]);
 
-    const searchParams = useSearchParams();
-    const queryString = searchParams.toString();
 
-    // 👇 เอา slug มาสร้าง query เพิ่ม
-    const slugQuery = slugToQuery(slug);
+    const product = projectslug
 
-    // 👇 รวมกัน (priority: query จริง > slug)
-    const finalQuery = queryString || slugQuery;
-
-    // 👇 สร้าง URL
-    const backHref = finalQuery
-        ? `/projects?${finalQuery}`
-        : `/projects`;
-
-    const product = ProjectDatas.find(
-        (p) => String(p.id) === String(id)
-    );
 
     if (!product) return <h1 className='cursor-default text-6xl font-bold mt-20 py-30 p-10 flex justify-center ' >PROJECT NOT FOUND </h1>;
 
     // 🔹 รวมข้อมูลของผู้จัดทำเป็น Array และกรองเฉพาะคนที่มีชื่อ
     const creators = [
-        { name: product.title, img: product.img1 },
-        { name: product.title, img: product.img2 },
-        { name: product.title, img: product.img3 },
-        { name: product.title, img: product.img4 },
-        { name: product.title, img: product.img5 },
-        { name: product.title, img: product.img6 },
-        { name: product.title, img: product.img7 },
+        { name: product.title, img: product.thumbnail },
+
     ].filter(person => person.img); // ลบค่าที่เป็น undefined หรือ ""
     const Video = [
         { name: product.title, vd: product.video },
@@ -87,6 +91,10 @@ export default function Details({ params }) {
             document.removeEventListener("contextmenu", handleContextMenu);
         };
     }, []);
+
+    if (loading) {
+        return <Loading />
+    }
     return (
 
         <div className="relative mx-auto p-5 md:p-20 max-w-[1320px] pt-25">
@@ -115,8 +123,8 @@ export default function Details({ params }) {
                 threshold={0.2}
                 delay={400}>
                 <ul className="py-5 justify-start mx-auto px-5 flex flex-wrap md:flex text-sm md:flex-row gap-5">
-                    {product.tag &&
-                        Object.values(product.tag).map((tagName, index) => (
+                    {product.tags &&
+                        Object.values(product.tags).map((tagName, index) => (
                             <li key={index}>
                                 <h6 className={`max-w-auto p-2 px-2 rounded-xl outline-2 ${tagColorMap[tagName] || " outline-gray-300"}`}>
                                     {tagName}
@@ -144,11 +152,11 @@ export default function Details({ params }) {
                 threshold={0.2}
                 delay={450}>
                 <div className={`cursor-default grid ${gridCols} gap-10 md:gap-5 justify-center p-5`}>
-                    {creators.map((creator, index) => (
-                        <div key={index} className="flex flex-col items-center">
-                            <img className="w-5/6 h-auto  object-cover mb-3 rounded-2xl shadow-md" src={creator.img} alt={creator.name} />
-                        </div>
-                    ))}
+
+                    <div className="flex flex-col items-center">
+                        <img className="w-5/6 h-auto  object-cover mb-3 rounded-2xl shadow-md" src={product.thumbnail} alt={product.name} />
+                    </div>
+
 
                     <div className={`grid ${VDgridCols} gap-2 items-center`}>
                         {Video.map((Vd, index) => (
@@ -209,8 +217,8 @@ export default function Details({ params }) {
                 <h3 className='cursor-default text-lg md:text-3xl font-medium mb-3 md:mx-2  whitespace-pre-line pt-20'>Skills</h3>
                 <hr className='pb-2' />
                 <ul className="py-5 justify-start mx-auto px-5 flex flex-wrap md:flex text-sm md:flex-row gap-5">
-                    {product.skill &&
-                        Object.values(product.skill).sort((a, b) => a.localeCompare(b)).map((skillName, index) => (
+                    {product.skills &&
+                        Object.values(product.skills).sort((a, b) => a.localeCompare(b)).map((skillName, index) => (
                             <li key={index}>
                                 <h6 className={`max-w-auto p-2 px-2 rounded-xl outline-2 ${skillColorMap[skillName] || " outline-black"}`}>
                                     {skillName}

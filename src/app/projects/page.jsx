@@ -1,8 +1,8 @@
 'use client'
 
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 
-import ProjectDatas from '../../datas/ProjectData'; // นำเข้าข้อมูลจาก ProjectData
+// import ProjectDatas from '../../datas/ProjectData'; // นำเข้าข้อมูลจาก ProjectData
 
 import Card from '../../components/Card'; // นำเข้าคอมโพเนนต์ Card
 
@@ -11,6 +11,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { IoSearch } from "react-icons/io5";
 import Link from 'next/link';
 import AnimatedContent from '../../components/AnimatedContent';
+import Loading from '../loading'
 
 // 👇 helper ฟังก์ชันเรียงลำดับ
 const sortKeepAllFirst = (arr) =>
@@ -72,7 +73,44 @@ const scrollToFirstCard = () => {
 
 export default function ArtPro() {
 
-  const Datas = ProjectDatas; // นำเข้าข้อมูลจาก ProjectData
+    const [projectDatas, setProjectDatas] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function getProjects() {
+      const startTime = Date.now();
+      try {
+        const response = await fetch("/api/projects");
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch projects");
+        }
+
+        const result = await response.json();
+
+        
+        // ถ้า API ส่ง { data: [...] }
+        setProjectDatas(result.data);
+
+        // ถ้า API ส่ง [...] โดยตรง ให้ใช้:
+        // setProjectDatas(result);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        const elapsed = Date.now() - startTime;
+            const remaining = Math.max(3000 - elapsed, 0);
+
+            setTimeout(() => {
+                setLoading(false);
+            }, remaining);
+        }
+    }
+
+    getProjects();
+  }, []);
+
+
+  const Datas = projectDatas; // นำเข้าข้อมูลจาก ProjectData
   const [showAll, setShowAll] = useState(false); // ควบคุมการแสดงสินค้า
 
   const searchParams = useSearchParams();
@@ -89,12 +127,12 @@ export default function ArtPro() {
   // 🔹 ดึง tag ทั้งหมด
   const allTags = Array.from(
     new Set(
-      Datas.flatMap(data => Object.values(data.tag || {}))
+      Datas.flatMap(data => Object.values(data.tags || {}))
     )
   );
   const allskills = Array.from(
     new Set(
-      Datas.flatMap(data => Object.values(data.skill || {}))
+      Datas.flatMap(data => Object.values(data.skills || {}))
     )
   );
   const slugify = (str) =>
@@ -105,11 +143,11 @@ export default function ArtPro() {
   // 🔸 ฟิลเตอร์ข้อมูลตาม search และ tag
   const searchedProducts = Datas.filter((product) => {
     const search = searchTerm.toLowerCase();
-    const tags = Object.values(product.tag || {}).map(t => t.toLowerCase());
+    const tags = Object.values(product.tags || {}).map(t => t.toLowerCase());
 
     const tagMatch = selectedTag === "all" || tags.includes(selectedTag.toLowerCase());
 
-    const skills = Object.values(product.skill || {}).map(t => t.toLowerCase());
+    const skills = Object.values(product.skills || {}).map(t => t.toLowerCase());
 
     const skillMatch = selectedSkill === "all" || skills.includes(selectedSkill.toLowerCase());
 
@@ -153,12 +191,11 @@ export default function ArtPro() {
     router.push(`/projects?${params.toString()}`, { scroll: false });
   };
 
-  const buildPath = (id, tagSlug, skillSlug) => {
-    return [id, tagSlug, skillSlug].filter(Boolean).join("/");
-
-  };
 
 
+  if (loading) {
+    return <Loading/>
+  }
 
   return (
 
@@ -278,7 +315,7 @@ export default function ArtPro() {
           <div className='grid max-md:grid-cols-1 max-lg:grid-cols-3 lg:grid-cols-4  gap-x-6 px-5 mt-10'>
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product, index) => {
-                const path = buildPath(product.id, tagSlug, skillSlug);
+                const path = product.slug
 
                 return (
                   <div id={index === 0 ? "first-card" : undefined} key={product.id}>
