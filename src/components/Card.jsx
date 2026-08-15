@@ -77,7 +77,7 @@ export default function Card({
                                 </li>
                             ))}
                 </ul>
-                <h3 className="text-white text-start font-medium text-xl indent-8 pb-2 pt-2 px-2 group-hover:text-blue-500 ">
+                <h3 className=" text-white text-start font-medium text-xl indent-8 pb-2 pt-2 px-2 group-hover:text-blue-500 ">
                     {data.title}
                 </h3>
 

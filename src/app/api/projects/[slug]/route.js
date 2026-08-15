@@ -1,18 +1,13 @@
+import { backendFetch } from "../../../lib/backend";
 import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
     const { slug } = await params;
 
     try {
-        const response = await fetch(
-            `${process.env.BACKEND_API_URL}/projects/${slug}`,
-            {
-                headers: {
-                    Authorization: `Bearer ${process.env.BACKEND_API_KEY}`,
-                },
-                cache: "no-store",
-            }
-        );
+        const response = await backendFetch(
+            `/api/projects/${slug}`
+        ); 
 
         if (!response.ok) {
             return NextResponse.json(

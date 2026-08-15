@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { useEffect, useState } from 'react';
 
+
 import { MdOutlineDateRange } from "react-icons/md";
 
 import Link from 'next/link';
@@ -30,7 +31,7 @@ export default function Details({ params }) {
             const startTime = Date.now();
             try {
                 const response = await fetch(`/api/projects/${slug}`)
-                console.log(response)
+                
                 if (!response.ok) {
                     throw new Error("Failed to fetch projects");
                 }
@@ -62,7 +63,11 @@ export default function Details({ params }) {
     const product = projectslug
 
 
-    if (!product) return <h1 className='cursor-default text-6xl font-bold mt-20 py-30 p-10 flex justify-center ' >PROJECT NOT FOUND </h1>;
+    if (!product.slug) 
+        return <div className='h-screen max-h-screen flex flex-col items-center justify-center'><h1 className='cursor-default  text-6xl font-bold mt-20 pt-20 p-10 flex justify-center ' >PROJECT NOT FOUND </h1>
+    <p className='pt-5 pb-10'>
+          <Link href="/projects" className="font-bold text-blue-200 hover:text-blue-500" target='_parent' >Back to Projects</Link>
+        </p></div>;
 
     // 🔹 รวมข้อมูลของผู้จัดทำเป็น Array และกรองเฉพาะคนที่มีชื่อ
     const creators = [
@@ -82,15 +87,6 @@ export default function Details({ params }) {
     const tagColorMap = TagColorMap[0].tagColorMap;
     const skillColorMap = TagColorMap[1].SkillColorMap;
 
-    useEffect(() => {
-        const handleContextMenu = (e) => {
-            e.preventDefault();
-        };
-        document.addEventListener("contextmenu", handleContextMenu);
-        return () => {
-            document.removeEventListener("contextmenu", handleContextMenu);
-        };
-    }, []);
 
     if (loading) {
         return <Loading />

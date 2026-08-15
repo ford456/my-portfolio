@@ -1,13 +1,20 @@
-import React from 'react'
+"use client"
+import React,{ useEffect, useState} from 'react'
 import { MdOutlineAutoAwesomeMotion, MdOutlineBrush, MdOutlineMovie, } from "react-icons/md";
 import { DiIllustrator, DiPhotoshop } from "react-icons/di";
 import { TbHexagon3D, TbCube3dSphere } from "react-icons/tb";
 
-import { Skills } from '../../datas/Skills';
+// import { Skills } from '../../datas/Skills';
 import AnimatedContent from '../AnimatedContent';
 
 
-export default function Skillsection() {
+export default function Skillsection({data}) {
+
+
+ if (!data) {
+        return null;
+    };
+ const Skills = data
   return (
 
     <section className="py-section-gap-mobile md:py-section-gap-desktop bg-[#e2e2e2] overflow-hidden" id="skills">

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Skills } from "../../datas/Skills"
+// import { Skills } from "../../datas/Skills"
 import AnimatedContent from '../AnimatedContent'
 
-export default function SkillsAbout() {
+export default function SkillsAbout({data}) {
     return (
         <section className="bg-primary py-section-gap-mobile md:py-section-gap-desktop text-white" id="skills">
             <div className="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
@@ -11,7 +11,7 @@ export default function SkillsAbout() {
                     <h2 className="font-headline-lg text-headline-lg">Core Skills &amp; Tools</h2>
                 </div>
                 <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                    {Skills.map((item, i) => (
+                    {data.map((item, i) => (
                         <AnimatedContent
                             distance={10}
                             direction="vertical"

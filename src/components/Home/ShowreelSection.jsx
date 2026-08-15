@@ -1,7 +1,10 @@
 import React from 'react'
 import AnimatedContent from '../AnimatedContent'
 
-export default function ShowreelSection() {
+export default function ShowreelSection({data}) {
+
+    const datas = data.homeland
+
     return (
 
         <section className='py-[80px] md:py-[100px] bg-[#eeedef]'>
@@ -39,7 +42,7 @@ export default function ShowreelSection() {
                     threshold={0.2}
                     delay={300}>
                     <iframe className='relative group justify-self-center aspect-video w-full rounded-xl overflow-hidden shadow-2xl xl:max-w-[1280px] '
-                        src="https://www.youtube.com/embed/fDwcXvyimLU?si=4cgotUUzdu-IFjGO" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+                        src={datas.url} title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                 </AnimatedContent>
             </div>
         </section>

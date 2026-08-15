@@ -1,6 +1,12 @@
+
+
 export async function backendFetch(endpoint, options = {}) {
+  
+  const baseURL =
+    process.env.BACKEND_API_URL || "http://localhost:3001";
+
   return fetch(
-    `${process.env.BACKEND_API_URL}${endpoint}`|| "http://localhost:3001",
+    `${baseURL}${endpoint}`,
     {
       ...options,
       headers: {

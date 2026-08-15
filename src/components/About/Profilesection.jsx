@@ -4,7 +4,7 @@ import AnimatedContent from '../AnimatedContent';
 
 import "../../styles/about.css"
 
-export default function Profilesection() {
+export default function Profilesection({data}) {
     return (
         <section className="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter max-w-container-max mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
@@ -26,7 +26,7 @@ export default function Profilesection() {
                         </div>
                         <div className='relative aspect-[4/5] overflow-hidden rounded-xl shadow-xl bg-surface-container'>
                             <img className='w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700'
-                                src="https://res.cloudinary.com/donnu2idb/image/upload/v1774361429/%E0%B8%A3%E0%B8%B8%E0%B8%9B_dfcso1.png" />
+                                src={data.image} />
                         </div>
                     </AnimatedContent>
                 </div>
@@ -140,7 +140,7 @@ export default function Profilesection() {
                         >
                     <div className="pt-4">
                         <a className="bg-primary text-white font-label-caps text-label-caps px-10 py-4 rounded-lg hover:bg-electric-blue transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-electric-blue/20"
-                            href="https://res.cloudinary.com/donnu2idb/image/upload/v1774361260/CV_xxxkvs.pdf"
+                            href={data.PDFurl}
                             target="_blank">
                             <MdFileDownload />
                             Download Resume

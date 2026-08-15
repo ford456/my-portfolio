@@ -101,7 +101,7 @@ const NavBar = () => {
                     <div className="container grid grid-cols-2 justify-self-center items-center w-full mx-[50px] ">
                         <div className="flex">
                             <Link href="/" target='_parent' className='flex flex-row gap-1 font-black text-2xl items-center'>
-                            <img src="/PortLogoWhite.svg" alt="Logo" className='brightness-0 h-12 w-auto 2xl:h-15  ' /> Freindaly
+                            <img src="/PortLogoWhite.svg" alt="Logo" loading="eager" className='brightness-0 h-12 w-auto 2xl:h-15  ' /> Freindaly
                         </Link>
                         </div>
                         <ul className="flex flex-row max-xl:grid max-xl:grid-cols-6 gap-x-2 justify-end md:text-sm ">

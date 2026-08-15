@@ -50,7 +50,7 @@ export const metadata = {
     siteName: "Patcharadol Portfolio",
     images: [
       {
-        url: "https://res.cloudinary.com/dlt9egtdv/image/upload/v1783119848/%E0%B8%9B%E0%B8%81cover_qeeizc.png",  
+        url: "https://res.cloudinary.com/dlt9egtdv/image/upload/v1783119848/%E0%B8%9B%E0%B8%81cover_qeeizc.png",
       }
     ],
   },
@@ -128,8 +128,9 @@ export default async function RootLayout({ children }) {
             disableRotation={false}
           />
         </div>
-
-        {children}
+        {/* <PageLoading className="absolute bg-primary -z-500"></PageLoading> */}
+          {children}
+        
         <SpeedInsights />
         <Footer />
         <Analytics />

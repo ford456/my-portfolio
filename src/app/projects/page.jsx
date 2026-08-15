@@ -73,7 +73,7 @@ const scrollToFirstCard = () => {
 
 export default function ArtPro() {
 
-    const [projectDatas, setProjectDatas] = useState([]);
+  const [projectDatas, setProjectDatas] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -88,7 +88,7 @@ export default function ArtPro() {
 
         const result = await response.json();
 
-        
+
         // ถ้า API ส่ง { data: [...] }
         setProjectDatas(result.data);
 
@@ -98,12 +98,12 @@ export default function ArtPro() {
         console.error(error);
       } finally {
         const elapsed = Date.now() - startTime;
-            const remaining = Math.max(3000 - elapsed, 0);
+        const remaining = Math.max(3000 - elapsed, 0);
 
-            setTimeout(() => {
-                setLoading(false);
-            }, remaining);
-        }
+        setTimeout(() => {
+          setLoading(false);
+        }, remaining);
+      }
     }
 
     getProjects();
@@ -194,15 +194,15 @@ export default function ArtPro() {
 
 
   if (loading) {
-    return <Loading/>
+    return <Loading />
   }
 
   return (
 
 
 
-<div className='bg-primary'>
-    <div className='pt-32 pb-section-gap-desktop max-w-container-max mx-auto px-margin-mobile md:px-gutter '>
+    <div className='bg-primary'>
+      <div className='pt-32 pb-section-gap-desktop max-w-container-max mx-auto px-margin-mobile md:px-gutter '>
         <header className="mb-17">
           <h1 className="font-display-hero text-display-hero-mobile md:text-display-hero text-white mb-unit-4 max-w-4xl">
             Curated <span className="text-electric-blue">Masterpieces</span> of Digital Design.
@@ -228,29 +228,29 @@ export default function ArtPro() {
             }}
           />
         </div>
-        
-          <div className='pl-5 '>
+
+        <div className='pl-5 '>
 
 
-            {/* 🔸 ปุ่มกรองประเภท */}
-            <div className='flex flex-wrap gap-2 mt-7  md:px-0'>
-              {sortKeepAllFirst(["all", ...allTags]).map((type, index) => {
-                const isActive = selectedTag === type;
-                return (
+          {/* 🔸 ปุ่มกรองประเภท */}
+          <div className='flex flex-wrap gap-2 mt-7  md:px-0'>
+            {sortKeepAllFirst(["all", ...allTags]).map((type, index) => {
+              const isActive = selectedTag === type;
+              return (
                 <AnimatedContent
-          className=''
-          distance={10}
-          direction="vertical"
-          reverse={false}
-          config={{ tension: 60, friction: 20 }}
-          initialOpacity={0}
-          animateOpacity
-          scale={1}
-          threshold={0.2}
-          delay={index*100}
-          key={type}>
+                  className=''
+                  distance={10}
+                  direction="vertical"
+                  reverse={false}
+                  config={{ tension: 60, friction: 20 }}
+                  initialOpacity={0}
+                  animateOpacity
+                  scale={1}
+                  threshold={0.2}
+                  delay={index * 100}
+                  key={type}>
                   <button
-                    
+
                     onClick={() => {
                       updateFilters({
                         tag: type,
@@ -267,11 +267,11 @@ export default function ArtPro() {
                   >
                     {type === "all" ? "All" : type}
                   </button>
-                  </AnimatedContent>
-                )
-              })}
-            </div>
-            {/* 🔸 ปุ่มกรองประเภท skill
+                </AnimatedContent>
+              )
+            })}
+          </div>
+          {/* 🔸 ปุ่มกรองประเภท skill
             <div className="">
               <div className=" pt-15 ">
                 <h2 className="text-xl">Skills</h2>
@@ -304,12 +304,12 @@ export default function ArtPro() {
                 )
               })}
             </div> */}
-          </div>
-        
+        </div>
 
-      <main className="relative">
-        
-        
+
+        <main className="relative">
+
+
 
           {/* 🔸 แสดงสินค้า  */}
           <div className='grid max-md:grid-cols-1 max-lg:grid-cols-3 lg:grid-cols-4  gap-x-6 px-5 mt-10'>
@@ -339,7 +339,7 @@ export default function ArtPro() {
                 );
               })
             ) : (
-              <p className="md:col-2 text-center text-red-500 py-10">ไม่พบข้อมูลที่ตรงกับ "{searchTerm}"</p>
+              <p className=" md:col-span-4 text-center text-red-500 py-10">ไม่พบข้อมูลที่ตรงกับ " {searchTerm} "</p>
             )}
           </div>
 
@@ -364,9 +364,9 @@ export default function ArtPro() {
               </div>
             )
           }
-        
-      </main>
-    </div >
+
+        </main>
+      </div >
     </div>
   );
 }

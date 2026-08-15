@@ -1,13 +1,13 @@
 "use client";;
 import { motion, useScroll, useTransform, } from "motion/react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 // import AnimatedContent from "./AnimatedContent";
 import "../../styles/about.css"
-import ExpDatas from './../../datas/ExpDatas';
+// import ExpDatas from './../../datas/ExpDatas';
 import TimeLineCard from './../TimeLineCard';
 
 
-export default function ExpTimeline() {
+export default function ExpTimeline({data}) {
 
     const containerRef = useRef(null);
 
@@ -15,13 +15,14 @@ export default function ExpTimeline() {
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start 30%", "end 70%"],
+        
     });
 
     const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
     const opacity = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
 
     const [activeId, setActiveId] = useState(null);
-
+    const EXPDatas= data
     return (
         <section ref={containerRef}
             className="relative py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden">
@@ -59,7 +60,7 @@ export default function ExpTimeline() {
                     />
                 </div>
                 {/* <!-- MAIDER CO.,Ltd --> */}
-                {ExpDatas.map((exp, i) => (
+                {EXPDatas.map((exp, i) => (
                     <TimeLineCard
                         key={exp.id}
                         data={exp}
