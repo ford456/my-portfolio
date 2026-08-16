@@ -14,6 +14,7 @@ export async function POST(req) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
         body {
             background-color: #f3f4f6;
@@ -58,6 +59,7 @@ export async function POST(req) {
 
         .logo {
             height: 50px;
+            width: auto;
             margin-bottom: 16px
         }
 
@@ -107,8 +109,8 @@ export async function POST(req) {
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1745500227/PJ/Logo.png" alt="Logo" class="logo">
+        <div class="header flex flex-col">
+            <img src="https://res.cloudinary.com/donnu2idb/image/upload/v1786804572/web-app-manifest-512x512_drqpcu.png" alt="Logo" class="logo">
             <h1>Response from Portfolio</h1>
         </div>
         <div class="content">

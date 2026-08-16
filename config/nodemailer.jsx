@@ -9,19 +9,19 @@ const pass2 = process.env.EMAIL_PASSWORD2;
 export const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth:{
-        user:emails,
-        pass:pass
+        user:emailSend,
+        pass:pass2
     },
 });
 
 export const mailOptions = {
-    from: emails,
-    to: emails
+    from: emailSend,
+    to: [emails,emailSend]
 };
 
 export const generateMailOptions = ({ from, to, subject, html }) => ({
-    from: from || emails,
-    to: to || emails,
+    from: from || emailSend,
+    to: to || [emails,emailSend],
     subject,
     html,
   });
