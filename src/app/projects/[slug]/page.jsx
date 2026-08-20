@@ -18,7 +18,7 @@ import SectionRenderer from '../../../components/Projects/SectionRenderer';
 // import { useRouter } from 'next/router'; // ใช้สำหรับการนำทาง
 // import { useParams } from 'next/navigation'; // ใช้สำหรับดึง params จาก URL   
 
-import ProjectViewTracker from "../../../components/analytics/ProjectViewTracker";
+import ProjectViewTracker from "../../../components/Analytics/ProjectViewTracker";
 
 export default function Details({ params }) {
 
