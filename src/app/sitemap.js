@@ -31,7 +31,7 @@ export default async function sitemap() {
 
   try {
     const response = await fetch(
-      `${process.env.BACKEND_API_URL}/projects`,
+      `${process.env.BACKEND_API_URL}api/projects`,
       {
         headers: {
           Authorization: `Bearer ${process.env.BACKEND_API_KEY}`,
@@ -59,7 +59,7 @@ export default async function sitemap() {
     const projectPages = projects
       .filter((project) => project?.slug)
       .map((project) => ({
-        url: `${baseUrl}/projects/${project.slug}`,
+        url: `${baseUrl}api/projects/${project.slug}`,
 
         lastModified: project.updatedAt
           ? new Date(project.updatedAt)
