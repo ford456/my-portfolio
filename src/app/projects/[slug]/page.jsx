@@ -18,7 +18,7 @@ import SectionRenderer from '../../../components/Projects/SectionRenderer';
 // import { useRouter } from 'next/router'; // ใช้สำหรับการนำทาง
 // import { useParams } from 'next/navigation'; // ใช้สำหรับดึง params จาก URL   
 
-
+import ProjectViewTracker from "../../../components/analytics/ProjectViewTracker";
 
 export default function Details({ params }) {
 
@@ -88,6 +88,8 @@ if (loading) return <div className='h-dvh w-h-dvh'></div>
 
 
     return (
+        <>
+        <ProjectViewTracker project={project} />
         <div className='bg-primary text-white font-body-md overflow-x-hidden'>
             <main className='py-20'>
                 
@@ -120,5 +122,6 @@ if (loading) return <div className='h-dvh w-h-dvh'></div>
                 </div>
             </main>
         </div>
+        </>
     )
 }

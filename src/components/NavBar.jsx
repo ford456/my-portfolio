@@ -5,7 +5,7 @@ import { CgClose } from "react-icons/cg";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Link from 'next/link';
 import Image from 'next/image'
-
+import { trackContactClick } from "../app/lib/analytics";
 
 const NavBar = () => {
 
@@ -102,32 +102,52 @@ const NavBar = () => {
                     <div className="container grid grid-cols-2 justify-self-center items-center w-full mx-[50px] ">
                         <div className="flex">
                             <Link href="/" target='_parent' className='flex flex-row gap-1 font-black text-2xl items-center'>
-                            <img src="/FriendalyLogo.png" alt="Logo" loading="eager" className='brightness-0 h-12 w-12 2xl:h-15 2xl:w-15 ' /> Freindaly
-                        </Link>
+                                <img src="/FriendalyLogo.png" alt="Logo" loading="eager" className='brightness-0 h-12 w-12 2xl:h-15 2xl:w-15 ' /> Freindaly
+                            </Link>
                         </div>
                         <ul className="flex flex-row max-xl:grid max-xl:grid-cols-6 gap-x-2 justify-end md:text-sm ">
                             <li className="mx-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                                <Link href="/" className=" hover:text-blue-500" target='_parent' >
+                                <Link href="/" className=" hover:text-blue-500" target='_parent' onClick={
+                                    () => trackContactClick({
+                                        method: "Home",
+                                        location: "Navbar",
+                                    })} >
                                     Home
                                 </Link>
                             </li>
                             <li className="mx-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                                <Link href="/about" className=" hover:text-blue-500" target='_parent' >
+                                <Link href="/about" className=" hover:text-blue-500" target='_parent' onClick={
+                                    () => trackContactClick({
+                                        method: "About",
+                                        location: "Navbar",
+                                    })}>
                                     About
                                 </Link>
                             </li>
                             <li className="mx-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                                <Link href="/projects" className=" hover:text-blue-500" target='_parent' >
+                                <Link href="/projects" className=" hover:text-blue-500" target='_parent' onClick={
+                                    () => trackContactClick({
+                                        method: "Projects",
+                                        location: "Navbar",
+                                    })} >
                                     Projects
                                 </Link>
                             </li>
                             <li className="mx-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                                <Link href="/contact" className=" hover:text-blue-500" target='_parent' >
+                                <Link href="/contact" className=" hover:text-blue-500" target='_parent' onClick={
+                                    () => trackContactClick({
+                                        method: "contact",
+                                        location: "Navbar",
+                                    })} >
                                     Contact
                                 </Link>
                             </li>
                             <li className="mx-2 col-span-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                                <Link href="/contact" className="py-1 px-5 bg-blue-500 text-white rounded-xl outline-0 hover:outline-blue-500 hover:outline-2 hover:outline-offset-2 " target='_parent' >
+                                <Link href="/contact" className="py-1 px-5 bg-blue-500 text-white rounded-xl outline-0 hover:outline-blue-500 hover:outline-2 hover:outline-offset-2 " target='_parent' onClick={
+                                    () => trackContactClick({
+                                        method: "Contact_HireMe",
+                                        location: "Navbar",
+                                    })}>
                                     Hire Me
                                 </Link>
                             </li>

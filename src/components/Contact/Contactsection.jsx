@@ -10,7 +10,10 @@ import { FaInstagram, FaLinkedinIn, FaBehance } from "react-icons/fa";
 import { RiLoader4Fill } from "react-icons/ri";
 import { IoLocationOutline } from "react-icons/io5";
 
-
+import {
+    trackSocialClick,
+    trackContactClick
+} from "../../app/lib/analytics";
 export default function Contactsection() {
 
     const initValues = { name: '', email: '', subject: '', message: '' };
@@ -134,11 +137,11 @@ export default function Contactsection() {
                                     </span>
                                     <div className='flex flex-col'>
                                         <p
-                                        className="font-label-caps text-label-caps text-soft-gray uppercase tracking-widest opacity-60">
-                                        Email Me</p>
-                                    <span className="font-body-md group-hover:text-electric-blue duration-300">patcharadol.soimanee@gmail.com</span>
+                                            className="font-label-caps text-label-caps text-soft-gray uppercase tracking-widest opacity-60">
+                                            Email Me</p>
+                                        <span className="font-body-md group-hover:text-electric-blue duration-300">patcharadol.soimanee@gmail.com</span>
                                     </div>
-                                    
+
                                 </a>
                             </AnimatedContent>
                             <AnimatedContent
@@ -154,17 +157,17 @@ export default function Contactsection() {
 
                             >
                                 <div className='flex items-center gap-4 text-white group '
-                                    >
+                                >
                                     <span className="w-12 h-12 rounded-full bg-white/10 group-hover:bg-electric-blue group-hover:scale-110 flex items-center justify-center duration-300 ease-in-out ">
                                         <IoLocationOutline className='text-2xl' />
                                     </span>
                                     <div className='flex flex-col'>
                                         <p
-                                        className="font-label-caps text-label-caps text-soft-gray uppercase tracking-widest opacity-60">
-                                        Base in</p>
-                                    <span className="font-body-md group-hover:text-electric-blue duration-300">Bangkok, Thailand</span>
+                                            className="font-label-caps text-label-caps text-soft-gray uppercase tracking-widest opacity-60">
+                                            Base in</p>
+                                        <span className="font-body-md group-hover:text-electric-blue duration-300">Bangkok, Thailand</span>
                                     </div>
-                                    
+
                                 </div>
                             </AnimatedContent>
                             <AnimatedContent
@@ -180,16 +183,44 @@ export default function Contactsection() {
 
                             >
                                 <div className='flex items-center gap-6 pt-4 duration-300'>
-                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.facebook.com/Fxrd.dd/' target='_blank' >
+                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.facebook.com/Fxrd.dd/' target='_blank' onClick={() =>
+                                        trackSocialClick({
+                                            platform: "facebook",
+                                            url: "https://www.facebook.com/Fxrd.dd/",
+                                            location: "contact_page",
+                                        })
+                                    }
+                                    >
                                         <FaFacebookF className='text-lg' />
                                     </a>
-                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.instagram.com/friendaly.stu' target='_blank' >
+                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.instagram.com/friendaly.stu' target='_blank' onClick={() =>
+                                        trackSocialClick({
+                                            platform: "instagram",
+                                            url: "https://www.instagram.com/friendaly.stu",
+                                            location: "contact_page",
+                                        })
+                                    }
+                                    >
                                         <FaInstagram className='text-lg' />
                                     </a>
-                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.linkedin.com/in/patcharadol-soimanee' target='_blank' >
+                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.linkedin.com/in/patcharadol-soimanee' target='_blank' onClick={() =>
+                                        trackSocialClick({
+                                            platform: "Linkedin",
+                                            url: "https://www.linkedin.com/in/patcharadol-soimanee",
+                                            location: "contact_page",
+                                        })
+                                    }
+                                    >
                                         <FaLinkedinIn className='text-lg' />
                                     </a>
-                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.behance.net/Patcharadol' target='_blank' >
+                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.behance.net/Patcharadol' target='_blank' onClick={() =>
+                                        trackSocialClick({
+                                            platform: "Behance",
+                                            url: "https://www.behance.net/Patcharadol",
+                                            location: "contact_page",
+                                        })
+                                    }
+                                    >
                                         <FaBehance className='text-lg' />
                                     </a>
 
@@ -280,7 +311,12 @@ export default function Contactsection() {
                                         !values.subject ||
                                         !values.message
                                     }
-
+                                    onClick={() =>
+                                        trackContactClick({
+                                            method: "contact_submit",
+                                            location: "contact_page",
+                                        })
+                                    }
                                     className={`px-4 py-2 rounded-xl font-medium text-white ${isLoading
                                         ? 'bg-blue-300 outline-2 outline-blue-800 cursor-not-allowed'
                                         : 'bg-blue-400 hover:bg-blue-600 cursor-pointer'

@@ -7,6 +7,8 @@ import {
     FaFacebook
 } from "react-icons/fa";
 
+import { trackSocialClick } from "../../../app/lib/analytics";
+
 const iconMap = {
     Instagram: FaInstagram,
     Youtube: FaYoutube,
@@ -35,7 +37,13 @@ function SocialSection({section}) {
             key={index}
             href={social.url}
             target="_blank"
-            
+            onClick={() =>
+            trackSocialClick({
+              platform: social.icon,
+              url: social.url,
+              location: "project_page",
+            })
+          }
             className="px-5 py-3 rounded-full hover:scale-120 hover:text-white transition duration-300 ease-in-out"
           ><Icon size={32} /> 
             {/* {social.name} */}

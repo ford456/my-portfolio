@@ -2,6 +2,8 @@
 
 import { React, useState, useEffect } from 'react'
 
+import { trackContactClick } from "../lib/analytics";
+
 // import ProjectDatas from '../../datas/ProjectData'; // นำเข้าข้อมูลจาก ProjectData
 
 import Card from '../../components/Card'; // นำเข้าคอมโพเนนต์ Card
@@ -324,7 +326,12 @@ if (loading) return <div className='h-dvh w-h-dvh'></div>
                       scale={1.1}
                       threshold={0.2}
                       delay={300}>
-                      <Link href={`/projects/${path}`} target='_parent'>
+                      <Link href={`/projects/${path}`} target='_parent' onClick={() =>
+        trackContactClick({
+          method: product.slug,
+          location: "Projects_page",
+        })
+      }>
                         <Card data={product}
                           textClassName='text-xs' />
                       </Link></AnimatedContent>
