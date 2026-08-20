@@ -14,7 +14,7 @@ export default function WebsiteSection({ section }) {
       <a
         href={section.url}
         target="_blank"
-        rel="noopener noreferrer"
+        
         className="inline-block mt-5 px-6 py-3 rounded-ful hover:text-blue-400 hover:underline hover:underline-offset-8"
       >{section.label && (
         <h2 className="text-lg font-bold mb-5">

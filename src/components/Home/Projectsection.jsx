@@ -70,8 +70,8 @@ export default function Projectsection({data}) {
                         >
                             <div
                                 className="project-img-container relative overflow-hidden rounded-2xl aspect-[16/10] bg-surface-container shadow-xl">
-                                <Link href={`/projects/${project26.slug}`} target="_parent" rel="noopener noreferrer">
-                                    <img className="w-full h-full object-cover " data-alt="Futuristic motion graphic preview"
+                                <Link href={`/projects/${project26.slug}`} target="_parent" >
+                                    <img className="w-full h-full object-cover " alt="Futuristic motion graphic preview"
                                         src={project26.thumbnail} />
                                     <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
 
@@ -81,7 +81,7 @@ export default function Projectsection({data}) {
 
                                     </div>
                                     <div
-                                        className="absolute items-center top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-white font-bold text-[12px]">
+                                        className="absolute items-center top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-blue-800 font-bold text-[12px]">
                                         2025</div>
                                 </Link>
                             </div>
@@ -107,15 +107,15 @@ export default function Projectsection({data}) {
                         >
                             <div
                                 className="project-img-container relative overflow-hidden rounded-2xl h-[400px] md:h-[600px] bg-surface-container shadow-lg">
-                                <Link href={`/projects/${project15.slug}`} target="_parent" rel="noopener noreferrer">
-                                    <img className="w-full h-full object-cover" data-alt="Elegant minimalist posters"
+                                <Link href={`/projects/${project15.slug}`} target="_parent" >
+                                    <img className="w-full h-full object-cover" alt="Elegant minimalist posters"
                                         src={project15.thumbnail} />
                                     <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
                                         <h3 className="font-bold text-[24px]">{project15.title}</h3>
                                         <p className="font-body-md opacity-80 max-w-md truncate">{project15.description}</p>
                                     </div></Link>
                                 <div
-                                    className="absolute top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-white font-bold text-[12px]">
+                                    className="absolute top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-blue-800 font-bold text-[12px]">
                                     2025</div>
 
                             </div>
@@ -141,15 +141,15 @@ export default function Projectsection({data}) {
                         >
                             <div
                                 className="project-img-container relative overflow-hidden rounded-2xl aspect-square bg-surface-container shadow-lg">
-                                <Link href={`/projects/${project23.slug}`} target="_parent" rel="noopener noreferrer">
-                                    <img className="w-full h-full object-cover" data-alt="Dynamic video editing frame"
+                                <Link href={`/projects/${project23.slug}`} target="_parent" >
+                                    <img className="w-full h-full object-cover" alt="Dynamic video editing frame"
                                         src={project23.thumbnail} />
                                     <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
                                         <h3 className="font-bold text-[24px]">{project23.title}</h3>
                                         <p className="font-body-md opacity-80 max-w-md truncate">{project23.description}</p>
                                     </div></Link>
                                 <div
-                                    className="absolute top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-gray-300 font-bold text-[12px]">
+                                    className="absolute top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-blue-800 font-bold text-[12px]">
                                     2025</div>
                             </div>
                             <div className="mt-6 md:hidden grid grid-cols-1 gap-y-1">
@@ -174,15 +174,15 @@ export default function Projectsection({data}) {
                         >
                             <div
                                 className="project-img-container relative overflow-hidden rounded-2xl aspect-video bg-surface-container shadow-xl">
-                                <Link href={`/projects/${project14.slug}`} target="_parent" rel="noopener noreferrer">
-                                    <img className="w-full h-full object-cover" data-alt="3D character design"
+                                <Link href={`/projects/${project14.slug}`} target="_parent" >
+                                    <img className="w-full h-full object-cover" alt="3D character design"
                                         src={project14.thumbnail} />
                                     <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
                                         <h3 className="font-bold text-headline-md">{project14.title}</h3>
                                         <p className="font-body-md opacity-80 max-w-md truncate">{project14.description}</p>
                                     </div></Link>
                                 <div
-                                    className="absolute top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-white font-bold text-[12px]">
+                                    className="absolute top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-blue-800 font-bold text-[12px]">
                                     2025</div>
                             </div>
                             <div className="mt-6 flex justify-between items-start md:hidden">

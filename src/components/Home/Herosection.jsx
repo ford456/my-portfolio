@@ -57,8 +57,9 @@ export default function HeroSection() {
 
                     <div className="relative lg:col-span-7 w-full  h-[430px]  sm:h-[500px] lg:h-[650px] xl:h-[1000px]  flex  items-end justify-center">
                         <img alt="Patcharadol Soimanee Portfolio"
-                            className="h-full w-auto rounded-2xl relative z-20 object-contain object-bottom"
-                            src="https://res.cloudinary.com/donnu2idb/image/upload/v1785071926/%E0%B8%9B%E0%B8%81cover_2x_zivdnx.png" />
+                            className="max-w-full max-h-full w-auto h-auto rounded-2xl relative z-20 object-contain object-bottom"
+                            src="https://res.cloudinary.com/donnu2idb/image/upload/v1785071926/%E0%B8%9B%E0%B8%81cover_2x_zivdnx.png"
+                            fetchPriority="high" />
                         <div
                             className="absolute inset-0 top-[50%] bg-electric-blue rounded-full blur-[120px] opacity-10 -z-10 animate-pulse">
                         </div>

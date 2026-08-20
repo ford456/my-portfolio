@@ -3,7 +3,7 @@ import AnimatedContent from '../AnimatedContent'
 
 export default function ShowreelSection({data}) {
 
-    const datas = data.homeland
+    const datas = data?.homeland
 
     return (
 

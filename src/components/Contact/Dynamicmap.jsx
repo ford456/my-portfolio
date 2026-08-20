@@ -7,7 +7,7 @@ export default function Dynamicmap() {
         <section className="h-[600px] grid grid-cols-1 place-content-center w-full relative justify-items-center group ">
             <div className=" absolute w-full h-full bg-[url(https://res.cloudinary.com/donnu2idb/image/upload/v1786219618/images_khixun.jpg)]
             bg-cover bg-center grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 cursor-default"
-                data-alt="A cinematic, low-angle photograph of a modern glass office building at twilight in Bangkok. The city lights create a vibrant blur in the background, with deep blues and teals dominating the color palette. Sharp geometric lines of the architecture reflect the soft, ethereal light from the setting sun. The mood is professional, sophisticated, and urban."
+                alt="A cinematic, low-angle photograph of a modern glass office building at twilight in Bangkok. The city lights create a vibrant blur in the background, with deep blues and teals dominating the color palette. Sharp geometric lines of the architecture reflect the soft, ethereal light from the setting sun. The mood is professional, sophisticated, and urban."
             >
             </div>
             <AnimatedContent

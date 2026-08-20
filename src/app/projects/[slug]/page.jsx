@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { MdOutlineDateRange } from "react-icons/md";
 
 import Link from 'next/link';
-import Loading from '../../loading'
+
 
 
 
@@ -23,15 +23,15 @@ import SectionRenderer from '../../../components/Projects/SectionRenderer';
 export default function Details({ params }) {
 
     const [projectslug, setProjectDatas] = useState([]);
-    const [loading, setLoading] = useState(true);
 
+    const [loading, setLoading] = useState(true)
     const resolvedParams = React.use(params);
 
     const slug = resolvedParams?.slug;
 
     useEffect(() => {
         async function getProjects() {
-            const startTime = Date.now();
+           
             try {
                 const response = await fetch(`/api/projects/${slug}`)
 
@@ -47,22 +47,18 @@ export default function Details({ params }) {
             }
             catch (error) {
                 console.error(error);
-            }
-            finally {
-                const elapsed = Date.now() - startTime;
-                const remaining = Math.max(3000 - elapsed, 0);
-
-                setTimeout(() => {
-                    setLoading(false);
-                }, remaining);
-            }
+            } finally {
+      setLoading(false)
+    }
+            
         }
         if (slug) {
             getProjects();
         }
     }, [slug]);
 
-
+if (loading) return <div className='h-dvh w-h-dvh'></div>
+    
     const product = projectslug
 
 
@@ -90,9 +86,7 @@ export default function Details({ params }) {
 
 
 
-    if (loading) {
-        return <Loading />
-    }
+
     return (
         <div className='bg-primary text-white font-body-md overflow-x-hidden'>
             <main className='py-20'>

@@ -9,15 +9,15 @@ import SkillsAbout from './../../components/About/SkillsAbout';
 import Certificatescontent from './../../components/About/Certificatescontent';
 import CTAsection from './../../components/About/CTAsection';
 
-import Loading from "../loading"
+import "../../styles/about.css"
 
 function AboutPage() {
     const [AboutData, setAbout] = useState([]);
-      const [loading, setLoading] = useState(true);
 
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         async function getAbouts() {
-            const startTime = Date.now();
+
             try {
                 const response = await fetch("/api/abouts")
                 if (!response.ok) {
@@ -31,32 +31,25 @@ function AboutPage() {
                 setAbout(result.data);
             } catch (error) {
                 console.error(error);
+            } finally {
+                setLoading(false)
             }
-            finally {
-                const elapsed = Date.now() - startTime;
-                const remaining = Math.max(3000 - elapsed, 0);
 
-                setTimeout(() => {
-                    setLoading(false);
-                }, remaining);
-            }
         }
 
         getAbouts();
     }, []);
 
-  if (loading) {
-    return <Loading />
-  }
 
-    
+if (loading) return <div className='h-dvh w-h-dvh'></div>
+
     return (
 
 
 
         <>
             {/* <HeroAbout /> */}
-            <Profilesection data={AboutData.Profiles} />
+            <Profilesection data={AboutData.Profiles} fetchPriority="high"/>
 
             <Linejob />
             {/* <Aboutcover /> */}

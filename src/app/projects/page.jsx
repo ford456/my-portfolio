@@ -11,7 +11,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { IoSearch } from "react-icons/io5";
 import Link from 'next/link';
 import AnimatedContent from '../../components/AnimatedContent';
-import Loading from '../loading'
+
 
 // 👇 helper ฟังก์ชันเรียงลำดับ
 const sortKeepAllFirst = (arr) =>
@@ -72,13 +72,13 @@ const scrollToFirstCard = () => {
 
 
 export default function ArtPro() {
-
+  const [loading, setLoading] = useState(true)
   const [projectDatas, setProjectDatas] = useState([]);
-  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     async function getProjects() {
-      const startTime = Date.now();
+      
       try {
         const response = await fetch("/api/projects");
 
@@ -96,14 +96,9 @@ export default function ArtPro() {
         // setProjectDatas(result);
       } catch (error) {
         console.error(error);
-      } finally {
-        const elapsed = Date.now() - startTime;
-        const remaining = Math.max(3000 - elapsed, 0);
-
-        setTimeout(() => {
-          setLoading(false);
-        }, remaining);
-      }
+      }  finally {
+      setLoading(false)
+    }
     }
 
     getProjects();
@@ -193,10 +188,8 @@ export default function ArtPro() {
 
 
 
-  if (loading) {
-    return <Loading />
-  }
-
+if (loading) return <div className='h-dvh w-h-dvh'></div>
+  
   return (
 
 

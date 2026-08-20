@@ -80,7 +80,7 @@ export default function Contactsection() {
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-16'>
                     <div>
                         <span
-                            className='font-label-caps text-label-caps text-electric-blue mb-4 block uppercase'>
+                            className='font-label-caps text-label-caps text-blue-300 mb-4 block uppercase'>
                             Contact Me</span>
                         <AnimatedContent
                             distance={30}

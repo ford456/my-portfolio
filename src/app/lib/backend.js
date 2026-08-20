@@ -12,6 +12,7 @@ export async function backendFetch(endpoint, options = {}) {
       headers: {
         ...options.headers,
         Authorization: `Bearer ${process.env.BACKEND_API_KEY}`,
+        cache: "no-store",
       },
     }
   );

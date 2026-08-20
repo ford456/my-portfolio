@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import Particles from "../components/Particles";
 import { Analytics } from '@vercel/analytics/react';
 
-
+import PrivacyNotice from "../components/PrivacyNotice";
 
 const ibmPlexSansThai = IBM_Plex_Sans_Thai({
   weight: ["400"],
@@ -70,7 +70,7 @@ export const viewport = {
   themeColor: 'black',
   width: 'device-width',
   initialScale: 1.0,
-  maximumScale: 1.0,
+  maximumScale: 5.0,
 };
 
 export const revalidate = 3600; // revalidate this page every hour
@@ -134,6 +134,7 @@ export default async function RootLayout({ children }) {
         <SpeedInsights />
         <Footer />
         <Analytics />
+        <PrivacyNotice />
       </body>
     </html>
   );

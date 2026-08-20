@@ -34,7 +34,7 @@ function SocialSection({section}) {
             key={index}
             href={social.url}
             target="_blank"
-            rel="noopener noreferrer"
+            
             className="px-5 py-3 rounded-full hover:scale-120 hover:text-white transition duration-300 ease-in-out"
           ><Icon size={32} /> 
             {/* {social.name} */}
