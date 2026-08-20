@@ -147,10 +147,10 @@ export default function Contactsection() {
 
                             >
                                 <div className='flex items-center gap-6 pt-4'>
-                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.facebook.com/Fxrd.dd/' target='_blank' rel='noopener noreferrer'>
+                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' >
                                         <FaFacebookF className='text-lg' />
                                     </a>
-                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' href='https://www.instagram.com/friendaly.stu' target='_blank' rel='noopener noreferrer'>
+                                    <a className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-electric-blue hover:border-electric-blue transition-all' >
                                         <FaInstagram className='text-lg' />
                                     </a>
                                 </div>
