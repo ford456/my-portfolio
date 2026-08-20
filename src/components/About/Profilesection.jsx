@@ -1,10 +1,11 @@
 import React from 'react'
 import { MdFileDownload } from "react-icons/md";
 import AnimatedContent from '../AnimatedContent';
+import { trackResumeDownload } from "../../app/lib/analytics";
 
 import "../../styles/about.css"
 
-export default function Profilesection({data}) {
+export default function Profilesection({ data }) {
     return (
         <section className="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter max-w-container-max mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
@@ -127,25 +128,32 @@ export default function Profilesection({data}) {
                         </AnimatedContent>
                     </div>
                     <AnimatedContent
-                            distance={0}
-                            direction="vertical"
-                            reverse={false}
-                            config={{ tension: 50, friction: 30 }}
-                            initialOpacity={0}
-                            animateOpacity
-                            scale={1}
-                            threshold={0.2}
-                            delay={300}
+                        distance={0}
+                        direction="vertical"
+                        reverse={false}
+                        config={{ tension: 50, friction: 30 }}
+                        initialOpacity={0}
+                        animateOpacity
+                        scale={1}
+                        threshold={0.2}
+                        delay={300}
 
-                        >
-                    <div className="pt-4">
-                        <a className="bg-primary text-white font-label-caps text-label-caps px-10 py-4 rounded-lg hover:bg-electric-blue transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-electric-blue/20"
-                            href={data.PDFurl}
-                            target="_blank">
-                            <MdFileDownload />
-                            Download Resume
-                        </a>
-                    </div></AnimatedContent>
+                    >
+                        <div className="pt-4">
+                            <a className="bg-primary text-white font-label-caps text-label-caps px-10 py-4 rounded-lg hover:bg-electric-blue transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-electric-blue/20"
+                                href={data.PDFurl}
+                                target="_blank"
+                                onClick={() =>
+                                    trackResumeDownload({
+                                        fileName: "Patcharadol-Resume.pdf",
+                                        location: "about_page",
+                                    })
+                                }
+                            >
+                                <MdFileDownload />
+                                Download Resume
+                            </a>
+                        </div></AnimatedContent>
                 </div>
             </div>
         </section>

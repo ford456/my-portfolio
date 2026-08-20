@@ -89,7 +89,7 @@ if (loading) return <div className='h-dvh w-h-dvh'></div>
 
     return (
         <>
-        <ProjectViewTracker project={project} />
+        <ProjectViewTracker project={product} />
         <div className='bg-primary text-white font-body-md overflow-x-hidden'>
             <main className='py-20'>
                 
