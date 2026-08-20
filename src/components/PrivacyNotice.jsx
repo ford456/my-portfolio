@@ -3,17 +3,22 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import CookieOption from "./CookieOption";
-// import GoogleAnalytics from "./GoogleAnalytics";
+import GoogleAnalytics from "../components/Analytics/GoogleAnalytics";
+
+const CONSENT_VERSION = "1.0.0";
+const CONSENT_EXPIRE_DAYS = 30;
+
+const defaultPreferences = {
+  necessary: true,
+  functional: false,
+  analytics: false,
+};
 
 export default function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
 
-  const [preferences, setPreferences] = useState({
-    necessary: true,
-    functional: false,
-    analytics: false,
-  });
+  const [preferences, setPreferences] = useState(defaultPreferences);
 
   useEffect(() => {
     const saved = localStorage.getItem("cookie-consent");
@@ -25,16 +30,55 @@ export default function CookieConsent() {
 
     try {
       const parsed = JSON.parse(saved);
-      setPreferences(parsed);
+
+      const isExpired =
+        !parsed.expiration ||
+        Date.now() > parsed.expiration;
+
+      const isOldVersion =
+        parsed.version !== CONSENT_VERSION;
+
+      if (isExpired || isOldVersion) {
+        localStorage.removeItem("cookie-consent");
+
+        setPreferences(defaultPreferences);
+        setShowBanner(true);
+
+        return;
+      }
+
+      setPreferences({
+        necessary: true,
+        functional: Boolean(parsed.functional),
+        analytics: Boolean(parsed.analytics),
+      });
     } catch {
+      localStorage.removeItem("cookie-consent");
+
+      setPreferences(defaultPreferences);
       setShowBanner(true);
     }
   }, []);
 
   const saveConsent = (consent) => {
+    const now = Date.now();
+
+    const expiration =
+      now +
+      CONSENT_EXPIRE_DAYS *
+        24 *
+        60 *
+        60 *
+        1000;
+
     const data = {
-      ...consent,
       necessary: true,
+      functional: Boolean(consent.functional),
+      analytics: Boolean(consent.analytics),
+
+      version: CONSENT_VERSION,
+      consentDate: now,
+      expiration,
     };
 
     localStorage.setItem(
@@ -42,7 +86,12 @@ export default function CookieConsent() {
       JSON.stringify(data)
     );
 
-    setPreferences(data);
+    setPreferences({
+      necessary: true,
+      functional: data.functional,
+      analytics: data.analytics,
+    });
+
     setShowBanner(false);
     setShowPreferences(false);
   };
@@ -69,18 +118,32 @@ export default function CookieConsent() {
 
   return (
     <>
-      {/* <GoogleAnalytics enabled={preferences.analytics} /> */}
+      <GoogleAnalytics
+        enabled={preferences.analytics}
+      />
 
-      {/* Main Cookie Banner */}
+      {/* Cookie Banner */}
       {showBanner && !showPreferences && (
         <div
           className="
-            fixed bottom-5 left-5 right-5
-            md:left-auto md:right-6 md:w-[520px]
-            z-[9999]
+            fixed z-[9999]
+
+            inset-x-0 bottom-0
+            md:inset-x-auto
+            md:right-6 md:bottom-6
+            md:w-[520px]
+
             bg-black text-white
-            p-6 rounded-2xl
+
+            p-5 sm:p-6
+
+            rounded-t-2xl
+            md:rounded-2xl
+
             shadow-2xl
+
+            max-h-[85vh]
+            overflow-y-auto
           "
         >
           <h2 className="text-xl font-semibold mb-3">
@@ -89,19 +152,28 @@ export default function CookieConsent() {
 
           <p className="text-sm text-white/70 leading-6">
             เว็บไซต์นี้ใช้คุกกี้ที่จำเป็น
-            และอาจใช้คุกกี้จากบริการภายนอกเพื่อแสดงเนื้อหา
-            และวิเคราะห์การใช้งานเว็บไซต์
+            และอาจใช้คุกกี้จากบริการภายนอก
+            เพื่อแสดงเนื้อหาและวิเคราะห์การใช้งานเว็บไซต์
           </p>
 
           <Link
             href="/privacy-policy"
-            className="inline-block mt-3 text-sm underline underline-offset-4"
+            className="
+              inline-block mt-3
+              text-sm
+              underline underline-offset-4
+            "
           >
             อ่าน Privacy Policy
           </Link>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-6">
-
+          <div
+            className="
+              grid grid-cols-1
+              sm:grid-cols-3
+              gap-2 mt-6
+            "
+          >
             <button
               onClick={rejectAll}
               className="
@@ -117,7 +189,9 @@ export default function CookieConsent() {
             </button>
 
             <button
-              onClick={() => setShowPreferences(true)}
+              onClick={() =>
+                setShowPreferences(true)
+              }
               className="
                 px-4 py-3
                 border border-white
@@ -143,7 +217,6 @@ export default function CookieConsent() {
             >
               ยอมรับทั้งหมด
             </button>
-
           </div>
         </div>
       )}
@@ -154,20 +227,33 @@ export default function CookieConsent() {
           className="
             fixed inset-0
             z-[10000]
+
             bg-black/60
             backdrop-blur-sm
-            flex items-center justify-center
-            p-5
+
+            flex
+            items-end
+            md:items-center
+            justify-center
+
+            p-0 md:p-5
           "
         >
           <div
             className="
               bg-black text-white
-              w-full max-w-[600px]
+
+              w-full
+              md:max-w-[600px]
+
               max-h-[90vh]
               overflow-y-auto
-              rounded-2xl
-              p-6
+
+              rounded-t-2xl
+              md:rounded-2xl
+
+              p-5 sm:p-6
+
               shadow-2xl
             "
           >
@@ -184,7 +270,9 @@ export default function CookieConsent() {
               </div>
 
               <button
-                onClick={() => setShowPreferences(false)}
+                onClick={() =>
+                  setShowPreferences(false)
+                }
                 className="
                   text-white/60
                   hover:text-white
@@ -198,43 +286,65 @@ export default function CookieConsent() {
             </div>
 
             <div className="space-y-3 mt-6">
-
               <CookieOption
                 title="คุกกี้ที่จำเป็น"
-                description="จำเป็นสำหรับการทำงานพื้นฐาน ความปลอดภัย และการจดจำการตั้งค่าคุกกี้"
+                description="
+                  จำเป็นสำหรับการทำงานพื้นฐาน
+                  ความปลอดภัย
+                  และการจดจำการตั้งค่าคุกกี้
+                "
                 alwaysOn
               />
 
               <CookieOption
                 title="คุกกี้เพื่อการใช้งาน"
-                description="ใช้สำหรับแสดงเนื้อหาจากบริการภายนอก เช่น YouTube และ Sketchfab"
-                checked={preferences.functional}
+                description="
+                  ใช้สำหรับแสดงเนื้อหาจากบริการภายนอก
+                  เช่น YouTube และ Sketchfab
+                "
+                checked={
+                  preferences.functional
+                }
                 onChange={() =>
                   setPreferences((prev) => ({
                     ...prev,
-                    functional: !prev.functional,
+                    functional:
+                      !prev.functional,
                   }))
                 }
               />
 
               <CookieOption
                 title="คุกกี้เพื่อการวิเคราะห์"
-                description="ใช้ Google Analytics เพื่อวิเคราะห์การเข้าชมและปรับปรุงเว็บไซต์"
-                checked={preferences.analytics}
+                description="
+                  ใช้ Google Analytics
+                  เพื่อวิเคราะห์การเข้าชม
+                  และช่วยปรับปรุงเว็บไซต์
+                "
+                checked={
+                  preferences.analytics
+                }
                 onChange={() =>
                   setPreferences((prev) => ({
                     ...prev,
-                    analytics: !prev.analytics,
+                    analytics:
+                      !prev.analytics,
                   }))
                 }
               />
-
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 mt-7">
-
+            <div
+              className="
+                flex flex-col
+                sm:flex-row
+                gap-3 mt-7
+              "
+            >
               <button
-                onClick={() => setShowPreferences(false)}
+                onClick={() =>
+                  setShowPreferences(false)
+                }
                 className="
                   flex-1
                   px-5 py-3
@@ -261,7 +371,6 @@ export default function CookieConsent() {
               >
                 บันทึกและยอมรับ
               </button>
-
             </div>
           </div>
         </div>
