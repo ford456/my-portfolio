@@ -1,6 +1,7 @@
 import { IBM_Plex_Sans_Thai, } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
+import { Suspense } from "react";
 // import {headers} from "next/headers";
 
 import NavBar from "../components/NavBar";
@@ -124,9 +125,10 @@ export default async function RootLayout({ children }) {
             disableRotation={false}
           />
         </div>
+        <Suspense fallback={<div>Loading...</div>}>
         {/* <PageLoading className="absolute bg-primary -z-500"></PageLoading> */}
           {children}
-        
+        </Suspense>
         <SpeedInsights />
         <Footer />
         <Analytics />
