@@ -24,6 +24,7 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname: "res.cloudinary.com",
+                pathname: "/donnu2idb/image/upload/**",
             },
         ],
     },

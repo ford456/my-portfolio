@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function WebsiteSection({ section }) {
   return (
     <section className="pb-8 flex justify-center">
@@ -11,7 +13,7 @@ export default function WebsiteSection({ section }) {
         />
       </div> */}
 
-      <a
+      <Link
         href={section.url}
         target="_blank"
         
@@ -22,7 +24,7 @@ export default function WebsiteSection({ section }) {
         </h2>
       )}
         
-      </a>
+      </Link>
     </section>
   );
 }

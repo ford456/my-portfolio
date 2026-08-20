@@ -21,6 +21,7 @@ function SketchfabSection({section}) {
           title={items.title || "Sketchfab 3D Model"}
           className="w-full h-full"
           allow="autoplay; fullscreen; xr-spatial-tracking"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         />
       </div>))}

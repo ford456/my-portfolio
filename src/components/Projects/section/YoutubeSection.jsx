@@ -11,6 +11,7 @@ function YoutubeSection({section}) {
           src={sections.url}
           title={sections.title || "YouTube video"}
           className="w-full h-full"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         />
       </div>

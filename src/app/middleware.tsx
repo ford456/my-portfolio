@@ -134,6 +134,21 @@ response.headers.set(
  
 export const config = {
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|about|:path).*)",
+    {
+      source:
+        "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
+
+      missing: [
+        {
+          type: "header",
+          key: "next-router-prefetch",
+        },
+        {
+          type: "header",
+          key: "purpose",
+          value: "prefetch",
+        },
+      ],
+    },
   ],
-}
+};

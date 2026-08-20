@@ -1,4 +1,4 @@
-import { IBM_Plex_Sans_Thai, IBM_Plex_Sans_Thai_Looped } from "next/font/google";
+import { IBM_Plex_Sans_Thai, } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 // import {headers} from "next/headers";
@@ -10,16 +10,12 @@ import { Analytics } from '@vercel/analytics/react';
 
 import PrivacyNotice from "../components/PrivacyNotice";
 
-const ibmPlexSansThai = IBM_Plex_Sans_Thai({
-  weight: ["400"],
-  variable: "--font-geist-sans",
-  subsets: ["thai"],
-});
 
-const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
-  weight: ["400"],
-  variable: "--font-geist-mono",
-  subsets: ["thai"],
+
+const ibm = IBM_Plex_Sans_Thai({
+  subsets: ["thai", "latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -104,7 +100,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={`${ibmPlexSansThai.variable} ${ibmPlexSansThaiLooped.variable} antialiased`}
+        className={`${ibm.className} antialiased`}
       >
         {/* <script
           nonce={nonce}

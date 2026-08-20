@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 
 import {
     FaInstagram,
@@ -30,7 +31,7 @@ function SocialSection({section}) {
 
                 return (
                    
-          <a
+          <Link
             key={index}
             href={social.url}
             target="_blank"
@@ -38,7 +39,7 @@ function SocialSection({section}) {
             className="px-5 py-3 rounded-full hover:scale-120 hover:text-white transition duration-300 ease-in-out"
           ><Icon size={32} /> 
             {/* {social.name} */}
-          </a>);
+          </Link>);
         })}
       </div>
     </section>

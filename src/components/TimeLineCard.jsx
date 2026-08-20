@@ -68,7 +68,7 @@ export default function TimeLineCard({ data, reverse, active, setActiveId, }) {
 
                 >
                     <div
-                        className=" glass-card p-8 rounded-xl shadow-sm border border-outline-variant/30 hover:border-electric-blue/50 group-hover:scale-105 transition-all duration-600 ease-in-out">
+                        className="relative glass-card p-8 rounded-xl shadow-sm border border-outline-variant/30 hover:border-electric-blue/50 group-hover:scale-105 transition-all duration-600 ease-in-out">
                         <span
                             className="md:hidden font-label-caps text-label-capstext-electric-blue mb-2 block">{data.years}</span>
                         <div className="flex flex-row gap-x-2">

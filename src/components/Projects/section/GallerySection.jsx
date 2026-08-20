@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function GallerySection({ section }) {
   return (
     <section className={`${section.layout} px-15 mx-1 mt-5 py-12`}>
@@ -12,7 +14,8 @@ export default function GallerySection({ section }) {
                     className={`${image.className || "aspect-square"} rounded-xl overflow-hidden bg-surface-container-highest group relative`}>
                     <img className="w-full h-full object-cover "
                         alt={`${image.title || "Gallery"} ${index + 1}`}
-                        src={image.src}/>
+                        src={image.src}
+                        loading="lazy"/>
                 </div>
       ))}
     </section>

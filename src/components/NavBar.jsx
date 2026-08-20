@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { CgClose } from "react-icons/cg";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Link from 'next/link';
+import Image from 'next/image'
 
 
 const NavBar = () => {
@@ -101,7 +102,7 @@ const NavBar = () => {
                     <div className="container grid grid-cols-2 justify-self-center items-center w-full mx-[50px] ">
                         <div className="flex">
                             <Link href="/" target='_parent' className='flex flex-row gap-1 font-black text-2xl items-center'>
-                            <img src="/PortLogoWhite.svg" alt="Logo" loading="eager" className='brightness-0 h-12 w-auto 2xl:h-15  ' /> Freindaly
+                            <img src="/FriendalyLogo.png" alt="Logo" loading="eager" className='brightness-0 h-12 w-12 2xl:h-15 2xl:w-15 ' /> Freindaly
                         </Link>
                         </div>
                         <ul className="flex flex-row max-xl:grid max-xl:grid-cols-6 gap-x-2 justify-end md:text-sm ">
@@ -138,7 +139,7 @@ const NavBar = () => {
             {/* Navbar สำหรับมือถือ (แสดงเฉพาะเมื่อ toggle เปิด) */}
             <div className="fixed top-0 left-0 w-full z-50 md:hidden">
                 <div className='grid grid-cols-2 w-screen bg-[#ebebeb] h-[60px] bg-opacity-90 items-center mx-auto px-[50px] pt-2'>
-                    <img src="/PortLogoWhite.svg" alt="Logo" className=' brightness-0 justify-items-start  h-12 w-12 ' />
+                    <img src="/FriendalyLogo.png" alt="Logo" className=' brightness-0 justify-items-start  h-12 w-12 ' height={12} width={12} />
                     <HiOutlineBars3
                         onClick={updateToggle}
                         className="cursor-pointer text-3xl justify-items-start ml-auto "

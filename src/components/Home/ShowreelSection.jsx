@@ -42,7 +42,7 @@ export default function ShowreelSection({data}) {
                     threshold={0.2}
                     delay={300}>
                     <iframe className='relative group justify-self-center aspect-video w-full rounded-xl overflow-hidden shadow-2xl xl:max-w-[1280px] '
-                        src={datas.url} title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
+                        src={datas.url} title="YouTube video player"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen ></iframe>
                 </AnimatedContent>
             </div>
         </section>

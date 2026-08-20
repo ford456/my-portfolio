@@ -67,6 +67,7 @@ export default function ExpTimeline({data}) {
                         reverse={i % 2 === 1}
                         active={activeId === exp.id}
                         setActiveId={setActiveId}
+                        className="relative"
                     />
                 ))}
 
