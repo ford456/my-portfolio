@@ -3,7 +3,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { trackProjectView } from "@/lib/analytics";
+import { trackProjectView } from "../../app/lib/analytics";
 
 export default function ProjectViewTracker({ project }) {
 
