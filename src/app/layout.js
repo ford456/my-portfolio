@@ -20,7 +20,12 @@ const ibm = IBM_Plex_Sans_Thai({
 });
 
 export const metadata = {
-  title: "Patcharadol | Portfolio",
+  metadataBase: new URL("https://www.patcharadol-portfolio.com"),
+
+  title: {
+    default: "Patcharadol | Portfolio",
+    template: "%s | Patcharadol Portfoilo",
+  },
   description: "Patcharadol Portfolio Website for Graphic Designer, Motion Designer, 3D Modeler and Web Developer Freelance",
   keywords: [
     "พัชรดล",
@@ -43,6 +48,7 @@ export const metadata = {
     type: "website",
     title: "Patcharadol | Portfolio",
     description: "Patcharadol Portfolio Website for Graphic Designer, Motion Designer, 3D Modeler and Web Developer Freelance",
+    locale: "th_TH",
     url: "https://patcharadol-portfolio.vercel.app",
     siteName: "Patcharadol Portfolio",
     images: [
@@ -60,6 +66,19 @@ export const metadata = {
       "https://res.cloudinary.com/dlt9egtdv/image/upload/v1783119848/%E0%B8%9B%E0%B8%81cover_qeeizc.png",
     ],
   },
+
+   robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+}
+
 };
 
 export const viewport = {

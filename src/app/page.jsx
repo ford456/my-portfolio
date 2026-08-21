@@ -11,6 +11,7 @@ import Contactsection from './../components/Home/Contactsection';
 
 
 
+
 export default function Home() {
 const [loading, setLoading] = useState(true)
   const [Homedata, setHomedata] = useState(null);
