@@ -24,7 +24,7 @@ async function getProject(slug) {
   }
 
   const response = await fetch(
-    `${process.env.BACKEND_API_URL}/api/projects/${encodeURIComponent(slug)}`,
+    `${process.env.BACKEND_API_URL}/api/projects/${(slug)}`,
     {
       headers: {
         Authorization: `Bearer ${process.env.BACKEND_API_KEY}`,
