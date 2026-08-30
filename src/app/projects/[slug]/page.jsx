@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import ProjectClient from "./ProjectClient";
+import {backendFetch} from '../../lib/backend';
 
 function isValidProjectSlug(slug) {
   if (!slug) return false;
@@ -23,14 +24,12 @@ async function getProject(slug) {
     return null;
   }
 
-  const response = await fetch(
-    `${process.env.BACKEND_API_URL}/api/projects/${(slug)}`,
+  const response = await backendFetch(
+    `/api/projects/${(slug)}`,
     {
-      headers: {
-        Authorization: `Bearer ${process.env.BACKEND_API_KEY}`,
-      },
+      
       next: {
-        revalidate: 3600,
+        revalidate: 86400,
       },
     }
   );

@@ -80,9 +80,15 @@ export default function ProjectsClient() {
 
   useEffect(() => {
     async function getProjects() {
-      
+
       try {
-        const response = await fetch("/api/projects");
+        const response = await fetch("/api/projects",
+          {
+            next: {
+              revalidate: 86400
+            }
+          }
+        );
 
         if (!response.ok) {
           throw new Error("Failed to fetch projects");
@@ -98,9 +104,9 @@ export default function ProjectsClient() {
         // setProjectDatas(result);
       } catch (error) {
         console.error(error);
-      }  finally {
-      setLoading(false)
-    }
+      } finally {
+        setLoading(false)
+      }
     }
 
     getProjects();
@@ -190,8 +196,8 @@ export default function ProjectsClient() {
 
 
 
-if (loading) return <div className='h-dvh w-h-dvh'></div>
-  
+  if (loading) return <div className='h-dvh w-h-dvh'></div>
+
   return (
 
 
@@ -327,11 +333,11 @@ if (loading) return <div className='h-dvh w-h-dvh'></div>
                       threshold={0.2}
                       delay={300}>
                       <Link href={`/projects/${path}`} target='_parent' onClick={() =>
-        trackContactClick({
-          method: product.slug,
-          location: "Projects_page",
-        })
-      }>
+                        trackContactClick({
+                          method: product.slug,
+                          location: "Projects_page",
+                        })
+                      }>
                         <Card data={product}
                           textClassName='text-xs' />
                       </Link></AnimatedContent>

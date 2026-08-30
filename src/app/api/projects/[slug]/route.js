@@ -6,8 +6,13 @@ export async function GET(request, { params }) {
 
     try {
         const response = await backendFetch(
-            `/api/projects/${slug}`
-        ); 
+            `/api/projects/${slug}`,
+            {
+                next: {
+                    revalidate: 86400
+                }
+            }
+        );
 
         if (!response.ok) {
             return NextResponse.json(

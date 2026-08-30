@@ -2,11 +2,17 @@ import { backendFetch } from "../../lib/backend";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const res = await backendFetch("/api/projects");
+    const res = await backendFetch("/api/projects",
+        {
+            next: {
+                revalidate: 86400
+            }
+        }
+    );
 
-  const data = await res.json();
+    const data = await res.json();
 
-  return Response.json(data);
+    return Response.json(data);
 }
 
 export async function POST(request) {
@@ -31,12 +37,13 @@ export async function POST(request) {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                  
+
                 },
                 body: JSON.stringify({
                     ids,
                 }),
                 cache: "no-store",
+                
             }
         );
 

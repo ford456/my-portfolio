@@ -32,7 +32,8 @@ useEffect(() => {
           }),
         }),
 
-        fetch("/api/homeland"),
+        fetch("/api/homeland",
+        ),
       ])
 
       const [projectsResult, homelandResult] = await Promise.all([
