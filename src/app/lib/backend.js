@@ -12,7 +12,9 @@ export async function backendFetch(endpoint, options = {}) {
       headers: {
         ...options.headers,
         Authorization: `Bearer ${process.env.BACKEND_API_KEY}`,
-        cache: "no-store",
+        // Next.js ใช้ headers เป็นส่วนหนึ่งของ cache key
+        // เลขนี้เปลี่ยนทุกครั้งที่ build/deploy ใหม่ จึงไม่ใช้ cache เก่าจาก deploy ก่อน
+        "x-deploy-version": process.env.DEPLOY_VERSION,
       },
     }
   );

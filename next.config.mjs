@@ -4,6 +4,10 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    // เลขประจำแต่ละ build ใช้แยก cache ของข้อมูลจาก backend ในแต่ละ deploy
+    env: {
+        DEPLOY_VERSION: process.env.VERCEL_DEPLOYMENT_ID || String(Date.now()),
+    },
     images: {
         localPatterns: [
             {

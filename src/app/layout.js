@@ -89,25 +89,7 @@ export const viewport = {
 
 export const revalidate = 3600; // revalidate this page every hour
 
-
-export const fetchCache = 'force-no-store'; // this page will not be cached and will always fetch fresh data
-
 export const dynamicParams = true; // this page does not support dynamic route segments
-
-
-export const unstable_allowDynamic = [
-  '/components/NavBar',
-  '/components/Footer',
-  '/components/Particles',
-];
-
-export const unstable_allowDynamicGlobs = [
-  '/components/*',
-];
-
-export const unstable_cache = 'no-store'; // this page will not be cached and will always fetch fresh data 
-
-export const unstable_revalidate = 3600; // revalidate this page every hour
 
 
 
