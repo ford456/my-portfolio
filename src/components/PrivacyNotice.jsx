@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import CookieOption from "./CookieOption";
 import GoogleAnalytics from "../components/Analytics/GoogleAnalytics";
@@ -14,51 +14,87 @@ const defaultPreferences = {
   analytics: false,
 };
 
+const STORAGE_KEY = "cookie-consent";
+
+// localStorage is an external store: components subscribe to it
+// instead of copying it into state inside an effect.
+const listeners = new Set();
+
+function subscribe(listener) {
+  listeners.add(listener);
+  window.addEventListener("storage", listener);
+
+  return () => {
+    listeners.delete(listener);
+    window.removeEventListener("storage", listener);
+  };
+}
+
+function readConsent() {
+  try {
+    return localStorage.getItem(STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function writeConsent(value) {
+  try {
+    localStorage.setItem(STORAGE_KEY, value);
+  } catch {
+    // storage unavailable (private mode, blocked site data)
+  }
+
+  listeners.forEach((listener) => listener());
+}
+
+// Returns the saved preferences, or null when missing, expired,
+// from an old consent version, or unreadable.
+function parseConsent(saved) {
+  if (!saved) return null;
+
+  try {
+    const parsed = JSON.parse(saved);
+
+    const isExpired =
+      !parsed.expiration ||
+      Date.now() > parsed.expiration;
+
+    const isOldVersion =
+      parsed.version !== CONSENT_VERSION;
+
+    if (isExpired || isOldVersion) return null;
+
+    return {
+      necessary: true,
+      functional: Boolean(parsed.functional),
+      analytics: Boolean(parsed.analytics),
+    };
+  } catch {
+    return null;
+  }
+}
+
 export default function CookieConsent() {
-  const [showBanner, setShowBanner] = useState(false);
+  // undefined on the server and during hydration, so nothing renders
+  // until the browser value is known.
+  const saved = useSyncExternalStore(
+    subscribe,
+    readConsent,
+    () => undefined
+  );
+
+  const consent = saved === undefined ? null : parseConsent(saved);
+  const preferences = consent ?? defaultPreferences;
+  const showBanner = saved !== undefined && consent === null;
+
   const [showPreferences, setShowPreferences] = useState(false);
+  const [draft, setDraft] = useState(defaultPreferences);
 
-  const [preferences, setPreferences] = useState(defaultPreferences);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("cookie-consent");
-
-    if (!saved) {
-      setShowBanner(true);
-      return;
-    }
-
-    try {
-      const parsed = JSON.parse(saved);
-
-      const isExpired =
-        !parsed.expiration ||
-        Date.now() > parsed.expiration;
-
-      const isOldVersion =
-        parsed.version !== CONSENT_VERSION;
-
-      if (isExpired || isOldVersion) {
-        localStorage.removeItem("cookie-consent");
-
-        setPreferences(defaultPreferences);
-        setShowBanner(true);
-
-        return;
-      }
-
-      setPreferences({
-        necessary: true,
-        functional: Boolean(parsed.functional),
-        analytics: Boolean(parsed.analytics),
-      });
-    } catch {
-      localStorage.removeItem("cookie-consent");
-
-      setPreferences(defaultPreferences);
-      setShowBanner(true);
-    }
-  }, []);
+  const openPreferences = () => {
+    setDraft(preferences);
+    setShowPreferences(true);
+  };
 
   const saveConsent = (consent) => {
     const now = Date.now();
@@ -81,18 +117,8 @@ export default function CookieConsent() {
       expiration,
     };
 
-    localStorage.setItem(
-      "cookie-consent",
-      JSON.stringify(data)
-    );
+    writeConsent(JSON.stringify(data));
 
-    setPreferences({
-      necessary: true,
-      functional: data.functional,
-      analytics: data.analytics,
-    });
-
-    setShowBanner(false);
     setShowPreferences(false);
   };
 
@@ -113,7 +139,7 @@ export default function CookieConsent() {
   };
 
   const acceptSelected = () => {
-    saveConsent(preferences);
+    saveConsent(draft);
   };
 
   return (
@@ -126,12 +152,12 @@ export default function CookieConsent() {
       {showBanner && !showPreferences && (
         <div
           className="
-            fixed z-[9999]
+            fixed z-9999
 
             inset-x-0 bottom-0
             md:inset-x-auto
             md:right-6 md:bottom-6
-            md:w-[520px]
+            md:w-130
 
             bg-black text-white
 
@@ -189,9 +215,7 @@ export default function CookieConsent() {
             </button>
 
             <button
-              onClick={() =>
-                setShowPreferences(true)
-              }
+              onClick={openPreferences}
               className="
                 px-4 py-3
                 border border-white
@@ -226,7 +250,7 @@ export default function CookieConsent() {
         <div
           className="
             fixed inset-0
-            z-[10000]
+            z-10000
 
             bg-black/60
             backdrop-blur-sm
@@ -244,7 +268,7 @@ export default function CookieConsent() {
               bg-black text-white
 
               w-full
-              md:max-w-[600px]
+              md:max-w-150
 
               max-h-[90vh]
               overflow-y-auto
@@ -303,10 +327,10 @@ export default function CookieConsent() {
                   เช่น YouTube และ Sketchfab
                 "
                 checked={
-                  preferences.functional
+                  draft.functional
                 }
                 onChange={() =>
-                  setPreferences((prev) => ({
+                  setDraft((prev) => ({
                     ...prev,
                     functional:
                       !prev.functional,
@@ -322,10 +346,10 @@ export default function CookieConsent() {
                   และช่วยปรับปรุงเว็บไซต์
                 "
                 checked={
-                  preferences.analytics
+                  draft.analytics
                 }
                 onChange={() =>
-                  setPreferences((prev) => ({
+                  setDraft((prev) => ({
                     ...prev,
                     analytics:
                       !prev.analytics,

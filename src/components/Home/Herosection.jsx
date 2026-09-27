@@ -13,7 +13,7 @@ export default function HeroSection() {
 
             <div className="max-w-container-max 3xl:max-w-[1900px] mx-auto px-margin-mobile md:px-gutter pt-23 xl:pt-5 2xl:pt-20 w-full grid grid-cols-1 lg:grid-cols-12 items-end max-md:justify-items-center gap-8 transition-all duration-1000 opacity-100 translate-y-0">
                 <div className="relative z-30 lg:col-span-5 flex flex-col gap-2 md:self-center 3xl:self-end ">
-                    <h1 className='flow-root md:pt-3 text-4xl 3xl:text-7xl font-bold text-start md:leading-12 max-md:leading-10 lg:leading-12 max-lg:leading-12 2xl:leading-24'>I'm <span className='font-normal text-blue-700 underline max-md:underline-offset-2 md:underline-offset-6 '>Patcharadol Soimanee</span>, <br />Based in Bangkok,Thailand.</h1>
+                    <h1 className='flow-root md:pt-3 text-4xl 3xl:text-7xl font-bold text-start md:leading-12 max-md:leading-10 lg:leading-12 max-lg:leading-12 2xl:leading-24'>I&apos;m <span className='font-normal text-blue-700 underline max-md:underline-offset-2 md:underline-offset-6 '>Patcharadol Soimanee</span>, <br />Based in Bangkok,Thailand.</h1>
                     <a className='flow-root whitespace-pre-line max-w-md sm:text: max-md:text-[16px] md:text-[14px] lg:text-sm 2xl:text-2xl pt-1 indent-8' >Creative and detail-oriented multidisciplinary designer specializing in graphic design, motion graphics, and video editing. Committed to delivering high-quality visual solutions and continuous rofessional growth. </a>
                     <div className='flex justify-start  gap-5 mt-7 2xl:mt-5 max-lg:text-[9px] 2xl:text-2xl y-10'>
                         <Link href="/about" className="" target='_parent' >
@@ -60,6 +60,7 @@ export default function HeroSection() {
                         <Image alt="Patcharadol Soimanee Portfolio"
                             className="aspect-square rounded-2xl relative z-20 object-contain object-bottom"
                             src="https://res.cloudinary.com/donnu2idb/image/upload/v1785071926/%E0%B8%9B%E0%B8%81cover_2x_zivdnx.png"
+                            loading="eager"
                             fetchPriority="high"
                             fill
   sizes="(max-width: 768px) 100vw, 661px" />

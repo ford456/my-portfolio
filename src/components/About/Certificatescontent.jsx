@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useEffect, useState } from 'react'
 // import { Cerfiticates } from '../../datas/Cerfiticates';
 import AnimatedContent from '../AnimatedContent'
@@ -28,9 +29,10 @@ export default function Certificatescontent({data}) {
                         <div
                             className="p-6 h-full bg-white rounded-xl outline-2 outline-variant/30 hover:outline-electric-blue/30 transition-all shadow-sm ease-in-out duration-700">
                             <div className="max-w-[500px] w-full h-auto mb-4 mx-auto md:mx-0">
-                                <img alt={item.alt}
-                                    className="w-full h-full object-contain"
-                                    src={item.img} />
+                                <Image alt={item.alt} width={500} height={350}
+                                    sizes="(max-width: 768px) 100vw, 500px"
+                                    className="w-full h-auto object-contain"
+                                    src={item.img} unoptimized={item.img?.endsWith(".gif")} />
                             </div>
                             <h3 className="font-label-caps text-label-caps text-deep-navy mb-2">{item.title}</h3>
                             <p className="font-body-md text-outline">{item.description}</p>

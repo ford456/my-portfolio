@@ -10,6 +10,14 @@ const nextConfig = {
                 pathname: "/assets/images/**",
                 search: "",
             },
+            {
+                pathname: "/assets/PortLogoWhite.png",
+                search: "",
+            },
+            {
+                pathname: "/FriendalyLogo.png",
+                search: "",
+            },
         ],
 
         remotePatterns: [
@@ -25,6 +33,11 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "res.cloudinary.com",
                 pathname: "/donnu2idb/image/upload/**",
+            },
+            {
+                protocol: "https",
+                hostname: "res.cloudinary.com",
+                pathname: "/dlt9egtdv/image/upload/**",
             },
         ],
     },

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from 'react'
 import { MdFileDownload } from "react-icons/md";
 import AnimatedContent from '../AnimatedContent';
@@ -26,7 +27,7 @@ export default function Profilesection({ data }) {
                         <div className='absolute -inset-4 bg-electric-blue/10 rounded-2xl scale-95 group-hover:scale-100 transition-transform duration-500 ease-in-out'>
                         </div>
                         <div className='relative aspect-[4/5] overflow-hidden rounded-xl shadow-xl bg-surface-container'>
-                            <img className='w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700'
+                            <Image alt='Patcharadol Soimanee' fill sizes='(max-width: 768px) 100vw, 40vw' loading='eager' fetchPriority='high' className='w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700'
                                 src={data.image} />
                         </div>
                     </AnimatedContent>

@@ -71,9 +71,9 @@ export default function Projectsection({data}) {
                         >
                             <div
                                 className="project-img-container relative overflow-hidden rounded-2xl aspect-[16/10] bg-surface-container shadow-xl">
-                                <Link href={`/projects/${project26.slug}`} target="_parent" >
-                                    <img className="w-full h-full object-cover " alt="Futuristic motion graphic preview"
-                                        src={project26.thumbnail} loading="lazy"/>
+                                <Link href={`/projects/${project26.slug}`} target="_parent" className="relative block w-full h-full">
+                                    <Image fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" alt="Futuristic motion graphic preview"
+                                        src={project26.thumbnail} unoptimized={project26.thumbnail?.endsWith(".gif")} loading="lazy"/>
                                     <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
 
                                         <h3 className="font-headline-lg text-headline-md mb-2">{project26.title}</h3>
@@ -108,9 +108,9 @@ export default function Projectsection({data}) {
                         >
                             <div
                                 className="project-img-container relative overflow-hidden rounded-2xl h-[400px] md:h-[600px] bg-surface-container shadow-lg">
-                                <Link href={`/projects/${project15.slug}`} target="_parent" >
-                                    <img className="w-full h-full object-cover" alt="Elegant minimalist posters"
-                                        src={project15.thumbnail} loading="lazy"/>
+                                <Link href={`/projects/${project15.slug}`} target="_parent" className="relative block w-full h-full">
+                                    <Image fill sizes="(max-width: 768px) 100vw, 40vw" className="object-cover" alt="Elegant minimalist posters"
+                                        src={project15.thumbnail} unoptimized={project15.thumbnail?.endsWith(".gif")} loading="lazy"/>
                                     <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
                                         <h3 className="font-bold text-[24px]">{project15.title}</h3>
                                         <p className="font-body-md opacity-80 max-w-md truncate">{project15.description}</p>
@@ -142,9 +142,9 @@ export default function Projectsection({data}) {
                         >
                             <div
                                 className="project-img-container relative overflow-hidden rounded-2xl aspect-square bg-surface-container shadow-lg">
-                                <Link href={`/projects/${project23.slug}`} target="_parent" >
-                                    <img className="w-full h-full object-cover" alt="Dynamic video editing frame"
-                                        src={project23.thumbnail} loading="lazy"/>
+                                <Link href={`/projects/${project23.slug}`} target="_parent" className="relative block w-full h-full">
+                                    <Image fill sizes="(max-width: 768px) 100vw, 40vw" className="object-cover" alt="Dynamic video editing frame"
+                                        src={project23.thumbnail} unoptimized={project23.thumbnail?.endsWith(".gif")} loading="lazy"/>
                                     <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
                                         <h3 className="font-bold text-[24px]">{project23.title}</h3>
                                         <p className="font-body-md opacity-80 max-w-md truncate">{project23.description}</p>
@@ -175,9 +175,9 @@ export default function Projectsection({data}) {
                         >
                             <div
                                 className="project-img-container relative overflow-hidden rounded-2xl aspect-video bg-surface-container shadow-xl">
-                                <Link href={`/projects/${project14.slug}`} target="_parent" >
-                                    <img className="w-full h-full object-cover" alt="3D character design"
-                                        src={project14.thumbnail} loading="lazy" />
+                                <Link href={`/projects/${project14.slug}`} target="_parent" className="relative block w-full h-full">
+                                    <Image fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" alt="3D character design"
+                                        src={project14.thumbnail} unoptimized={project14.thumbnail?.endsWith(".gif")} loading="lazy" />
                                     <div className="max-md:hidden overlay-kinetic absolute inset-0 flex flex-col justify-end p-8 text-white">
                                         <h3 className="font-bold text-headline-md">{project14.title}</h3>
                                         <p className="font-body-md opacity-80 max-w-md truncate">{project14.description}</p>

@@ -345,7 +345,7 @@ export default function ProjectsClient() {
                 );
               })
             ) : (
-              <p className=" md:col-span-4 text-center text-red-500 py-10">ไม่พบข้อมูลที่ตรงกับ " {searchTerm} "</p>
+              <p className=" md:col-span-4 text-center text-red-500 py-10">ไม่พบข้อมูลที่ตรงกับ &quot; {searchTerm} &quot;</p>
             )}
           </div>
 

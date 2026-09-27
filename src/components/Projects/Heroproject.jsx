@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from 'react'
 import { MdOutlineDateRange } from "react-icons/md";
 import AnimatedContent from '../AnimatedContent';
@@ -43,9 +44,9 @@ function Heroproject({section}) {
                     delay={300}>
         <section className="px-margin-mobile md:px-gutter max-w-container-max mx-auto -mt-20 relative z-20">
             <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10 group">
-                <img alt={section.title}
+                <Image alt={section.title} width={1600} height={900} sizes="100vw" loading="eager" fetchPriority="high"
                     className=" w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-700"
-                    src={section.thumbnail} />
+                    src={section.thumbnail} unoptimized={section.thumbnail?.endsWith(".gif")} />
             </div>
         </section></AnimatedContent>
         </div>

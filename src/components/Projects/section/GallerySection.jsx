@@ -12,9 +12,10 @@ export default function GallerySection({ section }) {
         // />
         <div key={index}
                     className={`${image.className || "aspect-square"} rounded-xl overflow-hidden bg-surface-container-highest group relative`}>
-                    <img className="w-full h-full object-cover "
+                    <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover"
                         alt={`${image.title || "Gallery"} ${index + 1}`}
                         src={image.src}
+                        unoptimized={image.src?.endsWith(".gif")}
                         loading="lazy"/>
                 </div>
       ))}

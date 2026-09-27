@@ -6,13 +6,14 @@ import { useEffect } from "react";
 import { trackProjectView } from "../../app/lib/analytics";
 
 export default function ProjectViewTracker({ project }) {
+  const { id, slug, title } = project ?? {};
 
   useEffect(() => {
-    if (!project) return;
+    if (id == null) return;
 
-    trackProjectView(project);
+    trackProjectView({ id, slug, title });
 
-  }, [project?.id]);
+  }, [id, slug, title]);
 
   return null;
 }

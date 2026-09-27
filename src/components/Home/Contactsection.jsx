@@ -96,7 +96,7 @@ export default function Contactsection() {
                         >
                             <h2
                                 className='font-display-hero-mobile text-display-hero-mobile md:text-headline-lg font-bold mb-6'>
-                                Let's build something extraordinary together.</h2>
+                                Let&apos;s build something extraordinary together.</h2>
                         </AnimatedContent>
                         <AnimatedContent
                             distance={30}
@@ -111,7 +111,7 @@ export default function Contactsection() {
 
                         >
                             <p className='font-body-lg text-body-lg text-soft-gray mb-12 opacity-80'>
-                                I'm always open to new challenges and freelance opportunities. Based in Bangkok, Thailand.</p>
+                                I&apos;m always open to new challenges and freelance opportunities. Based in Bangkok, Thailand.</p>
                         </AnimatedContent>
                         <div className='space-y-6'>
                             <AnimatedContent

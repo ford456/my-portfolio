@@ -5,10 +5,10 @@ import Image from 'next/image'
 
 function Footer() {
     return (
-        <footer className='bg-[#1d3a51] px-10 md:px-6 p-4 relative max-md:flex max-md:flex-col md:grid md:grid-cols-3 justify-center'>
+        <footer className='bg-deep-navy px-10 md:px-6 p-4 relative max-md:flex max-md:flex-col md:grid md:grid-cols-3 justify-center'>
             
             <div className='flex items-center col-span-2 text-white text-sm md:text-base lg:text-sm md:ml-10  mx-auto'>
-                <img src="/assets/PortLogoWhite.png" alt="Logo" loading="eager" className='aspect-square max-h-10 px-2'  />
+                <Image src="/assets/PortLogoWhite.png" alt="Logo" width={32} height={32} loading="eager" className='h-7 w-7 shrink-0 mx-2'  />
                 <p className='pr-2'>© 2025 Patcharadol Portfolio. All Rights Reserved. </p>
             </div >
             <ul className='col-start-3 text-sm flex flex-col space-y-2 md:flex-row md:space-x-4 sm:justify-center items-center sm:items-baseline '>

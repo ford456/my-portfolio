@@ -100,7 +100,7 @@ export default function Contactsection() {
                         >
                             <h2
                                 className='font-display-hero-mobile text-display-hero-mobile md:text-headline-lg font-bold mb-6'>
-                                Let's Create <span className='text-electric-blue'>Something Amazing</span>  Together.</h2>
+                                Let&apos;s Create <span className='text-electric-blue'>Something Amazing</span>  Together.</h2>
                         </AnimatedContent>
                         <AnimatedContent
                             distance={30}
@@ -115,7 +115,7 @@ export default function Contactsection() {
 
                         >
                             <p className='font-body-lg text-body-lg text-soft-gray mb-12 opacity-80'>
-                                I'm currently available for freelance projects and full-time opportunities. Drop me a line and let's start a conversation about your vision.</p>
+                                I&apos;m currently available for freelance projects and full-time opportunities. Drop me a line and let&apos;s start a conversation about your vision.</p>
                         </AnimatedContent>
                         <div className='space-y-6 flex flex-col'>
                             <AnimatedContent

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRef, useEffect } from "react";
 import {
     motion,
@@ -32,7 +33,7 @@ export default function TimeLineCard({ data, reverse, active, setActiveId, }) {
 
 
     return (
-        <div className={`cursor-default  group relative flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center mb-24 last:mb-0 timeline-item`}>
+        <div ref={ref} className={`cursor-default  group relative flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center mb-24 last:mb-0 timeline-item`}>
 
             <div className={`w-full md:w-1/2 mb-8 md:mb-0 hidden md:block ${reverse ? "md:text-left md:pl-24" : "md:text-right md:pr-24"}`}>
                 <AnimatedContent
@@ -75,8 +76,9 @@ export default function TimeLineCard({ data, reverse, active, setActiveId, }) {
                             {data?.img?.map((img) => (
                                 <div key={img}
                                     className="relative w-full h-auto mb-4 bg-white rounded-lg p-2 shadow-sm border border-outline-variant/30 md:ml-auto">
-                                    <img alt={`${data.title} Projects`} className="w-full h-full object-contain"
-                                        src={img} />
+                                    <Image alt={`${data.title} Projects`} width={800} height={600}
+                                        sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto object-contain"
+                                        src={img} unoptimized={img?.endsWith(".gif")} />
                                 </div>))}
                         </div>
 
