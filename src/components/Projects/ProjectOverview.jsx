@@ -1,12 +1,12 @@
 import React from 'react'
 import { TbTags } from "react-icons/tb";
 
-import { TagColorMap } from '../../components/Card';
+import { TagColorMap, buildColorMap, getTagColor } from '../../components/Card';
 
-function ProjectOverview({ data }) {
+function ProjectOverview({ data, allTags = [], allSkills = [] }) {
 
-        const tagColorMap = TagColorMap[0].tagColorMap;
-    const skillColorMap = TagColorMap[1].SkillColorMap;
+    const tagColorMap = buildColorMap([...allTags, ...(data.tags || [])]);
+    const skillColorMap = buildColorMap([...allSkills, ...(data.skills || [])], TagColorMap[1].SkillColorMap);
 
     return (
         <section
@@ -26,7 +26,7 @@ function ProjectOverview({ data }) {
                 <div>
                     <ul className="space-y-4 pt-4 ">
                         {data.tags?.map((items, index) => (
-                            <li key={index} className={`flex items-start gap-2 ${tagColorMap[items] || " outline-gray-300"}`}>
+                            <li key={index} className={`flex items-start gap-2 ${getTagColor(items, tagColorMap)}`}>
                                 <TbTags className="self-center text-xl" />
                                 <span className="">{items}</span>
                             </li>
@@ -39,7 +39,7 @@ function ProjectOverview({ data }) {
                         {data.skills?.map((skill, i) => (
                             <div key={i}
                                 className="bg-primary p-6 rounded-xl border border-white/5">
-                                <div className={`${skillColorMap[skill] || " outline-gray-300"} font-bold text-center text-xl `}>{skill}</div>
+                                <div className={`${getTagColor(skill, skillColorMap)} font-bold text-center text-xl `}>{skill}</div>
 
                             </div>
                         ))}

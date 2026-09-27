@@ -21,7 +21,7 @@ import SectionRenderer from '../../../components/Projects/SectionRenderer';
 import ProjectViewTracker from "../../../components/Analytics/ProjectViewTracker";
 
 
-export default function ProjectClient({ product }) {
+export default function ProjectClient({ product, allTags, allSkills }) {
 
 
 
@@ -63,7 +63,7 @@ export default function ProjectClient({ product }) {
                     scale={1}
                     threshold={0.2}
                     delay={600}>
-                    <ProjectOverview data={product} />
+                    <ProjectOverview data={product} allTags={allTags} allSkills={allSkills} />
                 </AnimatedContent>
                 {Array.isArray(product?.section) &&
                 product.section?.filter(section => section != null)

@@ -56,6 +56,32 @@ async function getProject(slug) {
   return result.data ?? null;
 }
 
+// ใช้รายการ tag/skill ทั้งหมดเพื่อแจกสีให้ตรงกับหน้า Projects
+async function getAllTagNames() {
+  try {
+    const response = await backendFetch("/api/projects", {
+      next: {
+        revalidate: 86400,
+      },
+    });
+
+    if (!response.ok) {
+      return { allTags: [], allSkills: [] };
+    }
+
+    const result = await response.json();
+    const projects = Array.isArray(result.data) ? result.data : [];
+
+    return {
+      allTags: projects.flatMap((p) => Object.values(p.tags || {})),
+      allSkills: projects.flatMap((p) => Object.values(p.skills || {})),
+    };
+  } catch (error) {
+    console.error("Projects API Error:", error);
+    return { allTags: [], allSkills: [] };
+  }
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
@@ -137,9 +163,16 @@ export default async function ProjectPages({ params }) {
    if (!isValidProjectSlug(slug)) {
     notFound();}
 
-  const project = await getProject(slug);
+  const [project, { allTags, allSkills }] = await Promise.all([
+    getProject(slug),
+    getAllTagNames(),
+  ]);
 
-
-
-  return <ProjectClient product={project} />;
+  return (
+    <ProjectClient
+      product={project}
+      allTags={allTags}
+      allSkills={allSkills}
+    />
+  );
 }

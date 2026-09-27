@@ -4,35 +4,35 @@ import { MdOutlineDateRange } from "react-icons/md";
 
 export const TagColorMap = [{
     tagColorMap: {
-        "Graphic Design": "text-blue-500",
+        "Graphic Design": "text-blue-400",
         "Motion Graphic": "text-pink-400",
         "UI/UX": "text-green-500",
-        "Font-end": "text-yellow-400",
+        "Front-end": "text-yellow-400",
         "3D Modeling": "text-amber-300",
-        "Brand Design": "text-red-500",
-        "Drawing": "text-purple-500",
+        "Brand Design": "text-red-400",
+        "Drawing": "text-purple-400",
         "Game Design": "text-emerald-500",
         "Video Editor": "text-cyan-500",
         "Visual Effect": "text-sky-500",
         "Camera Man": "text-teal-500",
-        "Photography": "text-rose-500",
+        "Photography": "text-rose-400",
         "Ganerative AI": "text-orange-500",
-        "Animation": "text-fuchsia-500",
+        "Animation": "text-fuchsia-400",
         "Web Design": "text-lime-500",
     },
 },
 {
     SkillColorMap: {
-        "Adobe Illustrator": "text-blue-500",
+        "Adobe Illustrator": "text-blue-400",
         "Adobe After Effects": "text-pink-400",
         'Adobe Premiere Pro': "text-cyan-500",
-        "Adobe XD": "text-rose-500",
+        "Adobe XD": "text-rose-400",
         "Adobe Lightroom": "text-green-500",
         "Blender": "text-amber-300",
-        "Figma": "text-green-500",
+        "Figma": "text-violet-400",
         "Javascript": "text-yellow-400",
-        "Procreate": "text-red-500",
-        "Adobe Photoshop": "text-purple-500",
+        "Procreate": "text-red-400",
+        "Adobe Photoshop": "text-purple-400",
         "Maya": "text-emerald-500",
         "AI Generate": "text-sky-500",
 
@@ -40,12 +40,78 @@ export const TagColorMap = [{
 }
 ]
 
+// สีสำรองสำหรับ tag ที่ไม่ได้กำหนดไว้ (ต้องเขียนชื่อคลาสเต็ม ๆ เพื่อให้ Tailwind generate ได้)
+const FallbackColors = [
+    "text-blue-400",
+    "text-pink-300",
+    "text-green-400",
+    "text-yellow-300",
+    "text-amber-500",
+    "text-red-400",
+    "text-purple-400",
+    "text-emerald-400",
+    "text-cyan-400",
+    "text-sky-400",
+    "text-teal-400",
+    "text-rose-400",
+    "text-orange-400",
+    "text-fuchsia-400",
+    "text-lime-400",
+    "text-indigo-400",
+    "text-violet-400",
+    "text-blue-300",
+    "text-green-300",
+    "text-amber-400",
+    "text-red-300",
+    "text-purple-300",
+    "text-emerald-300",
+    "text-cyan-300",
+    "text-sky-300",
+    "text-teal-300",
+    "text-rose-300",
+    "text-orange-300",
+    "text-fuchsia-300",
+    "text-lime-300",
+    "text-indigo-300",
+    "text-violet-300",
+];
+
+// ตัดสีที่ใช้ไปแล้วใน map ออก เพื่อไม่ให้ซ้ำกับ tag ที่กำหนดไว้
+function getFallbackPool(colorMap) {
+    const usedColors = new Set(Object.values(colorMap));
+    return FallbackColors.filter((color) => !usedColors.has(color));
+}
+
+// แจกสีให้ tag ที่ไม่ได้กำหนดไว้ โดยเรียงตามชื่อจาก tag ทั้งหมด
+// สีจึงไม่ชนกัน และไม่เปลี่ยนตามลำดับที่แสดงหรือการ filter
+export function buildColorMap(allNames = [], colorMap = TagColorMap[0].tagColorMap) {
+    const pool = getFallbackPool(colorMap);
+    const unmapped = [...new Set(allNames)]
+        .filter((name) => name && !colorMap[name])
+        .sort((a, b) => a.localeCompare(b));
+    const assigned = { ...colorMap };
+    unmapped.forEach((name, index) => {
+        assigned[name] = pool[index % pool.length];
+    });
+    return assigned;
+}
+
+// ถ้า tag ไม่อยู่ใน map (เช่นโหลดรายการ tag ทั้งหมดไม่สำเร็จ) ใช้สีจาก hash ของชื่อแทน
+export function getTagColor(name, colorMap = TagColorMap[0].tagColorMap) {
+    if (colorMap[name]) return colorMap[name];
+    const pool = getFallbackPool(colorMap);
+    let hash = 0;
+    for (const char of String(name)) {
+        hash = (hash * 31 + char.charCodeAt(0)) | 0;
+    }
+    return pool[Math.abs(hash) % pool.length];
+}
+
 export default function Card({
     data,
     textClassName = '',
+    tagColors = TagColorMap[0].tagColorMap,
 }) {
-
-    const tagColorMap = TagColorMap[0].tagColorMap; // ดึง tagColorMap จาก props
 
     return (
         <div>
@@ -74,7 +140,7 @@ export default function Card({
                             .sort((a, b) => a.localeCompare(b))
                             .map((tagName, index) => (
                                 <li key={index}>
-                                    <h6 className={`${textClassName} text-[10px] max-w-auto py-0.5 px-2  ${tagColorMap[tagName] || " text-gray-100"}`}>
+                                    <h6 className={`${textClassName} text-[10px] max-w-auto py-0.5 px-2  ${getTagColor(tagName, tagColors)}`}>
                                         {tagName}
                                     </h6>
 

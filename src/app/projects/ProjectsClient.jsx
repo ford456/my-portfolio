@@ -6,7 +6,7 @@ import { trackContactClick } from "../lib/analytics";
 
 // import ProjectDatas from '../../datas/ProjectData'; // นำเข้าข้อมูลจาก ProjectData
 
-import Card from '../../components/Card'; // นำเข้าคอมโพเนนต์ Card
+import Card, { buildColorMap } from '../../components/Card'; // นำเข้าคอมโพเนนต์ Card
 
 import { useSearchParams, useRouter } from 'next/navigation';
 
@@ -138,6 +138,7 @@ export default function ProjectsClient() {
       Datas.flatMap(data => Object.values(data.skills || {}))
     )
   );
+  const tagColors = buildColorMap(allTags);
   const slugify = (str) =>
     str.toLowerCase().replace(/\s+/g, "-");
   const tagSlug = selectedTag !== "all" ? slugify(selectedTag) : "";
@@ -339,7 +340,8 @@ export default function ProjectsClient() {
                         })
                       }>
                         <Card data={product}
-                          textClassName='text-xs' />
+                          textClassName='text-xs'
+                          tagColors={tagColors} />
                       </Link></AnimatedContent>
                   </div>
                 );
