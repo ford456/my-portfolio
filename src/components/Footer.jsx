@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
+import CookieSettingsButton from './CookieSettingsButton'
 
 function Footer() {
     return (
@@ -18,6 +19,7 @@ function Footer() {
                 <li><Link href="/contact" className="font-medium  text-white hover:text-blue-500" target='_parent' >Contact</Link></li>
             <li className="text-white">|</li>
             <li className=" text-gray-200 hover:underline hover:underline-offset-2"><Link href="/privacy-policy">Privacy policy</Link></li>
+            <li className=" text-gray-200 hover:underline hover:underline-offset-2"><CookieSettingsButton /></li>
             </ul>
             
         </footer>

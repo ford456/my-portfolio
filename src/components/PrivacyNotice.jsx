@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import CookieOption from "./CookieOption";
 import GoogleAnalytics from "../components/Analytics/GoogleAnalytics";
@@ -15,6 +15,10 @@ const defaultPreferences = {
 };
 
 const STORAGE_KEY = "cookie-consent";
+
+// Fired by the footer's "ตั้งค่าคุกกี้" button so visitors can change
+// a consent they already saved.
+export const OPEN_PREFERENCES_EVENT = "open-cookie-preferences";
 
 // localStorage is an external store: components subscribe to it
 // instead of copying it into state inside an effect.
@@ -95,6 +99,18 @@ export default function CookieConsent() {
     setDraft(preferences);
     setShowPreferences(true);
   };
+
+  useEffect(() => {
+    const handleOpen = () => {
+      setDraft(parseConsent(readConsent()) ?? defaultPreferences);
+      setShowPreferences(true);
+    };
+
+    window.addEventListener(OPEN_PREFERENCES_EVENT, handleOpen);
+
+    return () =>
+      window.removeEventListener(OPEN_PREFERENCES_EVENT, handleOpen);
+  }, []);
 
   const saveConsent = (consent) => {
     const now = Date.now();
