@@ -51,8 +51,7 @@ export function middleware(request: NextRequest) {
       https:
       https://img2.pic.in.th
       https://api.cloudinary.com
-      https://res.cloudinary.com
-      https://va.vercel-scripts.com;
+      https://res.cloudinary.com;
 
     frame-src
       https://www.youtube.com

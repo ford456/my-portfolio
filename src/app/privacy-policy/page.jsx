@@ -1,13 +1,15 @@
 import Link from "next/link";
+import { baseKeywords } from "../lib/seo";
 
 export const metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy and information about how this website handles user data.",
+  keywords: [...baseKeywords, "Privacy Policy", "นโยบายความเป็นส่วนตัว", "Cookie Policy"],
 };
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-[#EEEDEF] text-black">
+    <main className="min-h-screen bg-surface-container text-black">
       <div className="max-w-4xl mx-auto px-6 py-32">
 
         <p className="text-sm text-gray-500 mb-4">

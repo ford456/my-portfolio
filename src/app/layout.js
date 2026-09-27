@@ -1,5 +1,4 @@
 import { IBM_Plex_Sans_Thai, } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 import { Suspense } from "react";
 // import {headers} from "next/headers";
@@ -7,7 +6,6 @@ import { Suspense } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Particles from "../components/Particles";
-import { Analytics } from '@vercel/analytics/react';
 
 import PrivacyNotice from "../components/PrivacyNotice";
 
@@ -24,7 +22,7 @@ export const metadata = {
 
   title: {
     default: "Patcharadol | Portfolio",
-    template: "%s | Patcharadol Portfoilo",
+    template: "%s | Patcharadol Portfolio",
   },
   description: "Patcharadol Portfolio Website for Graphic Designer, Motion Designer, 3D Modeler and Web Developer Freelance",
   keywords: [
@@ -96,7 +94,6 @@ export const fetchCache = 'force-no-store'; // this page will not be cached and 
 
 export const dynamicParams = true; // this page does not support dynamic route segments
 
-export const preferredRegion = 'auto'; // this page can be rendered in any region
 
 export const unstable_allowDynamic = [
   '/components/NavBar',
@@ -148,9 +145,7 @@ export default async function RootLayout({ children }) {
         {/* <PageLoading className="absolute bg-primary -z-500"></PageLoading> */}
           {children}
         </Suspense>
-        <SpeedInsights />
         <Footer />
-        <Analytics />
         <PrivacyNotice />
       </body>
     </html>

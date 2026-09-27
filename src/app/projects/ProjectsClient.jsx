@@ -216,7 +216,7 @@ export default function ProjectsClient() {
         <div className='flex flex-row items-center my-3'>
           <IoSearch className='pointer-events-none relative left-8 text-xl fill-white' />
           <input
-            className="static text-white w-full h-[40px] border-2 border-white rounded-xl p-2 pl-10 focus:outline-blue-400 focus:outline-offset-4"
+            className="static text-white w-full h-10 border-2 border-white rounded-xl p-2 pl-10 focus:outline-blue-400 focus:outline-offset-4"
             type="text"
             placeholder='ค้นหาด้วยชื่อผลงาน หรือประเภท หรือ Skills'
             value={searchTerm}

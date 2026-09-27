@@ -119,6 +119,14 @@ export default function CookieConsent() {
 
     writeConsent(JSON.stringify(data));
 
+    // gtag stays on the page after it loads, so a withdrawn consent
+    // must be signalled to it directly.
+    if (typeof window.gtag === "function") {
+      window.gtag("consent", "update", {
+        analytics_storage: data.analytics ? "granted" : "denied",
+      });
+    }
+
     setShowPreferences(false);
   };
 

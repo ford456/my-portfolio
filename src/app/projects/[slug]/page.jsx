@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import ProjectClient from "./ProjectClient";
 import {backendFetch} from '../../lib/backend';
+import { baseKeywords } from '../../lib/seo';
 
 function isValidProjectSlug(slug) {
   if (!slug) return false;
@@ -77,6 +78,21 @@ export async function generateMetadata({ params }) {
     project.description?.slice(0, 160) ||
     `View ${project.title} project.`;
 
+  // Titles look like "Name | Category", so each part is a keyword too.
+  const titleParts =
+    project.title?.split("|").map((part) => part.trim()) ?? [];
+
+  const keywords = [
+    ...new Set(
+      [
+        ...titleParts,
+        ...(project.tags ?? []),
+        ...(project.skills ?? []),
+        ...baseKeywords,
+      ].filter(Boolean)
+    ),
+  ];
+
   const image =
     project.img1 ||
     "/og-image.jpg";
@@ -85,6 +101,8 @@ export async function generateMetadata({ params }) {
     title: project.seoTitle || project.title,
 
     description,
+
+    keywords,
 
     alternates: {
       canonical: `/projects/${project.slug}`,

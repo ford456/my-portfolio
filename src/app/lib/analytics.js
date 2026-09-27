@@ -5,7 +5,7 @@ function hasAnalyticsConsent() {
 
   try {
     const raw =
-      localStorage.getItem("cookie_consent");
+      localStorage.getItem("cookie-consent");
 
     if (!raw) {
       return false;
