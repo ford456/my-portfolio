@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Privacy Policy | Patcharadol Portfolio",
+  title: "Privacy Policy",
   description: "Privacy Policy and information about how this website handles user data.",
 };
 
