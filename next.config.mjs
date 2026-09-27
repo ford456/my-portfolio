@@ -46,6 +46,16 @@ const nextConfig = {
         ],
     },
     allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+    // หน้าแรกจริงอยู่ที่ /home
+    async redirects() {
+        return [
+            {
+                source: "/",
+                destination: "/home",
+                permanent: true,
+            },
+        ];
+    },
 };
 
 

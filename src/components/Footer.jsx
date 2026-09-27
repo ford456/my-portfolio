@@ -13,7 +13,7 @@ function Footer() {
                 <p className='pr-2'>© 2025 Patcharadol Portfolio. All Rights Reserved. </p>
             </div >
             <ul className='col-start-3 text-sm flex flex-col space-y-2 md:flex-row md:space-x-4 sm:justify-center items-center sm:items-baseline '>
-                <li><Link href="/" className="font-medium text-white hover:text-blue-500" target='_parent' >Home</Link></li>
+                <li><Link href="/home" className="font-medium text-white hover:text-blue-500" target='_parent' >Home</Link></li>
                 <li><Link href="/about" className="font-medium  text-white hover:text-blue-500 " target='_parent' >About</Link></li>
                 <li><Link href="/projects" className="font-medium  text-white hover:text-blue-500" target='_parent' >Projects</Link></li>
                 <li><Link href="/contact" className="font-medium  text-white hover:text-blue-500" target='_parent' >Contact</Link></li>

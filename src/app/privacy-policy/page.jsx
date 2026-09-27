@@ -129,7 +129,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="mt-16 pt-8 border-t border-black/20">
           <Link
-            href="/"
+            href="/home"
             className="underline underline-offset-4 hover:opacity-60 transition"
           >
             ← Back to Home

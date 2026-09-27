@@ -101,13 +101,13 @@ const NavBar = () => {
 
                     <div className="container grid grid-cols-2 justify-self-center items-center w-full mx-[50px] ">
                         <div className="flex">
-                            <Link href="/" target='_parent' className='flex flex-row gap-1 font-black text-2xl items-center'>
+                            <Link href="/home" target='_parent' className='flex flex-row gap-1 font-black text-2xl items-center'>
                                 <Image src="/FriendalyLogo.png" alt="Logo" width={60} height={60} loading="eager" className='brightness-0 h-12 w-12 2xl:h-15 2xl:w-15 ' /> Freindaly
                             </Link>
                         </div>
                         <ul className="flex flex-row max-xl:grid max-xl:grid-cols-6 gap-x-2 justify-end md:text-sm ">
                             <li className="mx-2 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                                <Link href="/" className=" hover:text-blue-500" target='_parent' onClick={
+                                <Link href="/home" className=" hover:text-blue-500" target='_parent' onClick={
                                     () => trackContactClick({
                                         method: "Home",
                                         location: "Navbar",
@@ -174,7 +174,7 @@ const NavBar = () => {
                     <div className="md:hidden fixed inset-x-0 top-0 z-100 transition-transform duration-300 ease-in-out bg-[#ebebeb] p-2 bg-opacity-90 flex flex-col justify-center items-center">
                         <ul className="m-5 mb-4 gap-x-5 gap-y-2 text-center flex flex-col space-y-6 items-center justify-center flex-wrap md:text-sm">
                             <li>
-                                <Link href="/" className="  text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
+                                <Link href="/home" className="  text-base hover:text-blue-500" target='_parent' onClick={() => setToggle(false)}>
                                     Home
                                 </Link>
                             </li>

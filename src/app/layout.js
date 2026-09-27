@@ -39,7 +39,7 @@ export const metadata = {
     "motion designer",
     "3D Artist",
     "3D Modeler", "Freelance",],
-  authors: [{ name: "Patcharadol", url: "https://patcharadol-portfolio.vercel.app" }],
+  authors: [{ name: "Patcharadol", url: "https://www.patcharadol-portfolio.com" }],
   creator: "Patcharadol",
   publisher: "Patcharadol",
   openGraph: {
@@ -47,7 +47,7 @@ export const metadata = {
     title: "Patcharadol | Portfolio",
     description: "Patcharadol Portfolio Website for Graphic Designer, Motion Designer, 3D Modeler and Web Developer Freelance",
     locale: "th_TH",
-    url: "https://patcharadol-portfolio.vercel.app",
+    url: "https://www.patcharadol-portfolio.com",
     siteName: "Patcharadol Portfolio",
     images: [
       {
